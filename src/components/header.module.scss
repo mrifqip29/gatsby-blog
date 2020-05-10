@@ -16,16 +16,27 @@
 }
 
 .nav-item {
-  color: #999999;
-  font-size: 0.9rem;
-  margin-right: 1.3rem;
+  color: #33775a;
+  font-size: 1rem;
   text-decoration: none;
+  margin: 0 1.3rem;
 }
 
 .nav-item:hover {
-  color: #666666;
+  color: #005131;
+  text-decoration: none;
 }
 
 .active-nav-item {
-  color: #333333;
+  color: #005131;
+}
+
+.nav-dropdown {
+  color: #33775a;
+  text-decoration: none;
+}
+
+.nav-dropdown:hover {
+  color: #005131;
+  text-decoration: none;
 }

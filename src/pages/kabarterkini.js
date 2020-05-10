@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import blogStyles from "./blog.module.scss"
 import Head from "../components/head"
 
-const BlogPage = () => {
+const PageKabar = () => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
@@ -21,13 +21,13 @@ const BlogPage = () => {
   `)
   return (
     <Layout>
-      <Head title="Blog" />
-      <h1>Blog</h1>
+      <Head title="Kabar Terkini" />
+      <h1>Kabar Terkini</h1>
       <ol className={blogStyles.posts}>
         {data.allContentfulBlogPost.edges.map(edge => {
           return (
             <li className={blogStyles.post}>
-              <Link to={`/blog/${edge.node.slug}`}>
+              <Link to={`/kabarterkini/${edge.node.slug}`}>
                 <h2>{edge.node.title}</h2>
                 <p>{edge.node.publishedDate}</p>
               </Link>
@@ -39,4 +39,4 @@ const BlogPage = () => {
   )
 }
 
-export default BlogPage
+export default PageKabar

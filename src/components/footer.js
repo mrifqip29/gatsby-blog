@@ -14,8 +14,11 @@ const Footer = () => {
     }
   `)
   return (
-    <footer className={footerStyles.footer}>
-      <p>Created by {data.site.siteMetadata.author}, © 2020</p>
+    <footer>
+      <p>Created by {data.site.siteMetadata.author}</p>©{" "}
+      {new Date().getFullYear()}, Built with
+      {` `}
+      <a href="https://www.gatsbyjs.org">Gatsby</a>
     </footer>
   )
 }

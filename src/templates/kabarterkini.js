@@ -17,7 +17,7 @@ export const query = graphql`
   }
 `
 
-const Blog = props => {
+const KabarTerkini = props => {
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
@@ -40,4 +40,4 @@ const Blog = props => {
   )
 }
 
-export default Blog
+export default KabarTerkini
