@@ -17,7 +17,12 @@ const Header = () => (
       </Link>
     </Navbar.Brand>
 
-    <Nav className="mx-auto justify-content-end">
+    <Nav
+      className="mx-auto justify-content-end"
+      style={{
+        color: "33775a",
+      }}
+    >
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
@@ -29,9 +34,10 @@ const Header = () => (
 
           <NavDropdown
             //warna nya gatau gmn
-            title="Tentang Kami"
-            // id="collasible-nav-dropdown"
-            className={headerStyles.navDropdownItem}
+            title={
+              <span className={headerStyles.navDropdownItem}>Tentang Kami</span>
+            }
+            id="collasible-nav-dropdown"
           >
             <NavDropdown.Item>
               <Link
@@ -57,9 +63,10 @@ const Header = () => (
 
           <NavDropdown
             //warna nya gatau gmn
-            title="Informasi"
+            title={
+              <span className={headerStyles.navDropdownItem}>Informasi</span>
+            }
             id="collasible-nav-dropdown"
-            className={headerStyles.navDropdownItem}
           >
             <NavDropdown.Item>
               <Link to="/kabarterkini" className={headerStyles.dropdownContent}>

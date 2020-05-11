@@ -9,9 +9,9 @@ import {
   Container,
 } from "react-bootstrap"
 
-import Layout from "../components/layout"
+import halamanStyles from "../pages/halaman.module.scss"
 
-const Jumbo = ({ props }) => {
+const Jumbo = ({ title, nav, page }) => {
   return (
     <div>
       <Jumbotron
@@ -21,13 +21,19 @@ const Jumbo = ({ props }) => {
         }}
       >
         <Container>
-          <h1>PROFIL SEKOLAH</h1>
-          <Breadcrumb>
+          <h1
+            style={{
+              padding: "0.75rem 1rem 0rem",
+            }}
+          >
+            {title}
+          </h1>
+          <Breadcrumb style={halamanStyles.breadcrumbJumbotron}>
             <Breadcrumb.Item>
               <Link to="/"> Home</Link>
             </Breadcrumb.Item>
-            <Breadcrumb.Item>{props}</Breadcrumb.Item>
-            <Breadcrumb.Item active>Profil Sekolah</Breadcrumb.Item>
+            <Breadcrumb.Item>{nav}</Breadcrumb.Item>
+            <Breadcrumb.Item active> {page}</Breadcrumb.Item>
           </Breadcrumb>
         </Container>
       </Jumbotron>

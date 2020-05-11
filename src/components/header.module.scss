@@ -13,6 +13,7 @@
 
 .nav-item {
   color: #33775a;
+  font-weight: 400;
   font-size: 1rem;
   text-decoration: none;
   margin: 0 1.3rem 0;
@@ -23,7 +24,7 @@
 .nav-item:focus {
   padding: 0 0 12px;
   color: #005131;
-  border-bottom: 3px #004547;
+  border-bottom: 3px;
   border-bottom-style: solid;
   background-color: transparent;
   text-decoration: none;
@@ -46,6 +47,7 @@
 .dropdown-content {
   color: #33775a;
   text-decoration: none;
+  outline: none;
 }
 
 .dropdown-content:hover,
@@ -53,4 +55,5 @@
 .dropdown-content:focus {
   color: #005131;
   text-decoration: none;
+  outline: none;
 }

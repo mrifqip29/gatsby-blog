@@ -12,8 +12,18 @@ const IndexPage = () => (
     <Banner />
 
     <div className="container text-center my-5 py-5">
-      <div className="lead">PROFIL</div>
-      <div className="display-3">Sekolah Cendekia BAZNAS</div>
+      <div className="lead bold">
+        <h1
+          style={{
+            fontWeight: 100,
+            fontSize: "1rem",
+            letterSpacing: "15px",
+          }}
+        >
+          PROFIL
+        </h1>
+      </div>
+      <div className="display-4">Sekolah Cendekia BAZNAS</div>
       <p className="m-5 m-5 ">
         Sekolah Cendekia Baznas adalah sekolah inklusi bebas biaya dan berasrama
         bagi dhuafa dan yatim untuk putra-putri Indonesia yang berada di bawah
@@ -36,14 +46,24 @@ const IndexPage = () => (
       </span>
       <span className="px-3">
         <Button className="px-4 py-3" variant="outline-primary">
-          SCB dalam 24Jam
+          SCB dalam 24 Jam
         </Button>
       </span>
     </div>
 
     <div className="container text-center my-5 py-5">
-      <div className="lead">JELAJAHI</div>
-      <div className="display-3">SCB dalam Angka</div>
+      <div className="lead bold">
+        <h1
+          style={{
+            fontWeight: 100,
+            fontSize: "1rem",
+            letterSpacing: "15px",
+          }}
+        >
+          JELAJAHI
+        </h1>
+      </div>
+      <div className="display-4">SCB dalam Angka </div>
       <div className="row py-4">
         <div className="col">
           <div className="card text-center">
@@ -81,8 +101,19 @@ const IndexPage = () => (
     </div>
 
     <div className="container text-center my-5 py-5">
-      <div className="display-3">Penerimaan Siswa Baru</div>
-      <div className="lead">HITUNG MUNDUR</div>
+      <div className="lead bold">
+        <h1>Penerimaan Siswa Baru</h1>
+      </div>
+      <div
+        className="display-4"
+        style={{
+          fontWeight: 100,
+          fontSize: "1rem",
+          letterSpacing: "15px",
+        }}
+      >
+        HITUNG MUNDUR
+      </div>
       <div className="card-group py-5">
         <div className="card">
           <div className="card-body">

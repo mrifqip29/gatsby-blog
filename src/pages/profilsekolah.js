@@ -1,15 +1,22 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import { Button, Image, Card, CardDeck } from "react-bootstrap"
+import { Button, Image, Card, CardDeck, Breadcrumb } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import Jumbo from "../components/jumbo"
+import halamanStyles from "./halaman.module.scss"
 
 const ProfilSekolahPage = () => {
   return (
     <div>
       <Layout>
-        <Jumbo props="Tentang Kami" />
+        <Jumbo
+          title="PROFIL SEKOLAH"
+          nav="Tentang Kami"
+          page="Profil Sekolah"
+        />
+
+        {/* breadcrumb nya lom ada */}
 
         <div className="container text-center my-5 py-5">
           <div className="lead bold">
@@ -22,19 +29,13 @@ const ProfilSekolahPage = () => {
             dari berbagai wilayah di Indonesia.
           </p>
           <span className="px-3">
-            <Button className="px-4 py-3 " variant="outline-primary">
-              Sejarah
-            </Button>
+            <Button className={halamanStyles.greenButton}>Sejarah</Button>
           </span>
           <span className="px-3">
-            <Button className="px-4 py-3" variant="outline-primary">
-              Visi-Misi
-            </Button>
+            <Button className={halamanStyles.greenButton}>Visi - Misi</Button>
           </span>
           <span className="px-3">
-            <Button className="px-4 py-3" variant="outline-primary">
-              Akreditas
-            </Button>
+            <Button className={halamanStyles.greenButton}>Akreditasi</Button>
           </span>
         </div>
 
