@@ -11,7 +11,7 @@ git checkout scb-web
 ```
 
 3. bikin file .env biar bisa login ke contentful
-bikin file ".env" di dalem folder gatsby. create new file-> .env
+bikin file ".env.development" di dalem folder gatsby. create new file-> .env
 isi file .env dengan ini, lalu save
 ```shell
 GATSBY_GRAPHQL_IDE=playground
