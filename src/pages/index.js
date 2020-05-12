@@ -5,6 +5,8 @@ import Banner from "../components/banner"
 import SEO from "../components/seo"
 import { Button } from "react-bootstrap"
 
+import halamanStyles from "./halaman.module.scss"
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Beranda" />
@@ -30,28 +32,44 @@ const IndexPage = () => (
         pengelolaan Badan Amil Zakat Nasional (BAZNAS).
       </p>
       <span className="px-3">
-        <Button className="px-4 py-3 " variant="outline-primary">
+        <Button
+          href="#scbdalamangka"
+          className={halamanStyles.greenButton}
+          variant="outline-primary"
+        >
           SCB dalam Angka
         </Button>
       </span>
       <span className="px-3">
-        <Button className="px-4 py-3" variant="outline-primary">
+        <Button
+          href="#agenda"
+          className={halamanStyles.greenButton}
+          variant="outline-primary"
+        >
           Agenda
         </Button>
       </span>
       <span className="px-3">
-        <Button className="px-4 py-3" variant="outline-primary">
+        <Button
+          href="#beritaterkini"
+          className={halamanStyles.greenButton}
+          variant="outline-primary"
+        >
           Berita terkini
         </Button>
       </span>
       <span className="px-3">
-        <Button className="px-4 py-3" variant="outline-primary">
+        <Button
+          href="#scbdalam24jam"
+          className={halamanStyles.greenButton}
+          variant="outline-primary"
+        >
           SCB dalam 24 Jam
         </Button>
       </span>
     </div>
 
-    <div className="container text-center my-5 py-5">
+    <div id="scbdalamangka" className="container text-center my-5 py-5">
       <div className="lead bold">
         <h1
           style={{
@@ -158,7 +176,7 @@ const IndexPage = () => (
       </div>
     </div>
 
-    <div className="container my-5 py-5">
+    <div id="agenda" className="container my-5 py-5">
       <div className="display-4">Agenda</div>
       <div className="row pt-5 pb-2">
         <div className="col">

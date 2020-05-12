@@ -6,6 +6,7 @@
   border-radius: 25px;
   border-width: medium;
   padding: 1rem (1rem * 1.5);
+  scroll-behavior: smooth;
 }
 
 .green-button:hover,
@@ -14,4 +15,5 @@
   color: #ffffff !important;
   background-color: #33775a !important;
   border-color: #33775a !important;
+  scroll-behavior: smooth;
 }
