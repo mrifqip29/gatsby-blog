@@ -48,42 +48,64 @@ const IndexPage = () => {
           berasrama bagi dhuafa dan yatim untuk putra-putri Indonesia yang
           berada di bawah pengelolaan Badan Amil Zakat Nasional (BAZNAS).
         </p>
-        <span className="px-3">
-          <Button
-            href="#scbdalamangka"
-            className={halamanStyles.greenButton}
-            variant="outline-primary"
-          >
-            SCB dalam Angka
-          </Button>
-        </span>
-        <span className="px-3">
-          <Button
-            href="#agenda"
-            className={halamanStyles.greenButton}
-            variant="outline-primary"
-          >
-            Agenda
-          </Button>
-        </span>
-        <span className="px-3">
-          <Button
-            href="#beritaterkini"
-            className={halamanStyles.greenButton}
-            variant="outline-primary"
-          >
-            Berita terkini
-          </Button>
-        </span>
-        <span className="px-3">
-          <Button
-            href="#scbdalam24jam"
-            className={halamanStyles.greenButton}
-            variant="outline-primary"
-          >
-            SCB dalam 24 Jam
-          </Button>
-        </span>
+        
+        <div className="row">
+        <div className="col-lg-3 col-md-6 col-sm-12 py-2">
+          <span className="px-3">
+            <Button style={{
+              minWidth:"177px"
+            }}
+              href="#scbdalamangka"
+              className={halamanStyles.greenButton}
+              variant="outline-primary"
+            >
+              SCB dalam Angka
+            </Button>
+          </span>
+        </div>
+
+        <div className="col-lg-3 col-md-6 col-sm-12 py-2">
+          <span className=" px-3">
+            <Button style={{
+              minWidth:"177px"
+            }}
+              href="#agenda"
+              className={halamanStyles.greenButton}
+              variant="outline-primary"
+            >
+              Agenda
+            </Button>
+          </span>
+        </div>
+
+        <div className="col-lg-3 col-md-6 col-sm-12 py-2">
+          <span className="px-3">
+            <Button style={{
+              minWidth:"177px"
+            }}
+              href="#beritaterkini"
+              className={halamanStyles.greenButton}
+              variant="outline-primary"
+            >
+              Berita terkini
+            </Button>
+          </span>
+        </div>
+        
+        <div className="col-lg-3 col-md-6 col-sm-12 py-2">
+          <span className="px-3">
+            <Button style={{
+              minWidth:"177px"
+            }}
+              href="#scbdalam24jam"
+              className={halamanStyles.greenButton}
+              variant="outline-primary"
+            >
+              SCB dalam 24 Jam
+            </Button>
+          </span>
+        </div>
+      </div>
       </div>
 
       <DalamAngka />
