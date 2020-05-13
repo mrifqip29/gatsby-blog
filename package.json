@@ -37,6 +37,7 @@
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
+    "pdfjs-dist": "^2.3.200",
     "prettier": "2.0.5"
   },
   "repository": {
