@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div>
+    <div className="col-sm-12">
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
       <Footer />
