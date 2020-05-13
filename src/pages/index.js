@@ -1,4 +1,5 @@
 import React from "react"
+import moment from "moment"
 import { Link, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Banner from "../components/banner"
@@ -22,6 +23,15 @@ const IndexPage = () => {
       contentfulCountdown {
         judul
         tenggatWaktu
+      }
+      allContentfulAgenda{
+        edges{
+          node{
+            tanggal
+            konten
+            lokasi
+          }
+        }
       }
     }
   `)
@@ -115,7 +125,7 @@ const IndexPage = () => {
 
       <DalamAngka />
 
-      <div className="container text-center my-5 py-5">
+    <div className="container text-center my-5 py-5">
         <div className="lead bold">
           <div className="display-4">{data.contentfulCountdown.judul}</div>
         </div>
@@ -137,78 +147,34 @@ const IndexPage = () => {
         />
       </div>
 
-      <div id="agenda" className="container my-5 py-5">
-        <div className="display-4">Agenda</div>
+    <div id="agenda" className="container my-5 py-5">
+      <div className="display-4">Agenda</div>
+
         <div className="row pt-5 pb-2">
-          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
+          {data.allContentfulAgenda.edges.map(edge => {
+            return( <div className="col-lg-3 col-md-6 col-sm-12 py-2">
             <div className="card">
               <div className="card-body">
                 <div className="row">
                   <div className="col-5">
-                    <div className="h4">20</div>
-                    <div className="h3">Nov</div>
+                    <div className="display-4">{moment(edge.node.tanggal).format('D')}</div>
+                    <div className="h3">{moment(edge.node.tanggal).format('MMM')}</div>
                   </div>
                   <div className="col">
-                    <div>Gema Akbar</div>
-                    <div>Lorem, ipsum.</div>
-                    <div>Lorem, ipsum.</div>
+                    <div className="h5">{edge.node.konten}</div>
+                    <div className="h6">{moment(edge.node.tanggal).format('h:mm')}</div>
+                    <div className="h6">{edge.node.lokasi}</div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
-            <div className="card">
-              <div className="card-body">
-                <div className="row">
-                  <div className="col-5">
-                    <div className="display-4">20</div>
-                    <div className="h3">Nov</div>
-                  </div>
-                  <div className="col">
-                    <div>Gema Akbar</div>
-                    <div>Lorem, ipsum.</div>
-                    <div>Lorem, ipsum.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
-            <div className="card">
-              <div className="card-body">
-                <div className="row">
-                  <div className="col-5">
-                    <div className="display-4">20</div>
-                    <div className="h3">Nov</div>
-                  </div>
-                  <div className="col">
-                    <div>Gema Akbar</div>
-                    <div>Lorem, ipsum.</div>
-                    <div>Lorem, ipsum.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
-            <div className="card">
-              <div className="card-body">
-                <div className="row">
-                  <div className="col-5">
-                    <div className="display-4">20</div>
-                    <div className="h3">Nov</div>
-                  </div>
-                  <div className="col">
-                    <div>Gema Akbar</div>
-                    <div>Lorem, ipsum.</div>
-                    <div>Lorem, ipsum.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          </div>)
+            }
+          )
+      }
+    </div>
+      
+
         <div className="float-right">Lihat lebih lengkap</div>
       </div>
     </Layout>
