@@ -130,27 +130,17 @@ const IndexPage = () => {
           }}
         >
           HITUNG MUNDUR
-<<<<<<< HEAD
-        </div>  
-        <Countdown date={data.contentfulCountdown.tenggatWaktu} />
-=======
         </div>
         <Countdown
           className="col-lg-12 col-md-6 col-sm-6"
           date={data.contentfulCountdown.tenggatWaktu}
         />
->>>>>>> ba85ee86db28baf4a3e76e312c64c25247ca168c
       </div>
 
       <div id="agenda" className="container my-5 py-5">
         <div className="display-4">Agenda</div>
         <div className="row pt-5 pb-2">
-<<<<<<< HEAD
-
-          <div className="col-md-3 col-sm-12 py-2">
-=======
           <div className="col-lg-3 col-md-6 col-sm-12 py-2">
->>>>>>> ba85ee86db28baf4a3e76e312c64c25247ca168c
             <div className="card">
               <div className="card-body">
                 <div className="row">
@@ -167,11 +157,7 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className="col-md-3 col-sm-12 py-2">
-=======
           <div className="col-lg-3 col-md-6 col-sm-12 py-2">
->>>>>>> ba85ee86db28baf4a3e76e312c64c25247ca168c
             <div className="card">
               <div className="card-body">
                 <div className="row">
@@ -187,12 +173,8 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          </div><div className="col-md-3 col-sm-12 py-2">
-=======
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12 py-2">
->>>>>>> ba85ee86db28baf4a3e76e312c64c25247ca168c
             <div className="card">
               <div className="card-body">
                 <div className="row">
@@ -208,12 +190,8 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          </div><div className="col-md-3 col-sm-12 py-2">
-=======
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12 py-2">
->>>>>>> ba85ee86db28baf4a3e76e312c64c25247ca168c
             <div className="card">
               <div className="card-body">
                 <div className="row">
@@ -229,7 +207,8 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
-          </div></div>
+          </div>
+        </div>
         <div className="float-right">Lihat lebih lengkap</div>
       </div>
     </Layout>
