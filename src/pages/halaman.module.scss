@@ -1,19 +1,19 @@
 .green-button {
-  color: #33775a;
+  color: #004547;
   background-color: #ffffff;
   font-weight: 300;
-  border-color: #33775a;
+  border-color: #004547;
   border-radius: 25px;
   border-width: medium;
   padding: 1rem (1rem * 1.5);
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 .green-button:hover,
 .green-button:active,
 .green-button:focus {
   color: #ffffff !important;
-  background-color: #33775a !important;
-  border-color: #33775a !important;
-  scroll-behavior: smooth;
+  background-color: #004547 !important;
+  border-color: #004547 !important;
+  scroll-behavior: smooth !important;
 }
