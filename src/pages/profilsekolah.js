@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Button, Image, Card, CardDeck, Breadcrumb } from "react-bootstrap"
+import SEO from "../components/seo"
 
 import Layout from "../components/layout"
 import Jumbo from "../components/jumbo"
@@ -10,6 +11,7 @@ const ProfilSekolahPage = () => {
   return (
     <div>
       <Layout>
+        <SEO title="Profil Sekolah" />
         <Jumbo
           title="PROFIL SEKOLAH"
           nav="Tentang Kami"
@@ -29,17 +31,23 @@ const ProfilSekolahPage = () => {
             dari berbagai wilayah di Indonesia.
           </p>
           <span className="px-3">
-            <Button className={halamanStyles.greenButton}>Sejarah</Button>
+            <Button href="#sejarah" className={halamanStyles.greenButton}>
+              Sejarah
+            </Button>
           </span>
           <span className="px-3">
-            <Button className={halamanStyles.greenButton}>Visi - Misi</Button>
+            <Button href="#visimisi" className={halamanStyles.greenButton}>
+              Visi - Misi
+            </Button>
           </span>
           <span className="px-3">
-            <Button className={halamanStyles.greenButton}>Akreditasi</Button>
+            <Button href="#akreditas" className={halamanStyles.greenButton}>
+              Akreditasi
+            </Button>
           </span>
         </div>
 
-        <div className="container text-center my-5 py-5">
+        <div id="sejarah" className="container text-center my-5 py-5">
           <div className="lead bold">
             <h1>SEJARAH</h1>
           </div>
@@ -51,7 +59,7 @@ const ProfilSekolahPage = () => {
           </p>
         </div>
 
-        <div className="container text-center my-5 py-5">
+        <div id="visimisi" className="container text-center my-5 py-5">
           <div className="lead bold">
             <h1>VISI & MISI</h1>
           </div>
@@ -95,7 +103,7 @@ const ProfilSekolahPage = () => {
           </CardDeck>
         </div>
 
-        <div className="container text-center my-5 py-5">
+        <div id="akreditas" className="container text-center my-5 py-5">
           <div className="lead bold">
             <h1>AKREDITASI</h1>
           </div>

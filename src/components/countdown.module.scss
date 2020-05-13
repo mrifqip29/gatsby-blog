@@ -1,0 +1,26 @@
+.countdown {
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #004547;
+  border-radius: 25px;
+}
+
+.countdown-col {
+  padding: 2rem 4.8rem;
+  display: inline-block;
+  text-size-adjust: auto;
+}
+
+.countdown-col-element {
+  color: #ffffff;
+  display: inline-block;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.countdown-col-element strong {
+  font-size: 4rem;
+  font-weight: 350;
+}

@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import SEO from "../components/seo"
 
 import Layout from "../components/layout"
 import blogStyles from "./blog.module.scss"
-import Head from "../components/head"
 
 const PageKabar = () => {
   const data = useStaticQuery(graphql`
@@ -21,7 +21,8 @@ const PageKabar = () => {
   `)
   return (
     <Layout>
-      <Head title="Kabar Terkini" />
+      <SEO title="Kabar Terkini" />
+
       <h1>Kabar Terkini</h1>
       <ol className={blogStyles.posts}>
         {data.allContentfulBlogPost.edges.map(edge => {
