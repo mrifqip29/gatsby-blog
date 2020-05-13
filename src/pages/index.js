@@ -149,14 +149,15 @@ const IndexPage = () => {
           }}
         >
           HITUNG MUNDUR
-        </div>
+        </div>  
         <Countdown date={data.contentfulCountdown.tenggatWaktu} />
       </div>
 
       <div id="agenda" className="container my-5 py-5">
         <div className="display-4">Agenda</div>
         <div className="row pt-5 pb-2">
-          <div className="col">
+
+          <div className="col-md-3 col-sm-12 py-2">
             <div className="card">
               <div className="card-body">
                 <div className="row">
@@ -173,7 +174,7 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col-md-3 col-sm-12 py-2">
             <div className="card">
               <div className="card-body">
                 <div className="row">
@@ -189,8 +190,7 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col">
+          </div><div className="col-md-3 col-sm-12 py-2">
             <div className="card">
               <div className="card-body">
                 <div className="row">
@@ -206,8 +206,7 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col">
+          </div><div className="col-md-3 col-sm-12 py-2">
             <div className="card">
               <div className="card-body">
                 <div className="row">
@@ -223,8 +222,7 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div></div>
         <div className="float-right">Lihat lebih lengkap</div>
       </div>
     </Layout>
