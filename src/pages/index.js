@@ -9,6 +9,7 @@ import halamanStyles from "./halaman.module.scss"
 import Countdown from "../components/countdown"
 import DalamAngka from "../components/dalamangka"
 
+//yuhu
 const currentDate = new Date()
 const year =
   currentDate.getMonth() === 11 && currentDate.getDate() > 23
@@ -48,64 +49,68 @@ const IndexPage = () => {
           berasrama bagi dhuafa dan yatim untuk putra-putri Indonesia yang
           berada di bawah pengelolaan Badan Amil Zakat Nasional (BAZNAS).
         </p>
-        
+
         <div className="row">
-        <div className="col-lg-3 col-md-6 col-sm-12 py-2">
-          <span className="px-3">
-            <Button style={{
-              minWidth:"177px"
-            }}
-              href="#scbdalamangka"
-              className={halamanStyles.greenButton}
-              variant="outline-primary"
-            >
-              SCB dalam Angka
-            </Button>
-          </span>
-        </div>
+          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
+            <span className="px-3">
+              <Button
+                style={{
+                  minWidth: "177px",
+                }}
+                href="#scbdalamangka"
+                className={halamanStyles.greenButton}
+                variant="outline-primary"
+              >
+                SCB dalam Angka
+              </Button>
+            </span>
+          </div>
 
-        <div className="col-lg-3 col-md-6 col-sm-12 py-2">
-          <span className=" px-3">
-            <Button style={{
-              minWidth:"177px"
-            }}
-              href="#agenda"
-              className={halamanStyles.greenButton}
-              variant="outline-primary"
-            >
-              Agenda
-            </Button>
-          </span>
-        </div>
+          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
+            <span className=" px-3">
+              <Button
+                style={{
+                  minWidth: "177px",
+                }}
+                href="#agenda"
+                className={halamanStyles.greenButton}
+                variant="outline-primary"
+              >
+                Agenda
+              </Button>
+            </span>
+          </div>
 
-        <div className="col-lg-3 col-md-6 col-sm-12 py-2">
-          <span className="px-3">
-            <Button style={{
-              minWidth:"177px"
-            }}
-              href="#beritaterkini"
-              className={halamanStyles.greenButton}
-              variant="outline-primary"
-            >
-              Berita terkini
-            </Button>
-          </span>
+          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
+            <span className="px-3">
+              <Button
+                style={{
+                  minWidth: "177px",
+                }}
+                href="#beritaterkini"
+                className={halamanStyles.greenButton}
+                variant="outline-primary"
+              >
+                Berita terkini
+              </Button>
+            </span>
+          </div>
+
+          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
+            <span className="px-3">
+              <Button
+                style={{
+                  minWidth: "177px",
+                }}
+                href="#scbdalam24jam"
+                className={halamanStyles.greenButton}
+                variant="outline-primary"
+              >
+                SCB dalam 24 Jam
+              </Button>
+            </span>
+          </div>
         </div>
-        
-        <div className="col-lg-3 col-md-6 col-sm-12 py-2">
-          <span className="px-3">
-            <Button style={{
-              minWidth:"177px"
-            }}
-              href="#scbdalam24jam"
-              className={halamanStyles.greenButton}
-              variant="outline-primary"
-            >
-              SCB dalam 24 Jam
-            </Button>
-          </span>
-        </div>
-      </div>
       </div>
 
       <DalamAngka />
