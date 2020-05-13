@@ -162,8 +162,8 @@ const IndexPage = () => {
                   </div>
                   <div className="col">
                     <div className="h5">{edge.node.konten}</div>
-                    <div className="h6">{moment(edge.node.tanggal).format('h:mm')}</div>
-                    <div className="h6">{edge.node.lokasi}</div>
+                    <div className="h6">Pukul {moment(edge.node.tanggal).format('h:mm')}</div>
+                    <div className="h6">Di {edge.node.lokasi}</div>
                   </div>
                 </div>
               </div>
