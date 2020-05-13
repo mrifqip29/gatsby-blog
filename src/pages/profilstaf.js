@@ -23,21 +23,21 @@ const ProfilStafPage = () => {
           <div className="lead bold">
             <h1>PEJABAT STRUKTURAL</h1>
           </div>
-          <div className="display-4">SMP CENDEKIA BAZNAS</div>
+          <div className="display-4">SEKOLAH CENDEKIA BAZNAS</div>
         </div>
 
         <div className="container text-center my-5 py-5">
           <div className="lead bold">
             <h1>PROFIL TENAGA PENDIDIK</h1>
           </div>
-          <div className="display-4">SMP CENDEKIA BAZNAS</div>
+          <div className="display-4">SEKOLAH CENDEKIA BAZNAS</div>
         </div>
 
         <div className="container text-center my-5 py-5">
           <div className="lead bold">
             <h1>PROFIL STAF</h1>
           </div>
-          <div className="display-4">SMP CENDEKIA BAZNAS</div>
+          <div className="display-4">SEKOLAH CENDEKIA BAZNAS</div>
         </div>
       </Layout>
     </div>

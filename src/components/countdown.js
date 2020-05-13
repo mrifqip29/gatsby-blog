@@ -87,37 +87,93 @@ class Countdown extends Component {
 
   render() {
     const countDown = this.state
-
     return (
-      <div className={countdownStyles.countdown}>
-        <span className={countdownStyles.countdownCol}>
-          <span className={countdownStyles.countdownColElement}>
-            <strong>{this.addLeadingZeros(countDown.days)}</strong>
-            <span>HARI</span>
-          </span>
-        </span>
-
-        <span className={countdownStyles.countdownCol}>
-          <span className={countdownStyles.countdownColElement}>
-            <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-            <span>JAM</span>
-          </span>
-        </span>
-
-        <span className={countdownStyles.countdownCol}>
-          <span className={countdownStyles.countdownColElement}>
-            <strong>{this.addLeadingZeros(countDown.min)}</strong>
-            <span>MENIT</span>
-          </span>
-        </span>
-
-        <span className={countdownStyles.countdownCol}>
-          <span className={countdownStyles.countdownColElement}>
-            <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-            <span>DETIK</span>
-          </span>
-        </span>
+      <div
+        className="row py-4"
+        style={{
+          background: "#004547",
+          color: "#ffffff",
+          borderRadius: "25px",
+        }}
+      >
+        <div className="col-lg-3 col-md-6 col-sm-12 py-2 px-0 mx-0">
+          <div className="row">
+            <div className="col-12">
+              <div className="display-4">
+                {this.addLeadingZeros(countDown.days)}
+              </div>
+              <div className="h5 pt-2">HARI</div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-12 py-2 px-0 mx-0">
+          <div className="row">
+            <div className="col-12">
+              <div className="display-4">
+                {this.addLeadingZeros(countDown.hours)}
+              </div>
+              <div className="h5 pt-2">JAM</div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-12 py-2 px-0 mx-0">
+          <div className="row">
+            <div className="col-12">
+              <div className="display-4">
+                {this.addLeadingZeros(countDown.min)}
+              </div>
+              <div className="h5 pt-2">MENIT</div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-12 py-2 px-0 mx-0">
+          <div className="row">
+            <div className="col-12">
+              <div className="display-4">
+                {this.addLeadingZeros(countDown.sec)}
+              </div>
+              <div className="h5 pt-2">DETIK</div>
+            </div>
+          </div>
+        </div>
       </div>
+      // <div className={`${countdownStyles.countdown}`}>
+      //   <span
+      //     className={`col-lg-3 col-md-6 col-sm-12 ${countdownStyles.countdownCol}`}
+      //   >
+      //     <span className={countdownStyles.countdownColElement}>
+      //       <strong>{this.addLeadingZeros(countDown.days)}</strong>
+      //       <span>HARI</span>
+      //     </span>
+      //   </span>
+
+      //   <span
+      //     className={`col-lg-3 col-md-6 col-sm-12${countdownStyles.countdownCol}`}
+      //   >
+      //     <span className={countdownStyles.countdownColElement}>
+      //       <strong>{this.addLeadingZeros(countDown.hours)}</strong>
+      //       <span>JAM</span>
+      //     </span>
+      //   </span>
+
+      //   <span
+      //     className={`col-lg-3 col-md-6 col-sm-12 ${countdownStyles.countdownCol}`}
+      //   >
+      //     <span className={countdownStyles.countdownColElement}>
+      //       <strong>{this.addLeadingZeros(countDown.min)}</strong>
+      //       <span>MENIT</span>
+      //     </span>
+      //   </span>
+
+      //   <span
+      //     className={`col-lg-3 col-md-6 col-sm-12 ${countdownStyles.countdownCol}`}
+      //   >
+      //     <span className={countdownStyles.countdownColElement}>
+      //       <strong>{this.addLeadingZeros(countDown.sec)}</strong>
+      //       <span>DETIK</span>
+      //     </span>
+      //   </span>
+      // </div>
     )
   }
 }

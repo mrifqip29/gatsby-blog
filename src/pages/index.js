@@ -7,6 +7,7 @@ import { Button } from "react-bootstrap"
 
 import halamanStyles from "./halaman.module.scss"
 import Countdown from "../components/countdown"
+import DalamAngka from "../components/dalamangka"
 
 const currentDate = new Date()
 const year =
@@ -43,7 +44,7 @@ const IndexPage = () => {
         </div>
         <div className="display-4">Sekolah Cendekia BAZNAS</div>
         <p className="m-5 m-5 ">
-          Sekolah Cendekia Baznas adalah sekolah inklusi bebas biaya dan
+          Sekolah Cendekia BAZNAS adalah sekolah inklusi bebas biaya dan
           berasrama bagi dhuafa dan yatim untuk putra-putri Indonesia yang
           berada di bawah pengelolaan Badan Amil Zakat Nasional (BAZNAS).
         </p>
@@ -85,54 +86,7 @@ const IndexPage = () => {
         </span>
       </div>
 
-      <div id="scbdalamangka" className="container text-center my-5 py-5">
-        <div className="lead bold">
-          <h1
-            style={{
-              fontWeight: 100,
-              fontSize: "1rem",
-              letterSpacing: "15px",
-            }}
-          >
-            JELAJAHI
-          </h1>
-        </div>
-        <div className="display-4">SCB dalam Angka </div>
-        <div className="row py-4">
-          <div className="col">
-            <div className="card text-center">
-              <div className="card-body">
-                <div className="display-4">44</div>
-                <p>Lorem ipsum dolor sit.</p>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card text-center">
-              <div className="card-body">
-                <div className="display-4">44</div>
-                <p>Lorem ipsum dolor sit.</p>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card text-center">
-              <div className="card-body">
-                <div className="display-4">44</div>
-                <p>Lorem ipsum dolor sit.</p>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card text-center">
-              <div className="card-body">
-                <div className="display-4">44</div>
-                <p>Lorem ipsum dolor sit.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <DalamAngka />
 
       <div className="container text-center my-5 py-5">
         <div className="lead bold">
@@ -150,13 +104,33 @@ const IndexPage = () => {
         >
           HITUNG MUNDUR
         </div>
-        <Countdown date={data.contentfulCountdown.tenggatWaktu} />
+        <Countdown
+          className="col-lg-12 col-md-6 col-sm-6"
+          date={data.contentfulCountdown.tenggatWaktu}
+        />
       </div>
 
       <div id="agenda" className="container my-5 py-5">
         <div className="display-4">Agenda</div>
         <div className="row pt-5 pb-2">
-          <div className="col">
+          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
+            <div className="card">
+              <div className="card-body">
+                <div className="row">
+                  <div className="col-5">
+                    <div className="h4">20</div>
+                    <div className="h3">Nov</div>
+                  </div>
+                  <div className="col">
+                    <div>Gema Akbar</div>
+                    <div>Lorem, ipsum.</div>
+                    <div>Lorem, ipsum.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
             <div className="card">
               <div className="card-body">
                 <div className="row">
@@ -173,7 +147,7 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
             <div className="card">
               <div className="card-body">
                 <div className="row">
@@ -190,24 +164,7 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-          <div className="col">
-            <div className="card">
-              <div className="card-body">
-                <div className="row">
-                  <div className="col-5">
-                    <div className="display-4">20</div>
-                    <div className="h3">Nov</div>
-                  </div>
-                  <div className="col">
-                    <div>Gema Akbar</div>
-                    <div>Lorem, ipsum.</div>
-                    <div>Lorem, ipsum.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
+          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
             <div className="card">
               <div className="card-body">
                 <div className="row">
