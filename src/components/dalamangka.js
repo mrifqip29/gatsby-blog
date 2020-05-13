@@ -30,8 +30,8 @@ const DalamAngka = () => {
 
       <div className="display-4">SCB dalam Angka </div>
       <div className="row py-4">
-        <div className="col">
-          <div className="card text-center">
+        <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
+          <div className="card text-center" style={{ height: "180px" }}>
             <div className="card-body">
               <div className="display-4 py-3">
                 {data.contentfulScbDalamAngka.jumlahKelas}
@@ -41,9 +41,9 @@ const DalamAngka = () => {
           </div>
         </div>
 
-        <div className="col">
+        <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
           <div className="card text-center">
-            <div className="card-body">
+            <div className="card-body" style={{ height: "180px" }}>
               <div className="display-4 py-3">
                 {data.contentfulScbDalamAngka.jumlahSiswa}
               </div>
@@ -52,9 +52,9 @@ const DalamAngka = () => {
           </div>
         </div>
 
-        <div className="col">
+        <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
           <div className="card text-center">
-            <div className="card-body">
+            <div className="card-body" style={{ height: "180px" }}>
               <div className="display-4 py-3">
                 {data.contentfulScbDalamAngka.prestasi}
               </div>
@@ -63,9 +63,9 @@ const DalamAngka = () => {
           </div>
         </div>
 
-        <div className="col">
+        <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
           <div className="card text-center">
-            <div className="card-body">
+            <div className="card-body" style={{ height: "180px" }}>
               <div className="display-4 py-3">
                 {data.contentfulScbDalamAngka.jumlahTendikDanStaf}
               </div>
