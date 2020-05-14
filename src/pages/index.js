@@ -168,18 +168,20 @@ const IndexPage = () => {
                   <div className="card-body">
                     <div className="row">
                       <div className="col-5">
-                        <div
-                          className="display-4"
-                          style={{ fontWeight: "bold", color: "#004547" }}
-                        >
-                          {moment(edge.node.tanggalm).format("D")}
-                        </div>
-                        <div
-                          className="h3 text-center"
-                          style={{ color: "#004547" }}
-                        >
-                          {moment(edge.node.tanggalm).format("MMM")}
-                        </div>
+                        <Link to="/kegiatan">
+                          <div
+                            className="display-4"
+                            style={{ fontWeight: "bold", color: "#004547" }}
+                          >
+                            {moment(edge.node.tanggalm).format("D")}
+                          </div>
+                          <div
+                            className="h3 text-center"
+                            style={{ color: "#004547" }}
+                          >
+                            {moment(edge.node.tanggalm).format("MMM")}
+                          </div>
+                        </Link>
                       </div>
                       <div className="col-7">
                         <div className="h5" style={{ color: "#004547" }}>
