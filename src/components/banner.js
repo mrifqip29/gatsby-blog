@@ -2,9 +2,11 @@ import { Link } from "gatsby"
 import React from "react"
 import { Carousel } from "react-bootstrap"
 
+import bannerStyles from "./banner.module.scss"
+
 const Banner = () => (
   <Carousel>
-    <Carousel.Item style={{ background: "grey" }} className="py-5">
+    <Carousel.Item style={{ background: "white" }} className="py-5">
       <div className="container">
         <div className="row align-items-center">
           <div className="col">
@@ -22,7 +24,7 @@ const Banner = () => (
         </div>
       </div>
     </Carousel.Item>
-    <Carousel.Item style={{ background: "grey" }} className="py-5">
+    <Carousel.Item style={{ background: "white" }} className="py-5">
       <div className="container">
         <div className="row align-items-center">
           <div className="col">

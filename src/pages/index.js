@@ -24,9 +24,9 @@ const IndexPage = () => {
         judul
         tenggatWaktu
       }
-      allContentfulAgenda(sort: { fields: tanggalm, order: ASC }, limit: 4){
-        edges{
-          node{
+      allContentfulAgenda(sort: { fields: tanggalm, order: ASC }, limit: 4) {
+        edges {
+          node {
             tanggalm
             tanggals
             konten
@@ -126,7 +126,7 @@ const IndexPage = () => {
 
       <DalamAngka />
 
-    <div className="container text-center my-5 py-5">
+      <div className="container text-center my-5 py-5">
         <div className="lead bold">
           <div className="display-4">{data.contentfulCountdown.judul}</div>
         </div>
@@ -148,36 +148,57 @@ const IndexPage = () => {
         />
       </div>
 
-    <div id="agenda" className="container my-5 py-5">
-      <div className="display-4">Agenda</div>
+      <div id="agenda" className="container my-5 py-5">
+        <div className="display-4">Agenda</div>
 
         <div className="row pt-5 pb-2">
           {data.allContentfulAgenda.edges.map(edge => {
-            return( <div className="col-lg-3 col-md-6 col-sm-12 py-2">
-            <div className="card" style={{minHeight:"200px",
-                                          borderColor: "#004547",
-                                          borderWidth: "7px"}}>
-              <div className="card-body">
-                <div className="row">
-                  <div className="col-5">
-                    <div className="display-4" style={{fontWeight: "bold",
-                                                      color: "#004547"}}>{moment(edge.node.tanggalm).format('D')}</div>
-                    <div className="h3 text-center" style={{color: "#004547"}}>{moment(edge.node.tanggalm).format('MMM')}</div>
-                  </div>
-                  <div className="col">
-                    <div className="h5" style={{color: "#004547"}}>{edge.node.konten}</div>
-                    <div className="h6" style={{color: "#004547"}}>{moment(edge.node.tanggalm).format('H:MM')}-{moment(edge.node.tanggals).format('H:MM')}</div>
-                    <div className="h6" style={{color: "#004547"}}>Di {edge.node.lokasi}</div>
+            return (
+              <div className="col-lg-3 col-md-6 col-sm-12 py-1">
+                <div
+                  className="card"
+                  style={{
+                    minHeight: "200px",
+
+                    borderColor: "#004547",
+                    borderWidth: "7px",
+                  }}
+                >
+                  <div className="card-body">
+                    <div className="row">
+                      <div className="col-5">
+                        <div
+                          className="display-4"
+                          style={{ fontWeight: "bold", color: "#004547" }}
+                        >
+                          {moment(edge.node.tanggalm).format("D")}
+                        </div>
+                        <div
+                          className="h3 text-center"
+                          style={{ color: "#004547" }}
+                        >
+                          {moment(edge.node.tanggalm).format("MMM")}
+                        </div>
+                      </div>
+                      <div className="col-7">
+                        <div className="h5" style={{ color: "#004547" }}>
+                          {edge.node.konten}
+                        </div>
+                        <div className="h6" style={{ color: "#004547" }}>
+                          {moment(edge.node.tanggalm).format("H:MM")}-
+                          {moment(edge.node.tanggals).format("H:MM")}
+                        </div>
+                        <div className="h6" style={{ color: "#004547" }}>
+                          Di {edge.node.lokasi}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>)
-            }
-          )
-      }
-    </div>
-      
+            )
+          })}
+        </div>
 
         <div className="float-right">Lihat lebih lengkap</div>
       </div>

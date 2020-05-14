@@ -6,8 +6,8 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 import headerStyles from "./header.module.scss"
 
 const Header = () => (
-  <Navbar bg="white" expand="lg">
-    <Navbar.Brand className="mx-5 px-5">
+  <Navbar bg="white" expand="lg" className="col-12">
+    <Navbar.Brand className="col-md-12 col-sm-12 col-lg-6">
       <Link to="/">
         <img
           src="https://www.cendekiabaznas.sch.id/wp-content/uploads/2017/12/Logo-SCB_Hitam.png"
