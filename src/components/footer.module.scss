@@ -1,69 +1,22 @@
-.footer {
-  margin-top: 3rem;
-}
-
 .containerFooter {
-  background: #004547;
-  padding-bottom: 3rem;
-  display: flex;
-  justify-content: space-around;
-}
-
-.footerkiri {
-  height: 100%;
-  list-style-type: none;
-}
-
-.footertengah {
-  height: 100%;
-  list-style-type: none;
-  padding-right: 40px;
-}
-
-.footerkanan {
-  max-width: 450px;
-  list-style-type: none;
+  background-color: #004547;
+  padding-bottom:2rem;
 }
 
 .title {
   font-family: Segoe UI;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 32px;
   color: #feba0f;
-  text-decoration: none;
-  padding-bottom: 1rem;
-}
-
-.titleCentered {
-  font-family: Segoe UI;
-  font-style: normal;
-  text-align: center;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
-  color: #feba0f;
-  text-decoration: none;
-  padding-bottom: 1rem;
+  padding-top:1rem;
 }
 
 .content {
   font-family: Segoe UI;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 32px;
-  list-style-type: none;
+  font-size: 1rem;
   color: #ffffff;
-  padding-bottom: 1.5rem;
-}
-.footerBottom {
-  background: #004547;
-  color: #ffffff;
-  height: 50px;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  padding-top: 20px;
 }

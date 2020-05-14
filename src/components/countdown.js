@@ -89,7 +89,7 @@ class Countdown extends Component {
     const countDown = this.state
     return (
       <div
-        className="row py-4"
+        className="row py-4 col-sm-12 m-0"
         style={{
           background: "#004547",
           color: "#ffffff",
@@ -137,43 +137,7 @@ class Countdown extends Component {
           </div>
         </div>
       </div>
-      // <div className={`${countdownStyles.countdown}`}>
-      //   <span
-      //     className={`col-lg-3 col-md-6 col-sm-12 ${countdownStyles.countdownCol}`}
-      //   >
-      //     <span className={countdownStyles.countdownColElement}>
-      //       <strong>{this.addLeadingZeros(countDown.days)}</strong>
-      //       <span>HARI</span>
-      //     </span>
-      //   </span>
-
-      //   <span
-      //     className={`col-lg-3 col-md-6 col-sm-12${countdownStyles.countdownCol}`}
-      //   >
-      //     <span className={countdownStyles.countdownColElement}>
-      //       <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-      //       <span>JAM</span>
-      //     </span>
-      //   </span>
-
-      //   <span
-      //     className={`col-lg-3 col-md-6 col-sm-12 ${countdownStyles.countdownCol}`}
-      //   >
-      //     <span className={countdownStyles.countdownColElement}>
-      //       <strong>{this.addLeadingZeros(countDown.min)}</strong>
-      //       <span>MENIT</span>
-      //     </span>
-      //   </span>
-
-      //   <span
-      //     className={`col-lg-3 col-md-6 col-sm-12 ${countdownStyles.countdownCol}`}
-      //   >
-      //     <span className={countdownStyles.countdownColElement}>
-      //       <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-      //       <span>DETIK</span>
-      //     </span>
-      //   </span>
-      // </div>
+      
     )
   }
 }
