@@ -9,6 +9,7 @@ import { Button } from "react-bootstrap"
 import halamanStyles from "./halaman.module.scss"
 import Countdown from "../components/countdown"
 import DalamAngka from "../components/dalamangka"
+import CardKabar from "../components/cardkabar"
 
 //yuhu
 const currentDate = new Date()
@@ -206,6 +207,8 @@ const IndexPage = () => {
           </Link>
         </div>
       </div>
+
+      <CardKabar />
     </Layout>
   )
 }
