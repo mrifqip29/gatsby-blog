@@ -143,7 +143,7 @@ const IndexPage = () => {
           HITUNG MUNDUR
         </div>
         <Countdown
-          className="col-lg-12 col-md-6 col-sm-12 pl-1"
+          className="col-lg-12 col-md-6 col-sm-6"
           date={data.contentfulCountdown.tenggatWaktu}
         />
       </div>
@@ -200,7 +200,11 @@ const IndexPage = () => {
           })}
         </div>
 
-        <div className="float-right">Lihat lebih lengkap</div>
+        <div className="float-right">
+          <Link className={halamanStyles.selengkapnya} to="/profilsekolah">
+            Lihat Selengkapnya
+          </Link>
+        </div>
       </div>
     </Layout>
   )
