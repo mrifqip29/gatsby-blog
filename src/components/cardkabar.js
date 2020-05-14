@@ -55,8 +55,8 @@ const CardKabar = () => {
                     >
                       {edge.node.title}
                     </h2>
-                    <p className="card-title">{edge.node.publishedDate}</p>
                   </Link>
+                  <p className="card-title">{edge.node.publishedDate}</p>
                 </div>
               </div>
             </div>
