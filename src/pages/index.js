@@ -24,10 +24,11 @@ const IndexPage = () => {
         judul
         tenggatWaktu
       }
-      allContentfulAgenda(sort: { fields: tanggal, order: ASC }, limit: 4){
+      allContentfulAgenda(sort: { fields: tanggalm, order: ASC }, limit: 4){
         edges{
           node{
-            tanggal
+            tanggalm
+            tanggals
             konten
             lokasi
           }
@@ -160,12 +161,12 @@ const IndexPage = () => {
                 <div className="row">
                   <div className="col-5">
                     <div className="display-4" style={{fontWeight: "bold",
-                                                      color: "#004547"}}>{moment(edge.node.tanggal).format('D')}</div>
-                    <div className="h3 text-center" style={{color: "#004547"}}>{moment(edge.node.tanggal).format('MMM')}</div>
+                                                      color: "#004547"}}>{moment(edge.node.tanggalm).format('D')}</div>
+                    <div className="h3 text-center" style={{color: "#004547"}}>{moment(edge.node.tanggalm).format('MMM')}</div>
                   </div>
                   <div className="col">
                     <div className="h5" style={{color: "#004547"}}>{edge.node.konten}</div>
-                    <div className="h6" style={{color: "#004547"}}>Pukul {moment(edge.node.tanggal).format('h:mm')}</div>
+                    <div className="h6" style={{color: "#004547"}}>{moment(edge.node.tanggalm).format('H:MM')}-{moment(edge.node.tanggals).format('H:MM')}</div>
                     <div className="h6" style={{color: "#004547"}}>Di {edge.node.lokasi}</div>
                   </div>
                 </div>
