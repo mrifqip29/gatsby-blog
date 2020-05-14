@@ -24,7 +24,7 @@ const PageKabar = () => {
 
       <div id="agenda" className="container my-5 py-5">
         <div className="row">
-          <div className="display-4">Kegiatan</div>
+          <h1>Kegiatan</h1>
           <ol>
             {data.allContentfulAgenda.edges.map(edge => {
               return (
