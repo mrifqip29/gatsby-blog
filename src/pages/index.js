@@ -24,7 +24,7 @@ const IndexPage = () => {
         judul
         tenggatWaktu
       }
-      allContentfulAgenda{
+      allContentfulAgenda(sort: { fields: tanggal, order: ASC }, limit: 4){
         edges{
           node{
             tanggal
@@ -153,17 +153,20 @@ const IndexPage = () => {
         <div className="row pt-5 pb-2">
           {data.allContentfulAgenda.edges.map(edge => {
             return( <div className="col-lg-3 col-md-6 col-sm-12 py-2">
-            <div className="card">
+            <div className="card" style={{minHeight:"200px",
+                                          borderColor: "#004547",
+                                          borderWidth: "7px"}}>
               <div className="card-body">
                 <div className="row">
                   <div className="col-5">
-                    <div className="display-4">{moment(edge.node.tanggal).format('D')}</div>
-                    <div className="h3">{moment(edge.node.tanggal).format('MMM')}</div>
+                    <div className="display-4" style={{fontWeight: "bold",
+                                                      color: "#004547"}}>{moment(edge.node.tanggal).format('D')}</div>
+                    <div className="h3 text-center" style={{color: "#004547"}}>{moment(edge.node.tanggal).format('MMM')}</div>
                   </div>
                   <div className="col">
-                    <div className="h5">{edge.node.konten}</div>
-                    <div className="h6">Pukul {moment(edge.node.tanggal).format('h:mm')}</div>
-                    <div className="h6">Di {edge.node.lokasi}</div>
+                    <div className="h5" style={{color: "#004547"}}>{edge.node.konten}</div>
+                    <div className="h6" style={{color: "#004547"}}>Pukul {moment(edge.node.tanggal).format('h:mm')}</div>
+                    <div className="h6" style={{color: "#004547"}}>Di {edge.node.lokasi}</div>
                   </div>
                 </div>
               </div>
