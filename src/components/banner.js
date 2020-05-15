@@ -2,8 +2,6 @@ import { Link, useStaticQuery } from "gatsby"
 import React from "react"
 import { Carousel } from "react-bootstrap"
 
-import bannerStyles from "./banner.module.scss"
-
 const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -12,8 +10,8 @@ const Banner = () => {
           node {
             teks
             gambar {
-              fixed(quality: 50, height: 580, resizingBehavior: FILL) {
-                src
+              fixed(quality: 50, height: 580, resizingBehavior: PAD) {
+                srcWebp
               }
             }
           }
@@ -46,7 +44,7 @@ const Banner = () => {
         return (
           <Carousel.Item
             style={{ background: "grey", height: "652px" }}
-            className="pt-4 pb-5 "
+            className="pt-4 pb-5 text-center"
           >
             <div
               className="container px-5 col-12 align-items-center"
@@ -55,15 +53,16 @@ const Banner = () => {
                 height: "580px",
               }}
             >
-              <div className="row  align-items-center">
+              <div className="row">
                 <div className="col ">
-                  <div className="display-3">{edge.node.teks}</div>
+                  <div className="display-4">{edge.node.teks}</div>
                 </div>
                 <div className="col text-center">
                   <img
-                    src={edge.node.gambar.fixed.src}
+                    src={edge.node.gambar.fixed.srcWebp}
                     style={{
-                      maxWidth: "800px",
+                      maxWidth: "600px",
+                      maxHeight: "580px",
                     }}
                   />
                 </div>
