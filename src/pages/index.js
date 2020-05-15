@@ -204,7 +204,7 @@ const IndexPage = () => {
         </div>
 
         <div className="float-right">
-          <Link className={halamanStyles.selengkapnya} to="/profilsekolah">
+          <Link className={halamanStyles.selengkapnya} to="/kegiatan">
             Lihat Selengkapnya
           </Link>
         </div>

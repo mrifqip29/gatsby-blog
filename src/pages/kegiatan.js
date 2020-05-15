@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Jumbo from "../components/jumbo"
 import blogStyles from "./blog.module.scss"
+import Insta from "../components/insta"
 
 const PageKabar = () => {
   const data = useStaticQuery(graphql`
@@ -30,6 +31,7 @@ const PageKabar = () => {
       <div id="agenda" className="container my-5 py-5">
         <div className="row">
           <h1>Kegiatan</h1>
+          <Insta />
           <ol>
             {data.allContentfulAgenda.edges.map(edge => {
               return (
