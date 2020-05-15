@@ -47,7 +47,7 @@ const Footer = () => {
                     alt="Website"
                     style={{ paddingRight:'0.5rem', width:'2.5rem' }}
                   />
-       </h5>
+        </h5>
       </div>
       
       <div className='col-md-4 col-sm-12 pr-0'>
