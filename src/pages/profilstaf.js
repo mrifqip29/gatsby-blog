@@ -10,7 +10,7 @@ import Jumbo from "../components/jumbo"
 const ProfilStafPage = () => {
   const data = useStaticQuery(graphql`
     query{
-      allContentfulProfilTenagaDidik{
+      allContentfulProfilTenagaDidik(sort: {fields: [role, jabatanTenagaDidik, namaTenagaDidik], order: [ASC,ASC,ASC] }){
         edges{
           node{
             namaTenagaDidik
@@ -21,7 +21,7 @@ const ProfilStafPage = () => {
           }
         }
       }
-      allContentfulProfilStaf(sort: { fields: namaStaf, order: ASC }){
+      allContentfulProfilStaf(sort: {fields: [role, jabatanStaf, namaStaf], order: [ASC,ASC,ASC] }){
         edges{
           node{
             namaStaf
@@ -50,8 +50,8 @@ const ProfilStafPage = () => {
 
         <div className="container text-center my-5 py-5 ">
           <div className="lead bold">
-            <div className="display-3 font-weight-bold"> PROFIL </div>
-            <div className="display-3 font-weight-bold"> TENAGA PENDIDIK </div>
+            <div className="display-4 font-weight-bold"> PROFIL </div>
+            <div className="display-4 font-weight-bold"> TENAGA PENDIDIK </div>
           </div>
           <div className="h1">SEKOLAH CENDEKIA BAZNAS</div>
         </div>
@@ -65,13 +65,13 @@ const ProfilStafPage = () => {
           <div className="row">
             {data.allContentfulProfilTenagaDidik.edges.map(edge=>{
               return (
-                <div className="col-md-4 col-sm-4 py-3" >
-                  <div className="card">
-                    <img className="card-img-top" src={edge.node.fotoTenagaDidik.file.url} alt={edge.node.namaTenagaDidik} object-fit='contain' height="456.49px">
+                <div className="col-md-4 col-sm-6 col-xs-12  py-3" >
+                  <div className="card  border-0">
+                    <img className="card-img-top" src={edge.node.fotoTenagaDidik.file.url} alt={edge.node.namaTenagaDidik} object-fit="cover" height="525vh">
                     </img>
                     <div className="card-body text-center">
-                      <h2 className="card-title font-weight-bold">{edge.node.namaTenagaDidik}</h2>
-                      <h2 className="card-title">{edge.node.jabatanTenagaDidik}</h2>
+                      <h4 className="card-title font-weight-bold">{edge.node.namaTenagaDidik}</h4>
+                      <h5 className="card-title">{edge.node.jabatanTenagaDidik}</h5>
                     </div>
                   </div>
                   
@@ -85,7 +85,7 @@ const ProfilStafPage = () => {
 
         <div className="container text-center my-5 py-5">
           <div className="lead bold">
-            <div className="display-3 font-weight-bold"> PROFIL STAFF </div>
+            <h1 className="display-4 font-weight-bold"> PROFIL STAFF </h1>
           </div>
           <div className="h1">SEKOLAH CENDEKIA BAZNAS</div>
         </div>
@@ -99,10 +99,10 @@ const ProfilStafPage = () => {
             {data.allContentfulProfilStaf.edges.map(edge => {
               return (
                 <div className="col-md-4 col-sm-4 py-3" >
-                  <div className="card">
+                  <div className="card border-0">
                     <div className="card-body text-center">
-                      <h2 className="card-title font-weight-bold">{edge.node.namaStaf} </h2>
-                      <h2 className="card-title">{edge.node.jabatanStaf}</h2>
+                      <h5 className="card-title font-weight-bold">{edge.node.namaStaf} </h5>
+                      <h6 className="card-title">{edge.node.jabatanStaf}</h6>
                     </div>
                   </div>
                   

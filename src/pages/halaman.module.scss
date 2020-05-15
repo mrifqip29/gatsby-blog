@@ -17,3 +17,15 @@
   border-color: #004547 !important;
   scroll-behavior: smooth !important;
 }
+
+.selengkapnya {
+  color: #005131;
+  text-decoration: none;
+}
+.selengkapnya:hover,
+.selengkapnya:active,
+.selengkapnya:focus {
+  color: #005131;
+  font-weight: bold;
+  text-decoration: none;
+}

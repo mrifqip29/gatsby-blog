@@ -12,3 +12,15 @@
 .content {
   flex-grow: 1;
 }
+
+.selengkapnya {
+  color: #005131;
+  text-decoration: none;
+}
+.selengkapnya:hover,
+.selengkapnya:active,
+.selengkapnya:focus {
+  color: #005131;
+  font-weight: bold;
+  text-decoration: none;
+}

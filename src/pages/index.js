@@ -9,6 +9,7 @@ import { Button } from "react-bootstrap"
 import halamanStyles from "./halaman.module.scss"
 import Countdown from "../components/countdown"
 import DalamAngka from "../components/dalamangka"
+import CardKabar from "../components/cardkabar"
 
 //yuhu
 const currentDate = new Date()
@@ -143,7 +144,11 @@ const IndexPage = () => {
           HITUNG MUNDUR
         </div>
         <Countdown
-          className="col-lg-12 col-md-6 col-sm-12"
+<<<<<<< HEAD
+          className="col-lg-12 col-md-6 col-sm-6"
+=======
+          className="col-lg-12 col-md-6 col-sm-6"
+>>>>>>> 35f8f7185f7cf8013a96ece5cafa50204644e740
           date={data.contentfulCountdown.tenggatWaktu}
         />
       </div>
@@ -167,18 +172,20 @@ const IndexPage = () => {
                   <div className="card-body">
                     <div className="row">
                       <div className="col-5">
-                        <div
-                          className="display-4"
-                          style={{ fontWeight: "bold", color: "#004547" }}
-                        >
-                          {moment(edge.node.tanggalm).format("D")}
-                        </div>
-                        <div
-                          className="h3 text-center"
-                          style={{ color: "#004547" }}
-                        >
-                          {moment(edge.node.tanggalm).format("MMM")}
-                        </div>
+                        <Link to="/kegiatan">
+                          <div
+                            className="display-4"
+                            style={{ fontWeight: "bold", color: "#004547" }}
+                          >
+                            {moment(edge.node.tanggalm).format("D")}
+                          </div>
+                          <div
+                            className="h3 text-center"
+                            style={{ color: "#004547" }}
+                          >
+                            {moment(edge.node.tanggalm).format("MMM")}
+                          </div>
+                        </Link>
                       </div>
                       <div className="col-7">
                         <div className="h5" style={{ color: "#004547" }}>
@@ -200,8 +207,14 @@ const IndexPage = () => {
           })}
         </div>
 
-        <div className="float-right">Lihat lebih lengkap</div>
+        <div className="float-right">
+          <Link className={halamanStyles.selengkapnya} to="/profilsekolah">
+            Lihat Selengkapnya
+          </Link>
+        </div>
       </div>
+
+      <CardKabar />
     </Layout>
   )
 }
