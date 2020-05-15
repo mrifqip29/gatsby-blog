@@ -21,9 +21,11 @@ const PageKabar = () => {
   `)
   return (
     <Layout>
+
       <SEO title="Kabar Terkini" />
 
       <h1>Kabar Terkini</h1>
+      
       <ol className={blogStyles.posts}>
         {data.allContentfulBlogPost.edges.map(edge => {
           return (
