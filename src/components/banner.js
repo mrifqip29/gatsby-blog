@@ -12,7 +12,7 @@ const Banner = () => {
           node {
             teks
             gambar {
-              fixed(quality: 50, height: 580, resizingBehavior: FILL) {
+              fixed(quality: 50, height: 580, resizingBehavior: SCALE) {
                 src
               }
             }
@@ -45,25 +45,26 @@ const Banner = () => {
       {data.allContentfulBannerBeranda.edges.map(edge => {
         return (
           <Carousel.Item
-            style={{ background: "grey", height: "652px" }}
-            className="pt-4 pb-5 "
+            style={{ background: "grey", height: "510px" }}
+            className="align-items-center "
           >
             <div
-              className="container px-5 col-12 align-items-center"
+              className="container px-5 col-12"
               style={{
                 width: "1659px",
                 height: "580px",
               }}
             >
-              <div className="row  align-items-center">
-                <div className="col ">
-                  <div className="display-3">{edge.node.teks}</div>
+              <div className="row mx-auto">
+                <div className="col-md-6 py-auto">
+                  <div className="display-4">{edge.node.teks}</div>
                 </div>
                 <div className="col text-center">
                   <img
                     src={edge.node.gambar.fixed.src}
                     style={{
-                      maxWidth: "800px",
+                      maxHeight: "500px",
+                      maxWidth: "500px",
                     }}
                   />
                 </div>
