@@ -2,8 +2,6 @@ import { Link, useStaticQuery } from "gatsby"
 import React from "react"
 import { Carousel } from "react-bootstrap"
 
-import bannerStyles from "./banner.module.scss"
-
 const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -61,7 +59,7 @@ const Banner = () => {
                 </div>
                 <div className="col text-center">
                   <img
-                    src={edge.node.gambar.fixed.src}
+                    src={edge.node.gambar.fixed.srcWebp}
                     style={{
                       maxHeight: "500px",
                       maxWidth: "500px",

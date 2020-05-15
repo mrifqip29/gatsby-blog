@@ -10,6 +10,7 @@ import halamanStyles from "./halaman.module.scss"
 import Countdown from "../components/countdown"
 import DalamAngka from "../components/dalamangka"
 import CardKabar from "../components/cardkabar"
+import Insta from "../components/insta"
 
 //yuhu
 const currentDate = new Date()
@@ -211,6 +212,7 @@ const IndexPage = () => {
       </div>
 
       <CardKabar />
+      <Insta />
     </Layout>
   )
 }

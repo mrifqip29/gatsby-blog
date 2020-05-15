@@ -11,8 +11,8 @@ const Header = () => {
       allContentfulAsset {
         edges {
           node {
-            file {
-              url
+            fixed {
+              srcWebp
             }
           }
         }
@@ -24,7 +24,7 @@ const Header = () => {
       <Navbar.Brand className="col-md-12 col-sm-12 col-lg-6">
         <Link to="/">
           <img
-            src={data.allContentfulAsset.edges[0].node.file.url}
+            src={data.allContentfulAsset.edges[0].node.fixed.srcWebp}
             alt=""
             height="70px"
           />
