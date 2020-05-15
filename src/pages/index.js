@@ -144,11 +144,7 @@ const IndexPage = () => {
           HITUNG MUNDUR
         </div>
         <Countdown
-<<<<<<< HEAD
           className="col-lg-12 col-md-6 col-sm-6"
-=======
-          className="col-lg-12 col-md-6 col-sm-6"
->>>>>>> 35f8f7185f7cf8013a96ece5cafa50204644e740
           date={data.contentfulCountdown.tenggatWaktu}
         />
       </div>
