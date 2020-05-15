@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import SEO from "../components/seo"
 
 import Layout from "../components/layout"
+import Jumbo from "../components/jumbo"
 import blogStyles from "./blog.module.scss"
 
 const PageKabar = () => {
@@ -21,7 +22,11 @@ const PageKabar = () => {
   return (
     <Layout>
       <SEO title="Kabar Terkini" />
-
+      <Jumbo
+          title="Kegiatan SCB"
+          nav="Informasi"
+          page="Kabar Terkini"
+        />
       <div id="agenda" className="container my-5 py-5">
         <div className="row">
           <h1>Kegiatan</h1>
