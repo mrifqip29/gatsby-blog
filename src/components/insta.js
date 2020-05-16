@@ -1,11 +1,14 @@
 import React from "react"
 import Image from "gatsby-image"
 import useInstagram from "../hooks/use-instagram"
+import InstagramUser from "../hooks/instagram-user"
 import instaStyles from "./insta.module.scss"
 
 const Insta = () => {
   const instaPhotos = useInstagram()
   const { username } = instaPhotos[0]
+  const instaUser = InstagramUser()
+  const { biography } = instaUser[0]
 
   return (
     <div className="container">
@@ -20,7 +23,7 @@ const Insta = () => {
                @{username}
             </div>
             <div className={instaStyles.bio}> 
-               Gimana cara ngambil bio dari ig nya? .-.
+               {biography}
             </div>
             
             {instaPhotos.map(photo => (
