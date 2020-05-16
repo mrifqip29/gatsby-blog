@@ -1,16 +1,15 @@
 .insta1 {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 1rem -0.5rem;
+  flex-wrap : wrap;
+  justify-content: right;
+  margin: auto;
   padding: 0.5rem 0;
 }
 
 .insta2 {
   box-shadow: 0;
   display: block;
-  margin: 0.5rem;
-  max-width: calc(33% - 1rem);
+  margin-top: 1rem;
   width: 120px;
   transition: 200ms box-shadow linear;
   :focus,
@@ -25,4 +24,34 @@
   * {
     margin-top: 0;
   }
+}
+
+.rounded {
+    border-radius:25px;
+    border: 1px solid rgba(0, 0, 0, 0.25);;
+}
+
+.username {
+  font-size : 12px;
+  font-weight : bold;
+  margin-left : 70px;
+}
+
+.bio {
+  font-size : 12px;
+  margin : 0px 0px 0px 70px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  margin : 45px 0px 45px 0;
+  background-color: #007446;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

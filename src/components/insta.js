@@ -8,27 +8,49 @@ const Insta = () => {
   const { username } = instaPhotos[0]
 
   return (
-    <>
-      <h2>Instagram posts from @{username}</h2>
+    <div className="container">
       <div className={instaStyles.insta1}>
-        {instaPhotos.map(photo => (
-          <a
-            href={`https://instagram.com/p/${photo.id}/`}
-            className={instaStyles.insta2}
-          >
-            <Image
-              key={photo.id}
-              className={instaStyles.insta3}
-              fluid={photo.fluid}
-              alt={photo.caption}
-            />
-          </a>
-        ))}
+        <div className="col-lg-4">
+          <div className={instaStyles.rounded}> 
+            <div className="h3 my-3 mx-3"> 
+              Instagram Feeds 
+            </div>
+
+            <div className={instaStyles.username}> 
+               @{username}
+            </div>
+            <div className={instaStyles.bio}> 
+               Gimana cara ngambil bio dari ig nya? .-.
+            </div>
+            
+            {instaPhotos.map(photo => (
+              <div className="col-lg-4 col-md-4 mx-auto d-inline-flex">
+                <a href={`https://instagram.com/p/${photo.id}/`}
+                className={instaStyles.insta2}
+                >
+                  <Image
+                    key={photo.id}
+                    className={instaStyles.insta3}
+                    fluid={photo.fluid}
+                    alt={photo.caption}
+                  />
+                </a>
+              </div>
+            ))}
+
+            <div className="container text-center">
+              <a className={instaStyles.button} href={`https://instagram.com/${username}`}>
+                Load More 
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+
       <a href={`https://instagram.com/${username}`}>
         See more on Instagram &rarr;
       </a>
-    </>
+    </div>
   )
 }
 

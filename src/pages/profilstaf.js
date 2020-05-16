@@ -66,7 +66,7 @@ const ProfilStafPage = () => {
             {data.allContentfulProfilTenagaDidik.edges.map(edge=>{
               return (
                 <div className="col-md-4 col-sm-6 col-xs-12  py-3" >
-                  <div className="card  border-0">
+                  <div className="card border-0">
                     <img className="card-img-top" src={edge.node.fotoTenagaDidik.file.url} alt={edge.node.namaTenagaDidik} object-fit="cover" height="525vh">
                     </img>
                     <div className="card-body text-center">
