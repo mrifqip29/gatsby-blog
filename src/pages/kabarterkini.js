@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 
 import Layout from "../components/layout"
 import blogStyles from "./blog.module.scss"
+import Kategori from "../components/kategori"
 
 const PageKabar = () => {
   const data = useStaticQuery(graphql`
@@ -38,6 +39,7 @@ const PageKabar = () => {
           )
         })}
       </ol>
+      <Kategori/>
     </Layout>
   )
 }
