@@ -3,16 +3,11 @@ import { Link, graphql} from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
-<<<<<<< HEAD:src/pages/kabarterkini.js
-import blogStyles from "./blog.module.scss"
-<<<<<<< HEAD
 
-=======
-=======
-import blogStyles from "../pages/blog.module.scss"
->>>>>>> 3d56a62d1a2180b591f4e7c5b9e845234f89de0d:src/templates/blog.js
+import blogStyles from "./blog.module.scss"
 import Pager from "../components/paginator"
->>>>>>> 75ff498e64715633675e09d98059bdd409cc29b3
+import Kategori from "../components/kategori"
+
 
 const Blog =  ({data, pageContext}) => {
     return (
