@@ -44,27 +44,31 @@ const Banner = () => {
         return (
           <Carousel.Item
             style={{ background: "grey", height: "510px" }}
-            className="align-items-center "
           >
             <div
-              className="container px-5 col-12"
+              className="container px-5 col-12 bg-danger align-items-center"
               style={{
                 width: "1659px",
                 height: "580px",
               }}
             >
-              <div className="row mx-auto">
-                <div className="col-md-6 py-auto">
-                  <div className="display-4">{edge.node.teks}</div>
+              <div className="row" >
+                <div className="col-md-6 py-auto bg-dark ">
+                  <div className='container'>
+                  <div className="display-4 text-primary bg-dark">{edge.node.teks}</div>
+                  </div>
                 </div>
-                <div className="col text-center">
-                  <img
-                    src={edge.node.gambar.fixed.srcWebp}
-                    style={{
-                      maxHeight: "500px",
-                      maxWidth: "500px",
+
+                <div className="col-md-6 bg-white ">
+                  <div className="container">
+                    <img className="p-3 right top"
+                    src={edge.node.gambar.fixed.src}
+                    style={{ maxHeight:"200px", objectPosition:'center'
                     }}
                   />
+
+                  </div>
+                  
                 </div>
               </div>
             </div>
