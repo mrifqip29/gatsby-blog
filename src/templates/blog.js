@@ -2,20 +2,23 @@ import React from "react"
 import { Link, graphql} from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
-
 import Layout from "../components/layout"
+<<<<<<< HEAD:src/pages/kabarterkini.js
 import blogStyles from "./blog.module.scss"
 <<<<<<< HEAD
 
 =======
+=======
+import blogStyles from "../pages/blog.module.scss"
+>>>>>>> 3d56a62d1a2180b591f4e7c5b9e845234f89de0d:src/templates/blog.js
 import Pager from "../components/paginator"
 >>>>>>> 75ff498e64715633675e09d98059bdd409cc29b3
 
-const PageKabar = ({data, pageContext}) => {
+const Blog =  ({data, pageContext}) => {
     return (
       <Layout>
         <SEO title= "Blog Posts" />
-        <h1> Blog Posts </h1>
+        <div className="h1 text-center"> Kabar Terkini</div>
         <ol className={blogStyles.posts}>
           {data.allContentfulBlogPost.edges.map(edge => {
             return (
@@ -33,28 +36,33 @@ const PageKabar = ({data, pageContext}) => {
     )
   }
 
-PageKabar.propTypes = {
+Blog.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.object.isRequired,
 }
 
+
+
 export const query = graphql`
-query ($skip: Int!, $limit:Int!) {
-      allContentfulBlogPost(
-      sort: {fields: title, order: DESC}
-      skip : $skip
-      limit: $limit
-      ) {
-        edges {
-          node {
-            id
-            title
-            slug
-            publishedDate
-            gambarArtikel{
-              file{url}
+query ($skip: Int, $limit:Int) {
+allContentfulBlogPost(
+          sort: {fields: title, order: DESC}
+          skip: $skip
+          limit: $limit
+          ) {
+            edges {
+              node {
+                id
+                title
+                slug
+                publishedDate
+                gambarArtikel{
+                  file{url}
+                }
+              }
             }
           }
+<<<<<<< HEAD:src/pages/kabarterkini.js
         }
       }
     }
@@ -87,5 +95,10 @@ query ($skip: Int!, $limit:Int!) {
 `
   
 >>>>>>> 75ff498e64715633675e09d98059bdd409cc29b3
+=======
+}`  
 
-export default PageKabar
+
+>>>>>>> 3d56a62d1a2180b591f4e7c5b9e845234f89de0d:src/templates/blog.js
+
+export default Blog

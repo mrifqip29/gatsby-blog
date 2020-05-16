@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import PropTypes from "prop-types"
 import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 
 import headerStyles from "./header.module.scss"
@@ -8,9 +7,13 @@ import headerStyles from "./header.module.scss"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulAsset {
+      allContentfulAsset(
+        filter: { id: { eq: "d90e6e31-c573-51a5-8cde-b6d9fca79a66" } }
+      ) {
         edges {
           node {
+            id
+            title
             fixed {
               srcWebp
             }
