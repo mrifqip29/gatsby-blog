@@ -34,13 +34,15 @@ module.exports.createPages = async ({ graphql, actions }) => {
     return
   }
 
+result.data.allContentfulBlogPost.edges.forEach(edge =>  {
   paginate({
     createPage,
     items: result.data.allContentfulBlogPost.edges,
     itemsPerPage: MAX_POST,
     pathPrefix : '/kabarterkini',
-    component: path.resolve(`./src/pages/kabarterkini.js`),
-  });
+    component: path.resolve(`./src/templates/blog.js`),
+    });
+  })
 
   result.data.allContentfulBlogPost.edges.forEach(edge => {
     createPage({
