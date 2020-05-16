@@ -79,6 +79,16 @@ module.exports = {
         username: "ahmadscb2019",
       },
     },
+    {
+      resolve: 'gatsby-plugin-schema-snapshot',
+      options: {
+        path: 'schema.gql',
+        exclude: {
+          plugins: ['gatsby-source-npm-package-search']
+        },
+        update: process.env.GATSBY_UPDATE_SCHEMA_SNAPSHOT
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

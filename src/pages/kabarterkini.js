@@ -7,10 +7,32 @@ import Layout from "../components/layout"
 import blogStyles from "./blog.module.scss"
 import Pager from "../components/paginator"
 
+export const pageQuery = graphql`
+query ($skip: Int!, $limit:Int!) {
+      allContentfulBlogPost(
+      sort: {fields: title, order: DESC}
+      skip: $skip 
+      limit: $limit
+      ) {
+        edges {
+          node {
+            id
+            title
+            slug
+            publishedDate
+            gambarArtikel{
+              file{url}
+            }
+          }
+        }
+      }
+    }
+`
+
 const PageKabar = ({data, pageContext}) => {
     return (
       <Layout>
-        <SEO title= "Blog Posts" />
+        <SEO title= "Kabar Terkini" />
         <h1> Blog Posts </h1>
         <ol className={blogStyles.posts}>
           {data.allContentfulBlogPost.edges.map(edge => {
@@ -34,27 +56,7 @@ PageKabar.propTypes = {
   pageContext: PropTypes.object.isRequired,
 }
 
-export const query = graphql`
-query ($skip: Int!, $limit:Int!) {
-      allContentfulBlogPost(
-      sort: {fields: title, order: DESC}
-      skip : $skip
-      limit: $limit
-      ) {
-        edges {
-          node {
-            id
-            title
-            slug
-            publishedDate
-            gambarArtikel{
-              file{url}
-            }
-          }
-        }
-      }
-    }
-`
+
   
 
 export default PageKabar

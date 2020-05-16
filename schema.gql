@@ -1,0 +1,637 @@
+### Type definitions saved at 2020-05-16T09:17:27.318Z ###
+
+type File implements Node @dontInfer {
+  sourceInstanceName: String!
+  absolutePath: String!
+  relativePath: String!
+  extension: String!
+  size: Int!
+  prettySize: String!
+  modifiedTime: Date! @dateformat
+  accessTime: Date! @dateformat
+  changeTime: Date! @dateformat
+  birthTime: Date! @dateformat
+  root: String!
+  dir: String!
+  base: String!
+  ext: String!
+  name: String!
+  relativeDirectory: String!
+  dev: Int!
+  mode: Int!
+  nlink: Int!
+  uid: Int!
+  gid: Int!
+  rdev: Int!
+  ino: Float!
+  atimeMs: Float!
+  mtimeMs: Float!
+  ctimeMs: Float!
+  atime: Date! @dateformat
+  mtime: Date! @dateformat
+  ctime: Date! @dateformat
+  birthtime: Date @deprecated(reason: "Use `birthTime` instead")
+  birthtimeMs: Float @deprecated(reason: "Use `birthTime` instead")
+  blksize: Int
+  blocks: Int
+  url: String
+}
+
+type Directory implements Node @dontInfer {
+  sourceInstanceName: String!
+  absolutePath: String!
+  relativePath: String!
+  extension: String!
+  size: Int!
+  prettySize: String!
+  modifiedTime: Date! @dateformat
+  accessTime: Date! @dateformat
+  changeTime: Date! @dateformat
+  birthTime: Date! @dateformat
+  root: String!
+  dir: String!
+  base: String!
+  ext: String!
+  name: String!
+  relativeDirectory: String!
+  dev: Int!
+  mode: Int!
+  nlink: Int!
+  uid: Int!
+  gid: Int!
+  rdev: Int!
+  ino: Float!
+  atimeMs: Float!
+  mtimeMs: Float!
+  ctimeMs: Float!
+  atime: Date! @dateformat
+  mtime: Date! @dateformat
+  ctime: Date! @dateformat
+  birthtime: Date @deprecated(reason: "Use `birthTime` instead")
+  birthtimeMs: Float @deprecated(reason: "Use `birthTime` instead")
+  blksize: Int
+  blocks: Int
+}
+
+type SitePage implements Node @dontInfer {
+  path: String!
+  component: String!
+  internalComponentName: String!
+  componentChunkName: String!
+  matchPath: String
+}
+
+enum ImageFormat {
+  NO_CHANGE
+  JPG
+  PNG
+  WEBP
+}
+
+enum ImageFit {
+  COVER
+  CONTAIN
+  FILL
+  INSIDE
+  OUTSIDE
+}
+
+enum ImageCropFocus {
+  CENTER
+  NORTH
+  NORTHEAST
+  EAST
+  SOUTHEAST
+  SOUTH
+  SOUTHWEST
+  WEST
+  NORTHWEST
+  ENTROPY
+  ATTENTION
+}
+
+input DuotoneGradient {
+  highlight: String!
+  shadow: String!
+  opacity: Int
+}
+
+enum PotraceTurnPolicy {
+  TURNPOLICY_BLACK
+  TURNPOLICY_WHITE
+  TURNPOLICY_LEFT
+  TURNPOLICY_RIGHT
+  TURNPOLICY_MINORITY
+  TURNPOLICY_MAJORITY
+}
+
+input Potrace {
+  turnPolicy: PotraceTurnPolicy
+  turdSize: Float
+  alphaMax: Float
+  optCurve: Boolean
+  optTolerance: Float
+  threshold: Int
+  blackOnWhite: Boolean
+  color: String
+  background: String
+}
+
+type ImageSharp implements Node @childOf(types: ["File"]) @dontInfer {
+  fixed(width: Int, height: Int, base64Width: Int, jpegProgressive: Boolean = true, pngCompressionSpeed: Int = 4, grayscale: Boolean = false, duotone: DuotoneGradient, traceSVG: Potrace, quality: Int, jpegQuality: Int, pngQuality: Int, webpQuality: Int, toFormat: ImageFormat = NO_CHANGE, toFormatBase64: ImageFormat = NO_CHANGE, cropFocus: ImageCropFocus = ATTENTION, fit: ImageFit = COVER, background: String = "rgba(0,0,0,1)", rotate: Int = 0, trim: Float = 0): ImageSharpFixed
+  resolutions(width: Int, height: Int, base64Width: Int, jpegProgressive: Boolean = true, pngCompressionSpeed: Int = 4, grayscale: Boolean = false, duotone: DuotoneGradient, traceSVG: Potrace, quality: Int, jpegQuality: Int, pngQuality: Int, webpQuality: Int, toFormat: ImageFormat = NO_CHANGE, toFormatBase64: ImageFormat = NO_CHANGE, cropFocus: ImageCropFocus = ATTENTION, fit: ImageFit = COVER, background: String = "rgba(0,0,0,1)", rotate: Int = 0, trim: Float = 0): ImageSharpResolutions @deprecated(reason: "Resolutions was deprecated in Gatsby v2. It's been renamed to \"fixed\" https://example.com/write-docs-and-fix-this-example-link")
+  fluid(
+    maxWidth: Int
+    maxHeight: Int
+    base64Width: Int
+    grayscale: Boolean = false
+    jpegProgressive: Boolean = true
+    pngCompressionSpeed: Int = 4
+    duotone: DuotoneGradient
+    traceSVG: Potrace
+    quality: Int
+    jpegQuality: Int
+    pngQuality: Int
+    webpQuality: Int
+    toFormat: ImageFormat = NO_CHANGE
+    toFormatBase64: ImageFormat = NO_CHANGE
+    cropFocus: ImageCropFocus = ATTENTION
+    fit: ImageFit = COVER
+    background: String = "rgba(0,0,0,1)"
+    rotate: Int = 0
+    trim: Float = 0
+    sizes: String = ""
+
+    """
+    A list of image widths to be generated. Example: [ 200, 340, 520, 890 ]
+    """
+    srcSetBreakpoints: [Int] = []
+  ): ImageSharpFluid
+  sizes(
+    maxWidth: Int
+    maxHeight: Int
+    base64Width: Int
+    grayscale: Boolean = false
+    jpegProgressive: Boolean = true
+    pngCompressionSpeed: Int = 4
+    duotone: DuotoneGradient
+    traceSVG: Potrace
+    quality: Int
+    jpegQuality: Int
+    pngQuality: Int
+    webpQuality: Int
+    toFormat: ImageFormat = NO_CHANGE
+    toFormatBase64: ImageFormat = NO_CHANGE
+    cropFocus: ImageCropFocus = ATTENTION
+    fit: ImageFit = COVER
+    background: String = "rgba(0,0,0,1)"
+    rotate: Int = 0
+    trim: Float = 0
+    sizes: String = ""
+
+    """
+    A list of image widths to be generated. Example: [ 200, 340, 520, 890 ]
+    """
+    srcSetBreakpoints: [Int] = []
+  ): ImageSharpSizes @deprecated(reason: "Sizes was deprecated in Gatsby v2. It's been renamed to \"fluid\" https://example.com/write-docs-and-fix-this-example-link")
+  original: ImageSharpOriginal
+  resize(width: Int, height: Int, quality: Int, jpegQuality: Int, pngQuality: Int, webpQuality: Int, jpegProgressive: Boolean = true, pngCompressionLevel: Int = 9, pngCompressionSpeed: Int = 4, grayscale: Boolean = false, duotone: DuotoneGradient, base64: Boolean = false, traceSVG: Potrace, toFormat: ImageFormat = NO_CHANGE, cropFocus: ImageCropFocus = ATTENTION, fit: ImageFit = COVER, background: String = "rgba(0,0,0,1)", rotate: Int = 0, trim: Float = 0): ImageSharpResize
+}
+
+type ImageSharpFixed {
+  base64: String
+  tracedSVG: String
+  aspectRatio: Float
+  width: Float!
+  height: Float!
+  src: String!
+  srcSet: String!
+  srcWebp: String
+  srcSetWebp: String
+  originalName: String
+}
+
+type ImageSharpResolutions {
+  base64: String
+  tracedSVG: String
+  aspectRatio: Float
+  width: Float!
+  height: Float!
+  src: String!
+  srcSet: String!
+  srcWebp: String
+  srcSetWebp: String
+  originalName: String
+}
+
+type ImageSharpFluid {
+  base64: String
+  tracedSVG: String
+  aspectRatio: Float!
+  src: String!
+  srcSet: String!
+  srcWebp: String
+  srcSetWebp: String
+  sizes: String!
+  originalImg: String
+  originalName: String
+  presentationWidth: Int!
+  presentationHeight: Int!
+}
+
+type ImageSharpSizes {
+  base64: String
+  tracedSVG: String
+  aspectRatio: Float!
+  src: String!
+  srcSet: String!
+  srcWebp: String
+  srcSetWebp: String
+  sizes: String!
+  originalImg: String
+  originalName: String
+  presentationWidth: Int!
+  presentationHeight: Int!
+}
+
+type ImageSharpOriginal {
+  width: Float
+  height: Float
+  src: String
+}
+
+type ImageSharpResize {
+  src: String
+  tracedSVG: String
+  width: Int
+  height: Int
+  aspectRatio: Float
+  originalName: String
+}
+
+type MarkdownHeading {
+  id: String
+  value: String
+  depth: Int
+}
+
+enum MarkdownHeadingLevels {
+  h1
+  h2
+  h3
+  h4
+  h5
+  h6
+}
+
+enum MarkdownExcerptFormats {
+  PLAIN
+  HTML
+  MARKDOWN
+}
+
+type MarkdownWordCount {
+  paragraphs: Int
+  sentences: Int
+  words: Int
+}
+
+type MarkdownRemark implements Node @childOf(mimeTypes: ["text/markdown", "text/x-markdown"], types: [], many: false) @derivedTypes @dontInfer {
+  frontmatter: MarkdownRemarkFrontmatter
+  excerpt: String
+  rawMarkdownBody: String
+  fileAbsolutePath: String
+}
+
+type MarkdownRemarkFrontmatter {
+  title: String
+  date: String
+}
+
+type InstaNode implements Node @derivedTypes @dontInfer {
+  type: String
+  username: String
+  likes: Int
+  caption: String
+  thumbnails: [InstaNodeThumbnails]
+  mediaType: String
+  preview: String
+  original: String
+  timestamp: Int
+  dimensions: InstaNodeDimensions
+  comments: Int
+  localFile: File @link(by: "id", from: "localFile___NODE")
+}
+
+type InstaNodeThumbnails {
+  src: String
+  config_width: Int
+  config_height: Int
+}
+
+type InstaNodeDimensions {
+  height: Int
+  width: Int
+}
+
+type ContentfulAsset implements Node @derivedTypes @dontInfer {
+  contentful_id: String
+  file: ContentfulAssetFile
+  title: String
+  description: String
+  node_locale: String
+}
+
+type ContentfulAssetFile @derivedTypes {
+  url: String
+  details: ContentfulAssetFileDetails
+  fileName: String
+  contentType: String
+}
+
+type ContentfulAssetFileDetails @derivedTypes {
+  size: Int
+  image: ContentfulAssetFileDetailsImage
+}
+
+type ContentfulAssetFileDetailsImage {
+  width: Int
+  height: Int
+}
+
+type ContentfulBannerBeranda implements Node @derivedTypes @dontInfer {
+  teks: String
+  gambar: ContentfulAsset @link(by: "id", from: "gambar___NODE")
+  spaceId: String
+  contentful_id: String
+  createdAt: Date @dateformat
+  updatedAt: Date @dateformat
+  sys: ContentfulBannerBerandaSys
+  node_locale: String
+}
+
+type ContentfulBannerBerandaSys @derivedTypes {
+  revision: Int
+  contentType: ContentfulBannerBerandaSysContentType
+}
+
+type ContentfulBannerBerandaSysContentType @derivedTypes {
+  sys: ContentfulBannerBerandaSysContentTypeSys
+}
+
+type ContentfulBannerBerandaSysContentTypeSys {
+  type: String
+  linkType: String
+  id: String
+  contentful_id: String
+}
+
+type ContentfulProfilStaf implements Node @derivedTypes @dontInfer {
+  namaStaf: String
+  jabatanStaf: String
+  role: Int
+  spaceId: String
+  contentful_id: String
+  createdAt: Date @dateformat
+  updatedAt: Date @dateformat
+  sys: ContentfulProfilStafSys
+  node_locale: String
+}
+
+type ContentfulProfilStafSys @derivedTypes {
+  revision: Int
+  contentType: ContentfulProfilStafSysContentType
+}
+
+type ContentfulProfilStafSysContentType @derivedTypes {
+  sys: ContentfulProfilStafSysContentTypeSys
+}
+
+type ContentfulProfilStafSysContentTypeSys {
+  type: String
+  linkType: String
+  id: String
+  contentful_id: String
+}
+
+type ContentfulProfilTenagaDidik implements Node @derivedTypes @dontInfer {
+  namaTenagaDidik: String
+  jabatanTenagaDidik: String
+  role: Int
+  fotoTenagaDidik: ContentfulAsset @link(by: "id", from: "fotoTenagaDidik___NODE")
+  spaceId: String
+  contentful_id: String
+  createdAt: Date @dateformat
+  updatedAt: Date @dateformat
+  sys: ContentfulProfilTenagaDidikSys
+  node_locale: String
+}
+
+type ContentfulProfilTenagaDidikSys @derivedTypes {
+  revision: Int
+  contentType: ContentfulProfilTenagaDidikSysContentType
+}
+
+type ContentfulProfilTenagaDidikSysContentType @derivedTypes {
+  sys: ContentfulProfilTenagaDidikSysContentTypeSys
+}
+
+type ContentfulProfilTenagaDidikSysContentTypeSys {
+  type: String
+  linkType: String
+  id: String
+  contentful_id: String
+}
+
+type ContentfulAgenda implements Node @derivedTypes @dontInfer {
+  tanggalm: Date @dateformat
+  tanggals: Date @dateformat
+  konten: String
+  lokasi: String
+  spaceId: String
+  contentful_id: String
+  createdAt: Date @dateformat
+  updatedAt: Date @dateformat
+  sys: ContentfulAgendaSys
+  node_locale: String
+}
+
+type ContentfulAgendaSys @derivedTypes {
+  revision: Int
+  contentType: ContentfulAgendaSysContentType
+}
+
+type ContentfulAgendaSysContentType @derivedTypes {
+  sys: ContentfulAgendaSysContentTypeSys
+}
+
+type ContentfulAgendaSysContentTypeSys {
+  type: String
+  linkType: String
+  id: String
+  contentful_id: String
+}
+
+type ContentfulBuletin implements Node @derivedTypes @dontInfer {
+  namaBuletin: String
+  pdfLink: String
+  coverBuletin: ContentfulAsset @link(by: "id", from: "coverBuletin___NODE")
+  spaceId: String
+  contentful_id: String
+  createdAt: Date @dateformat
+  updatedAt: Date @dateformat
+  sys: ContentfulBuletinSys
+  node_locale: String
+}
+
+type ContentfulBuletinSys @derivedTypes {
+  revision: Int
+  contentType: ContentfulBuletinSysContentType
+}
+
+type ContentfulBuletinSysContentType @derivedTypes {
+  sys: ContentfulBuletinSysContentTypeSys
+}
+
+type ContentfulBuletinSysContentTypeSys {
+  type: String
+  linkType: String
+  id: String
+  contentful_id: String
+}
+
+type ContentfulScbDalamAngka implements Node @derivedTypes @dontInfer {
+  judul: String
+  jumlahKelas: Int
+  jumlahSiswa: Int
+  prestasi: Int
+  jumlahTendikDanStaf: Int
+  spaceId: String
+  contentful_id: String
+  createdAt: Date @dateformat
+  updatedAt: Date @dateformat
+  sys: ContentfulScbDalamAngkaSys
+  node_locale: String
+}
+
+type ContentfulScbDalamAngkaSys @derivedTypes {
+  revision: Int
+  contentType: ContentfulScbDalamAngkaSysContentType
+}
+
+type ContentfulScbDalamAngkaSysContentType @derivedTypes {
+  sys: ContentfulScbDalamAngkaSysContentTypeSys
+}
+
+type ContentfulScbDalamAngkaSysContentTypeSys {
+  type: String
+  linkType: String
+  id: String
+  contentful_id: String
+}
+
+type ContentfulCountdown implements Node @derivedTypes @dontInfer {
+  tenggatWaktu: Date @dateformat
+  judul: String
+  spaceId: String
+  contentful_id: String
+  createdAt: Date @dateformat
+  updatedAt: Date @dateformat
+  sys: ContentfulCountdownSys
+  node_locale: String
+}
+
+type ContentfulCountdownSys @derivedTypes {
+  revision: Int
+  contentType: ContentfulCountdownSysContentType
+}
+
+type ContentfulCountdownSysContentType @derivedTypes {
+  sys: ContentfulCountdownSysContentTypeSys
+}
+
+type ContentfulCountdownSysContentTypeSys {
+  type: String
+  linkType: String
+  id: String
+  contentful_id: String
+}
+
+type ContentfulFasilitasScb implements Node @derivedTypes @dontInfer {
+  namaFasilitas: String
+  gambarFasilitas: ContentfulAsset @link(by: "id", from: "gambarFasilitas___NODE")
+  spaceId: String
+  contentful_id: String
+  createdAt: Date @dateformat
+  updatedAt: Date @dateformat
+  sys: ContentfulFasilitasScbSys
+  node_locale: String
+}
+
+type ContentfulFasilitasScbSys @derivedTypes {
+  revision: Int
+  contentType: ContentfulFasilitasScbSysContentType
+}
+
+type ContentfulFasilitasScbSysContentType @derivedTypes {
+  sys: ContentfulFasilitasScbSysContentTypeSys
+}
+
+type ContentfulFasilitasScbSysContentTypeSys {
+  type: String
+  linkType: String
+  id: String
+  contentful_id: String
+}
+
+type contentfulBlogPostBodyRichTextNode implements Node @derivedTypes @dontInfer {
+  content: [contentfulBlogPostBodyRichTextNodeContent]
+  nodeType: String
+  body: String
+}
+
+type contentfulBlogPostBodyRichTextNodeContent @derivedTypes {
+  content: [contentfulBlogPostBodyRichTextNodeContentContent]
+  nodeType: String
+}
+
+type contentfulBlogPostBodyRichTextNodeContentContent {
+  value: String
+  nodeType: String
+}
+
+type ContentfulBlogPost implements Node @derivedTypes @dontInfer {
+  title: String
+  slug: String
+  publishedDate: Date @dateformat
+  gambarArtikel: ContentfulAsset @link(by: "id", from: "gambarArtikel___NODE")
+  body: contentfulBlogPostBodyRichTextNode @link(by: "id", from: "body___NODE")
+  spaceId: String
+  contentful_id: String
+  createdAt: Date @dateformat
+  updatedAt: Date @dateformat
+  sys: ContentfulBlogPostSys
+  node_locale: String
+}
+
+type ContentfulBlogPostSys @derivedTypes {
+  revision: Int
+  contentType: ContentfulBlogPostSysContentType
+}
+
+type ContentfulBlogPostSysContentType @derivedTypes {
+  sys: ContentfulBlogPostSysContentTypeSys
+}
+
+type ContentfulBlogPostSysContentTypeSys {
+  type: String
+  linkType: String
+  id: String
+  contentful_id: String
+}
+
+type ContentfulContentType implements Node @dontInfer {
+  name: String
+  displayField: String
+  description: String
+}
