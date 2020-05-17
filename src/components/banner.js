@@ -53,15 +53,16 @@ const Banner = () => {
                 height: "580px",
               }}
             >
-              <div className="row">
-                <div className="col ">
-                  <div className="display-4">{edge.node.teks}</div>
+              <div className="row align-items-center">
+                <div className="col text-center">
+                  <div className="display-3 text-left"
+                  style={{ fontWeight: "bold", }}>{edge.node.teks}</div>
                 </div>
                 <div className="col text-center">
                   <img
                     src={edge.node.gambar.fixed.srcWebp}
                     style={{
-                      maxWidth: "600px",
+                      maxWidth: "700px",
                       maxHeight: "580px",
                     }}
                   />
