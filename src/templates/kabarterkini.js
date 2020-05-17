@@ -4,6 +4,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
+import Jumbo from "../components/jumbo"
 
 export const query = graphql`
   query($slug: String!) {
@@ -29,8 +30,14 @@ const KabarTerkini = props => {
   }
   return (
     <Layout>
+      <Jumbo
+          title="Judul Artikel"
+          nav="Kabar Terkini ini ada yang kurang breadcrumbs nya"
+          page="slug"
+        />
       <Head title={props.data.contentfulBlogPost.title} />
       <h1>{props.data.contentfulBlogPost.title}</h1>
+      <h1></h1>
       <p>{props.data.contentfulBlogPost.publishedDate}</p>
       {documentToReactComponents(
         props.data.contentfulBlogPost.body.json,

@@ -8,6 +8,23 @@ import Jumbo from "../components/jumbo"
 import halamanStyles from "./halaman.module.scss"
 
 const ProfilSekolahPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      contentfulJumbotronHalaman(
+        jumbotronHalaman: { eq: "Halaman Profile Sekolah" }
+      ) {
+        jumbotronHalaman
+        jumbotronGambar {
+          fixed {
+            srcWebp
+          }
+        }
+      }
+    }
+    
+  
+  `)
+
   return (
     <div>
       <Layout>
@@ -16,6 +33,7 @@ const ProfilSekolahPage = () => {
           title="PROFIL SEKOLAH"
           nav="Tentang Kami"
           page="Profil Sekolah"
+          image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
         />
 
         {/* breadcrumb nya lom ada */}

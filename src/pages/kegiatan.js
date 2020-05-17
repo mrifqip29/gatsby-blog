@@ -11,6 +11,22 @@ import blogStyles from "./blog.module.scss"
 import Insta from "../components/insta"
 
 const KegiatanPage = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    contentfulJumbotronHalaman(
+      jumbotronHalaman: { eq: "Halaman Kegiatan" }
+    ) {
+      jumbotronHalaman
+      jumbotronGambar {
+        fixed {
+          srcWebp
+        }
+      }
+    }
+  }
+  
+
+`)
   return (
     <div>
       <Layout>
@@ -18,6 +34,7 @@ const KegiatanPage = () => {
         <Jumbo
           title="KEGIATAN"
           page="Kegiatan"
+          image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
         />
 
     <div className={kegiatanStyles.slideKategori}>

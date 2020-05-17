@@ -21,6 +21,18 @@ const PageFasilitas = () => {
         }
       }
     }
+
+    contentfulJumbotronHalaman(
+      jumbotronHalaman: { eq: "Halaman Fasilitas" }
+    ) {
+      jumbotronHalaman
+      jumbotronGambar {
+        fixed {
+          srcWebp
+        }
+      }
+    }
+    
   }
   `)
 
@@ -28,7 +40,11 @@ const PageFasilitas = () => {
     <Layout>
       <Jumbo title="Fasilitas SCB"
           nav="Tentang Kami"
-          page="Fasilitas SCB"/>
+          page="Fasilitas SCB"
+          image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
+          />
+
+
       <Head title="Fasilitas Kami" />
       <div className="col-xs-12 col-sm-12">
         <div className="container text-center my-5 py-5">

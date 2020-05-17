@@ -106,6 +106,7 @@ class Countdown extends Component {
             </div>
           </div>
         </div>
+
         <div className="col-lg-3 col-md-6 col-sm-12 py-2 px-0 mx-0">
           <div className="row">
             <div className="col-12">
@@ -116,6 +117,7 @@ class Countdown extends Component {
             </div>
           </div>
         </div>
+        
         <div className="col-lg-3 col-md-6 col-sm-12 py-2 px-0 mx-0">
           <div className="row">
             <div className="col-12">
