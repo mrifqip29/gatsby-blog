@@ -38,9 +38,9 @@ const Banner = () => {
               }}
             >
               <div className="row align-items-center">
-                <div className="col-lg-6 col-md-12 col-sm-12">
+                <div className="col-lg-5 col-md-12 col-sm-12">
                   <div
-                    className="vw-auto h1 text-left pb-2"
+                    className="vw-auto h1 text-center pb-2"
                     style={{
                       fontWeight: "bold",
                       color: "white",
@@ -50,7 +50,7 @@ const Banner = () => {
                   </div>
                 </div>
 
-                <div className="col-lg-6 col-md-12 col-sm-12">
+                <div className="col-lg-7 col-md-12 col-sm-12">
                   <img src={edge.node.gambar.fixed.srcWebp} class="img-fluid" />
                 </div>
               </div>
