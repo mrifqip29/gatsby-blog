@@ -26,7 +26,7 @@ const Banner = () => {
           aria-hidden="true"
           className="carousel-control-prev-icon"
           style={{
-            color: "#000",
+            color: "#015330",
           }}
         />
       }
@@ -54,18 +54,22 @@ const Banner = () => {
               }}
             >
               <div className="row align-items-center">
-                <div className="col text-center">
-                  <div className="display-3 text-left"
-                  style={{ fontWeight: "bold", }}>{edge.node.teks}</div>
+                <div className="col">
+
+                <div className="display-3 text-left"
+                  style={{ fontWeight: "bold", 
+                  maxWidth: "700px",
+                  maxHeight: "580px",
+                  minWidth: "700px",
+                  minHeight: "580px", }}>{edge.node.teks}</div>
                 </div>
+
                 <div className="col text-center">
                   <img
                     src={edge.node.gambar.fixed.srcWebp}
                     style={{
                       maxWidth: "700px",
                       maxHeight: "580px",
-                      minWidth: "700px",
-                      minHeight: "580px",
                     }}
                   />
                 </div>
