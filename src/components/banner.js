@@ -26,7 +26,7 @@ const Banner = () => {
           aria-hidden="true"
           className="carousel-control-prev-icon"
           style={{
-            color: "#000",
+            color: "#015330",
           }}
         />
       }
@@ -47,28 +47,26 @@ const Banner = () => {
             className="pt-4 pb-5 text-center"
           >
             <div
-              className="container px-5 col-12 align-items-center"
+              className="container px-5 col align-items-center"
               style={{
                 width: "1659px",
                 height: "580px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
               }}
             >
               <div className="row align-items-center">
-                <div className="col text-center">
-                  <div className="display-3 text-left"
-                  style={{ fontWeight: "bold", }}>{edge.node.teks}</div>
+                <div className="col-lg-6 col-md-12 col-sm-12">
+                <div className="display-3 text-left"
+                  style={{ fontWeight: "bold",}} >{edge.node.teks}</div>
                 </div>
-                <div className="col text-center">
+      
+                <div className="col-lg-6 col-md-12 col-sm-12">
                   <img
-                    src={edge.node.gambar.fixed.srcWebp}
-                    style={{
-                      maxWidth: "700px",
-                      maxHeight: "580px",
-                      minWidth: "700px",
-                      minHeight: "580px",
-                    }}
+                    src={edge.node.gambar.fixed.srcWebp} class="img-fluid"
                   />
-                </div>
+                  </div>
               </div>
             </div>
           </Carousel.Item>
