@@ -22,6 +22,18 @@ const CardKabar = () => {
           }
         }
       }
+
+      contentfulJumbotronHalaman(
+        jumbotronHalaman: { eq: "Default" }
+      ) {
+        jumbotronHalaman
+        jumbotronGambar {
+          fixed(width: 200, height: 200, quality: 80) {
+            srcWebp
+          }
+        }
+      }
+
     }
   `)
 
@@ -39,6 +51,12 @@ const CardKabar = () => {
               <div className="card" style={{ minHeight: "200px" }}>
                 {edge.node.gambarArtikel === null ? (
                   <div className="card-body text-center">
+                    <img
+                      className="card-img-top"
+                      src={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
+                      alt={edge.node.title}
+                      object-fit="contain"
+                    ></img>
                     <Link
                       to={`/kabarterkini/${edge.node.slug}`}
                       className={layoutStyles.selengkapnya}
@@ -53,7 +71,7 @@ const CardKabar = () => {
                     <p className="card-title">{edge.node.publishedDate}</p>
                   </div>
                 ) : (
-                  <div>
+                  <div className="card-body text-center">
                     <img
                       className="card-img-top"
                       src={edge.node.gambarArtikel.fixed.src}
