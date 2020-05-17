@@ -14,22 +14,17 @@ const Insta = () => {
     <div className="container">
       <div className={instaStyles.insta1}>
         <div className="col-lg-4">
-          <div className={instaStyles.rounded}> 
-            <div className="h3 my-3 mx-3"> 
-              Instagram Feeds 
-            </div>
+          <div className={instaStyles.rounded}>
+            <div className="h3 my-3 mx-3">Instagram Feeds</div>
 
-            <div className={instaStyles.username}> 
-               @{username}
-            </div>
-            <div className={instaStyles.bio}> 
-               {biography}
-            </div>
-            
+            <div className={instaStyles.username}>@{username}</div>
+            <div className={instaStyles.bio}>{biography}</div>
+
             {instaPhotos.map(photo => (
-              <div className="col-lg-4 col-md-4 mx-auto d-inline-flex">
-                <a href={`https://instagram.com/p/${photo.id}/`}
-                className={instaStyles.insta2}
+              <div className="col-6 col-sm-6 col-lg-4 col-md-4 mx-auto d-inline-flex">
+                <a
+                  href={`https://instagram.com/p/${photo.id}/`}
+                  className={instaStyles.insta2}
                 >
                   <Image
                     key={photo.id}
@@ -42,8 +37,11 @@ const Insta = () => {
             ))}
 
             <div className="container text-center">
-              <a className={instaStyles.button} href={`https://instagram.com/${username}`}>
-                Load More 
+              <a
+                className={instaStyles.button}
+                href={`https://instagram.com/${username}`}
+              >
+                Load More
               </a>
             </div>
           </div>
