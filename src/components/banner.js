@@ -52,33 +52,19 @@ const Banner = () => {
                 height: "580px",
               }}
             >
-              <div className="row" >
-                <div className="col-md-6 py-auto bg-dark ">
-                  <div className='container'>
-                  <div className="display-4 text-primary bg-dark">{edge.node.teks}</div>
-                  </div>
+                <div className="col text-center">
+                  <div className="display-3 text-left"
+                  style={{ fontWeight: "bold", }}>{edge.node.teks}</div>
                 </div>
-
-                <div className="col-md-6 bg-white ">
-                  <div className="container">
-                    <img className="p-3 right top"
-                    src={edge.node.gambar.fixed.src}
-                    style={{ maxHeight:"200px", objectPosition:'center'
-                    }}
-                  />
-
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </Carousel.Item>
-        )
-      })}
-
-      {/* <Carousel.Item style={{ background: "grey" }} className="py-5">
-        <div className="container">
-          <div className="row align-items-center">
+                <div className="col text-center">
+                  <img
+                    src={edge.node.gambar.fixed.srcWebp}
+                    style={{
+                      maxWidth: "700px",
+                      maxHeight: "580px",
+                      minWidth: "700px",
+                      minHeight: "580px",
+                      
             <div className="col">
               <div className="display-3">
                 Selamat Datang di Sekolah Cendekia Baznas

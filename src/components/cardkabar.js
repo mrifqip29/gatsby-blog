@@ -5,7 +5,7 @@ import layoutStyles from "./layout.module.scss"
 const CardKabar = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost {
+      allContentfulBlogPost(sort: { fields: publishedDate, order: ASC }) {
         edges {
           node {
             title
@@ -29,7 +29,7 @@ const CardKabar = () => {
     <div id="agenda" className="container my-5 py-5">
       <div className="row">
         <div className="display-4">Kabar Terkini</div>
-        <p className="m-5 m-5">
+        <p className="my-5 mr-5">
           Kumpulan berita yang memuat berita terkini Sekolah Cendikia BAZNAS
           mengenai prestasi, kegiatan kesiswaan, dsb.
         </p>
@@ -37,27 +37,46 @@ const CardKabar = () => {
           return (
             <div className="col-lg-3 col-md-6 col-sm-12 py-1">
               <div className="card" style={{ minHeight: "200px" }}>
-                <img
-                  className="card-img-top"
-                  src={edge.node.gambarArtikel.fixed.src}
-                  alt={edge.node.title}
-                  object-fit="contain"
-                ></img>
-
-                <div className="card-body text-center">
-                  <Link
-                    to={`/kabarterkini/${edge.node.slug}`}
-                    className={layoutStyles.selengkapnya}
-                  >
-                    <h2
-                      className="card-title font-weight-bold"
+                {edge.node.gambarArtikel === null ? (
+                  <div className="card-body text-center">
+                    <Link
+                      to={`/kabarterkini/${edge.node.slug}`}
                       className={layoutStyles.selengkapnya}
                     >
-                      {edge.node.title}
-                    </h2>
-                  </Link>
-                  <p className="card-title">{edge.node.publishedDate}</p>
-                </div>
+                      <h2
+                        className="card-title font-weight-bold"
+                        className={layoutStyles.selengkapnya}
+                      >
+                        {edge.node.title}
+                      </h2>
+                    </Link>
+                    <p className="card-title">{edge.node.publishedDate}</p>
+                  </div>
+                ) : (
+                  <div>
+                    <img
+                      className="card-img-top"
+                      src={edge.node.gambarArtikel.fixed.src}
+                      alt={edge.node.title}
+                      object-fit="contain"
+                    ></img>
+
+                    <div className="card-body text-center">
+                      <Link
+                        to={`/kabarterkini/${edge.node.slug}`}
+                        className={layoutStyles.selengkapnya}
+                      >
+                        <h2
+                          className="card-title font-weight-bold"
+                          className={layoutStyles.selengkapnya}
+                        >
+                          {edge.node.title}
+                        </h2>
+                      </Link>
+                      <p className="card-title">{edge.node.publishedDate}</p>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           )

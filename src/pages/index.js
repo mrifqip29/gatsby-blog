@@ -161,7 +161,6 @@ const IndexPage = () => {
                   className="card"
                   style={{
                     minHeight: "200px",
-
                     borderColor: "#004547",
                     borderWidth: "7px",
                   }}
@@ -171,7 +170,7 @@ const IndexPage = () => {
                       <div className="col-5">
                         <Link to="/kegiatan">
                           <div
-                            className="display-4"
+                            className="display-4 text-center"
                             style={{ fontWeight: "bold", color: "#004547" }}
                           >
                             {moment(edge.node.tanggalm).format("D")}
