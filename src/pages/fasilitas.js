@@ -22,16 +22,13 @@ const PageFasilitas = () => {
       }
     }
 
-    allContentfulJumbotronHalaman(
-      filter: { jumbotronHalaman: { eq: "Halaman Profile Sekolah" } }
+    contentfulJumbotronHalaman(
+      jumbotronHalaman: { eq: "Halaman Fasilitas" }
     ) {
-      edges {
-        node {
-          jumbotronGambar {
-            fixed{
-              srcWebp
-            }
-          }
+      jumbotronHalaman
+      jumbotronGambar {
+        fixed {
+          srcWebp
         }
       }
     }
@@ -44,13 +41,11 @@ const PageFasilitas = () => {
       <Jumbo title="Fasilitas SCB"
           nav="Tentang Kami"
           page="Fasilitas SCB"
-
+          image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
           />
 
 
       <Head title="Fasilitas Kami" />
-     
-     <img src={data.allContentfulJumbotronHalaman.edges[0].node.fixed.srcWebp}> </img>
       <div className="col-xs-12 col-sm-12">
         <div className="container text-center my-5 py-5">
           <div className="lead bold">

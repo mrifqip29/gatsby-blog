@@ -10,8 +10,8 @@ const Banner = () => {
           node {
             teks
             gambar {
-              fixed(quality: 50, height: 580, resizingBehavior: SCALE) {
-                src
+              fixed(quality: 50, height: 580, resizingBehavior: PAD) {
+                srcWebp
               }
             }
           }
@@ -43,15 +43,17 @@ const Banner = () => {
       {data.allContentfulBannerBeranda.edges.map(edge => {
         return (
           <Carousel.Item
-            style={{ background: "grey", height: "510px" }}
+            style={{ background: "grey", height: "652px" }}
+            className="pt-4 pb-5 text-center"
           >
             <div
-              className="container px-5 col-12 bg-danger align-items-center"
+              className="container px-5 col-12 align-items-center"
               style={{
                 width: "1659px",
                 height: "580px",
               }}
             >
+              <div className="row align-items-center">
                 <div className="col text-center">
                   <div className="display-3 text-left"
                   style={{ fontWeight: "bold", }}>{edge.node.teks}</div>
@@ -64,7 +66,18 @@ const Banner = () => {
                       maxHeight: "580px",
                       minWidth: "700px",
                       minHeight: "580px",
-                      
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </Carousel.Item>
+        )
+      })}
+
+      {/* <Carousel.Item style={{ background: "grey" }} className="py-5">
+        <div className="container">
+          <div className="row align-items-center">
             <div className="col">
               <div className="display-3">
                 Selamat Datang di Sekolah Cendekia Baznas

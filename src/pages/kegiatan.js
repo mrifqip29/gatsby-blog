@@ -18,6 +18,17 @@ const PageKabar = () => {
           }
         }
       }
+      contentfulJumbotronHalaman(
+        jumbotronHalaman: { eq: "Halaman Kegiatan" }
+      ) {
+        jumbotronHalaman
+        jumbotronGambar {
+          fixed {
+            srcWebp
+          }
+        }
+      }
+      
     }
   `)
   return (
@@ -27,6 +38,7 @@ const PageKabar = () => {
           title="Kegiatan SCB"
           nav="Informasi"
           page="Kabar Terkini"
+          image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
         />
       <div id="agenda" className="container my-5 py-5">
         <div className="row">

@@ -11,19 +11,24 @@ import {
 
 import halamanStyles from "../pages/halaman.module.scss"
 
-const Jumbo = ({ title, nav, page }) => {
+const Jumbo = ({ title, nav, page, image }) => {
   return (
     <div>
       <Jumbotron
         fluid
         style={{
-          backgroundImage: null,
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url(' + image + ')',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          
+          
         }}
       >
         <Container>
           <h1
             style={{
               padding: "0.75rem 1rem 0rem",
+              color:'white'
             }}
           >
             {title}

@@ -29,6 +29,17 @@ const ProfilStafPage = () => {
           }
         }
       }
+      contentfulJumbotronHalaman(
+        jumbotronHalaman: { eq: "Halaman Profile Tendik" }
+      ) {
+        jumbotronHalaman
+        jumbotronGambar {
+          fixed {
+            srcWebp
+          }
+        }
+      }
+      
     }
   `)
   
@@ -40,12 +51,12 @@ const ProfilStafPage = () => {
           title="PROFIL PENDIDIK & STAF"
           nav="Tentang Kami"
           page="Profil Pendidik & Staf"
+          image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
         />
 
         {/* breadcrumb nya lom ada */}
 
-
-
+  <p>{JSON.stringify(data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp)}</p>
 
 
         <div className="container text-center my-5 py-5 ">
