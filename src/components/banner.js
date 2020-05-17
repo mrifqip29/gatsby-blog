@@ -64,6 +64,8 @@ const Banner = () => {
                     style={{
                       maxWidth: "700px",
                       maxHeight: "580px",
+                      minWidth: "700px",
+                      minHeight: "580px",
                     }}
                   />
                 </div>
