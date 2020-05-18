@@ -78,7 +78,22 @@ const IndexPage = () => {
               </Button>
             </span>
           </div>
-
+          
+          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
+            <span className="px-3">
+              <Button
+                style={{
+                  minWidth: "177px",
+                }}
+                href="#hitungmundur"
+                className={halamanStyles.greenButton}
+                variant="outline-primary"
+              >
+                Hitung Mundur
+              </Button>
+            </span>
+          </div>
+          
           <div className="col-lg-3 col-md-6 col-sm-12 py-2">
             <span className=" px-3">
               <Button
@@ -100,26 +115,11 @@ const IndexPage = () => {
                 style={{
                   minWidth: "177px",
                 }}
-                href="#beritaterkini"
+                href="#kabarterkini"
                 className={halamanStyles.greenButton}
                 variant="outline-primary"
               >
-                Berita terkini
-              </Button>
-            </span>
-          </div>
-
-          <div className="col-lg-3 col-md-6 col-sm-12 py-2">
-            <span className="px-3">
-              <Button
-                style={{
-                  minWidth: "177px",
-                }}
-                href="#scbdalam24jam"
-                className={halamanStyles.greenButton}
-                variant="outline-primary"
-              >
-                SCB dalam 24 Jam
+                Kabar Terkini
               </Button>
             </span>
           </div>
@@ -128,7 +128,7 @@ const IndexPage = () => {
 
       <DalamAngka />
 
-      <div className="container text-center my-5 py-5">
+      <div id="hitungmundur" className="container text-center my-5 py-5">
         <div className="lead bold">
           <div className="display-4">{data.contentfulCountdown.judul}</div>
         </div>
@@ -210,7 +210,7 @@ const IndexPage = () => {
         </div>
       </div>
 
-      <CardKabar />
+      <div id="kabarterkini"> <CardKabar/> </div>
       <Insta />
     </Layout>
   )
