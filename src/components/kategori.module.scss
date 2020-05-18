@@ -1,3 +1,79 @@
+.box {
+  display: block;
+  padding: 0.5rem 0;
+}
+.rounded {
+    border-radius:25px;
+    border: 1px solid rgba(0, 0, 0, 0.25);;
+    margin-bottom: 10px;
+}
+.title {
+  margin : 5px 0px 10px 0px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.listChecker{
+  height:15px;
+  width:15px;
+  background : transparant;
+  margin-top : 10px;
+  margin-right : 10px;
+}
+.listName{
+  text-align :left;
+  font-size: 1rem;
+  text-transform: capitalize;
+  text-align : left;
+  color: black;
+}
+.listName:hover{
+  text-decoration: none;
+  color : green;
+}
+.list {
+  border : 1px white;
+  width : 100px;
+  height: auto;
+  background: yellow;
+  background : none;
+  color : white;
+  margin-left : 5px;
+}
+.list:hover {
+  color: transparant;
+  text-decoration: none;
+}
+.button {
+  margin : 20px 0px 20px 0;
+  background-color: #007446;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transform: none;
+}
+.button:hover {
+  text-decoration: none;
+  color : white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container {
     display: block;
     position: relative;
