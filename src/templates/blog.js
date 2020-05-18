@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
@@ -8,12 +8,17 @@ import blogStyles from "../pages/blog.module.scss"
 import Pager from "../components/paginator"
 import Kategori from "../components/kategori"
 import Insta from "../components/insta"
+import Jumbo from "../components/jumbo"
 
 const Blog = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Blog Posts" />
-      <div className="h1 text-center"> Kabar Terkini</div>
+      <Jumbo
+        title="KABAR TERKINI"
+        page="Halaman Kabar Terkini"
+        image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
+      />
       <div className="row">
         <div className="col-md-9 col-lg-9">
           <ol className={blogStyles.posts}>
@@ -69,6 +74,14 @@ export const query = graphql`
               url
             }
           }
+        }
+      }
+    }
+    contentfulJumbotronHalaman(jumbotronHalaman: { eq: "Halaman Kegiatan" }) {
+      jumbotronHalaman
+      jumbotronGambar {
+        fixed {
+          srcWebp
         }
       }
     }
