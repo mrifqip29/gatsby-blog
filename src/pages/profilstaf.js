@@ -56,8 +56,6 @@ const ProfilStafPage = () => {
 
         {/* breadcrumb nya lom ada */}
 
-  <p>{JSON.stringify(data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp)}</p>
-
 
         <div className="container text-center my-5 py-5 ">
           <div className="lead bold">
