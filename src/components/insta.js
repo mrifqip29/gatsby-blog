@@ -15,13 +15,13 @@ const Insta = () => {
       <div className={instaStyles.insta1}>
         <div className="col-lg-20">
           <div className={instaStyles.rounded}>
-            <div className="h3 my-3 mx-3">Instagram Feeds</div>
+            <div className="h3 m-3">Instagram Feeds</div>
 
             <div className={instaStyles.username}>@{username}</div>
             <div className={instaStyles.bio}>{biography}</div>
               <div className={instaStyles.photo}>
               {instaPhotos.map(photo => (
-                <div className="col-4 col-sm-4 col-lg-4 col-md-4  d-inline-flex">
+                <div className="col-4 d-inline-flex">
 
                   <a
                     href={`https://instagram.com/p/${photo.id}/`}

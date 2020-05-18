@@ -10,10 +10,10 @@ import Kategori from "../components/kategori"
 import Insta from "../components/insta"
 import Jumbo from "../components/jumbo"
 
+
 const Blog = ({ data, pageContext }) => {
   return (
     <Layout>
-      <SEO title="Blog Posts" />
       <Jumbo
         title="KABAR TERKINI"
         page="Halaman Kabar Terkini"
@@ -106,6 +106,7 @@ const Blog = ({ data, pageContext }) => {
           <Pager pageContext={pageContext} />
         </div>
         <div className="col-md-3 col-lg-3">
+          <Kategori />
           <Insta />
         </div>
       </div>
@@ -122,7 +123,7 @@ Blog.propTypes = {
 export const query = graphql`
   query($skip: Int, $limit: Int) {
     allContentfulBlogPost(
-      sort: { fields: title, order: DESC }
+      sort: { fields: publishedDate, order: DESC }
       skip: $skip
       limit: $limit
     ) {

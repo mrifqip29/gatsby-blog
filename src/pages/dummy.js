@@ -12,6 +12,7 @@ import {
 import Layout from "../components/layout"
 import Jumbo from "../components/jumbo"
 import Insta from "../components/insta"
+import Kategori from "../components/kategori"
 
 const Dummy = () => {
   return (
@@ -46,7 +47,7 @@ const Dummy = () => {
               
             >
               {/* instagramnya belom bener */}
-              <Insta />
+              <Kategori />
             </div>
 
               <div
@@ -55,7 +56,6 @@ const Dummy = () => {
                 background: "yellow",
               }}
             >
-              {/* instagramnya belom bener */}
               <Insta />
             </div>
 
