@@ -73,12 +73,7 @@ module.exports = {
         icon: `src/images/logo-scb.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: "gatsby-source-instagram",
-      options: {
-        username: "ahmadscb2019",
-      },
-    },
+
     {
       resolve: "gatsby-source-instagram",
       options: {
