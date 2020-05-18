@@ -109,13 +109,13 @@ const Header = () => {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link className="px-3">
+            <Nav.Link>
               <Link to="/kegiatan" className={headerStyles.navItem}>
                 Kegiatan
               </Link>
             </Nav.Link>
 
-            <Nav.Link className="px-3">
+            <Nav.Link>
               <Link to="/ppdb" className={headerStyles.navItem}>
                 PPDB
               </Link>
