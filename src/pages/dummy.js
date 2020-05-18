@@ -47,9 +47,17 @@ const Dummy = () => {
             </div>
 
             <div
+              className=" mb-2"
+              
+            >
+              {/* instagramnya belom bener */}
+              <Insta />
+            </div>
+
+              <div
               className=""
               style={{
-                background: "grey",
+                background: "yellow",
               }}
             >
               {/* instagramnya belom bener */}

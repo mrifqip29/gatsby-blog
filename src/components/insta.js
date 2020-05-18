@@ -13,28 +13,30 @@ const Insta = () => {
   return (
     <div className="container">
       <div className={instaStyles.insta1}>
-        <div className="col-lg-4">
+        <div className="col-lg-20">
           <div className={instaStyles.rounded}>
             <div className="h3 my-3 mx-3">Instagram Feeds</div>
 
             <div className={instaStyles.username}>@{username}</div>
             <div className={instaStyles.bio}>{biography}</div>
+              <div className={instaStyles.photo}>
+              {instaPhotos.map(photo => (
+                <div className="col-4 col-sm-4 col-lg-4 col-md-4  d-inline-flex">
 
-            {instaPhotos.map(photo => (
-              <div className="col-6 col-sm-6 col-lg-4 col-md-4 mx-auto d-inline-flex">
-                <a
-                  href={`https://instagram.com/p/${photo.id}/`}
-                  className={instaStyles.insta2}
-                >
-                  <Image
-                    key={photo.id}
-                    className={instaStyles.insta3}
-                    fluid={photo.fluid}
-                    alt={photo.caption}
-                  />
-                </a>
-              </div>
-            ))}
+                  <a
+                    href={`https://instagram.com/p/${photo.id}/`}
+                    className={instaStyles.insta2}
+                  >
+                    <Image
+                      key={photo.id}
+                      className={instaStyles.insta3}
+                      fluid={photo.fluid}
+                      alt={photo.caption}
+                    />
+                  </a>
+                </div>
+              ))}
+            </div>
 
             <div className="container text-center">
               <a
@@ -47,10 +49,6 @@ const Insta = () => {
           </div>
         </div>
       </div>
-
-      <a href={`https://instagram.com/${username}`}>
-        See more on Instagram &rarr;
-      </a>
     </div>
   )
 }
