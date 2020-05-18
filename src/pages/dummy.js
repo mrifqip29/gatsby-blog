@@ -30,12 +30,7 @@ const Dummy = () => {
             className="col-lg-3 col-md-12 col-sm-12"
             style={{ background: "red", color: "white" }}
           >
-            <div
-              className=""
-              style={{
-                background: "grey",
-              }}
-            >
+            <div>
               <h1
                 className=""
                 style={{
@@ -56,12 +51,7 @@ const Dummy = () => {
               <Insta />
             </div>
 
-            <div
-              className=""
-              style={{
-                background: "grey",
-              }}
-            >
+            <div>
               <h1
                 className=""
                 style={{
