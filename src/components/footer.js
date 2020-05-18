@@ -12,6 +12,17 @@ const Footer = () => {
           author
         }
       }
+      contentfulFooter{
+          narahubung1
+          narahubung2
+          linkWebsite
+          linkTwitter
+          linkFacebook
+          linkInstagram
+          linkLine
+          alamatSekolah
+      }
+      
     }
   `)
   return (
@@ -26,34 +37,65 @@ const Footer = () => {
          <img
           src='https://svgshare.com/i/KzK.svg'
           style={{width:'2.2rem'}}
-        />  081298408698 (Dani)
+        />  {data.contentfulFooter.narahubung1}
         </h5>
-
+        <h5 className={footerStyles.content}>
+         <img
+          src='https://svgshare.com/i/KzK.svg'
+          style={{width:'2.2rem'}}
+        /> {data.contentfulFooter.narahubung2}
+        </h5>
         
       </div>
 
 
-      <div className='col-md-4 col-sm-12 pr-0'>
+      <div className='col-md-4 col-sm-12 '>
         <h1 className={footerStyles.title}>Social Media</h1>
   
-        <h5 className={footerStyles.content} title="Website" href="#">
-                  <img
+        <div className='d-flex ' href="#">
+          <a href={data.contentfulFooter.linkWebsite}>
+            <img
                     src="https://svgshare.com/i/L1H.svg"
                     alt="Website"
-                    style={{ paddingRight:'0.5rem', width:'2.5rem' }}
+                    style={{ padding:'0.5rem' , width:'3.4rem' }}
                   />
-                  <img
-                    src="https://svgshare.com/i/L1H.svg"
-                    alt="Website"
-                    style={{ paddingRight:'0.5rem', width:'2.5rem' }}
+          </a>
+          <a href={data.contentfulFooter.linkTwitter}>
+            <img
+                      src="https://svgshare.com/i/LD3.svg"
+                      alt="Twitter"
+                      style={{ padding:'0.5rem', width:'3.4rem' }}
+                    />
+          </a>
+          <a href={data.contentfulFooter.linkLine}>
+          <img
+                    src="https://svgshare.com/i/LE8.svg"
+                    alt="Line"
+                    style={{ padding:'0.5rem', width:'3.4rem' }}
                   />
-        </h5>
+          </a>
+          <a href={data.contentfulFooter.linkInstagram}>
+          <img
+                    src="https://svgshare.com/i/LDw.svg"
+                    alt="Instagram"
+                    style={{ padding:'0.5rem', width:'3.4rem' }}
+                  />
+          </a>
+          <a href={data.contentfulFooter.linkFacebook}>
+          <img
+                    src="https://svgshare.com/i/LDF.svg"
+                    alt="Facebook"
+                    style={{ padding:'0.5rem', width:'3.4rem' }}
+                  />
+          </a>
+                  
+        </div>
       </div>
       
       <div className='col-md-4 col-sm-12 pr-0'>
         <h1 className={footerStyles.title}>Informasi Sekolah</h1>
         <h5 className={footerStyles.content}>Sekolah Cendekia BAZNAS</h5>
-        <h5 className={footerStyles.content}>K.H. Umar Cirangkong RT. 18 RW. 07, Desa Cemplang, Kec. Cibungbulang, Kab. Bogor, 16630 </h5>
+        <h5 className={footerStyles.content}>{data.contentfulFooter.alamatSekolah} </h5>
       </div>
 
     </div>
