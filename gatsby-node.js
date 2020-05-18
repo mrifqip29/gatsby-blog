@@ -14,7 +14,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const blogTemplate = path.resolve("./src/templates/kabarterkini.js")
   const tagTemplate = path.resolve("./src/templates/tags-template.js")
-  const MAX_POST = 2
+  const MAX_POST = 4
 
   const result = await graphql(`
     query {

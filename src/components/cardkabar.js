@@ -55,7 +55,6 @@ const CardKabar = () => {
                       className="card-img-top"
                       src={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
                       alt={edge.node.title}
-                      object-fit="contain"
                     ></img>
                     <Link
                       to={`/kabarterkini/${edge.node.slug}`}

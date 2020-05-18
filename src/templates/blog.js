@@ -19,13 +19,76 @@ const Blog = ({ data, pageContext }) => {
         page="Halaman Kabar Terkini"
         image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
       />
+      <div className='container'>
       <div className="row">
         <div className="col-md-9 col-lg-9">
-          <ol className={blogStyles.posts}>
-            {data.allContentfulBlogPost.edges.map(edge => {
-              return (
-                // <div className="col-lg-3 col-md-6 col-sm-12 py-1">
-                <div
+         
+         {data.allContentfulBlogPost.edges.map(edge =>{
+           return(
+            edge.node.gambarArtikel === null ? (
+            <div className='card' style={{ borderRadius:'45px' , minHeight: "100px", marginBottom: "30px" }}>
+              <img className="card-img-top" src={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}  style={{height:'20rem', objectFit:'cover', borderRadius:'45px 45px 0px 0px'}}></img>
+              <div className='card-body'>
+                <div className='container'>
+                  <div className='row'>
+                    <div className='col-md-9'>
+                      <p>{edge.node.title}</p>
+                      </div>
+
+                    <div className='col'>
+                      tanggal
+                      </div>
+                    </div>
+
+                  <div className='row'>
+                    <p>deskripisi</p>
+                    </div>
+                  <div className='row'>
+                    <p>button</p>
+                    </div>
+
+                  </div>
+                
+                </div>
+            </div>
+
+      
+            )
+            :(
+              <div className='card' style={{ borderRadius:'45px' , minHeight: "100px", marginBottom: "30px" }}>
+              <img className="card-img-top" src={edge.node.gambarArtikel.file.url}  style={{height:'20rem', objectFit:'cover', borderRadius:'45px 45px 0px 0px'}}></img>
+              <div className='card-body'>
+                <div className='container'>
+                  <div className='row'>
+                    <div className='col-md-9'>
+                      <p>{edge.node.title}</p>
+                      </div>
+
+                    <div className='col'>
+                      tanggal
+                      </div>
+                    </div>
+
+                  <div className='row'>
+                    <p>deskripisi</p>
+                    </div>
+                  <div className='row'>
+                    <p>button</p>
+                    </div>
+
+                  </div>
+                
+                </div>
+            </div>
+
+      
+              )    
+
+
+           )
+         })}
+{/*          
+         <div
                   className="card"
                   style={{ minHeight: "100px", marginBottom: "30px" }}
                 >
@@ -37,15 +100,15 @@ const Blog = ({ data, pageContext }) => {
                       </Link>
                     </li>
                   </div>
-                </div>
-              )
-            })}
-          </ol>
+                </div> */}
+
+
           <Pager pageContext={pageContext} />
         </div>
         <div className="col-md-3 col-lg-3">
           <Insta />
         </div>
+      </div>
       </div>
     </Layout>
   )
@@ -77,7 +140,7 @@ export const query = graphql`
         }
       }
     }
-    contentfulJumbotronHalaman(jumbotronHalaman: { eq: "Halaman Kegiatan" }) {
+    contentfulJumbotronHalaman(jumbotronHalaman: { eq: "Halaman Kabar Terkini" }) {
       jumbotronHalaman
       jumbotronGambar {
         fixed {
