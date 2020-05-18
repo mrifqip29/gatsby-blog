@@ -59,10 +59,10 @@ const ProfilStafPage = () => {
 
         <div className="container text-center my-5 py-5 ">
           <div className="lead bold">
-            <div className="display-4 font-weight-bold"> PROFIL </div>
-            <div className="display-4 font-weight-bold"> TENAGA PENDIDIK </div>
+            <h1>PROFIL</h1>
+            <h1>TENAGA PENDIDIK</h1>
           </div>
-          <div className="h1">SEKOLAH CENDEKIA BAZNAS</div>
+          <div className="display-4">SEKOLAH CENDEKIA BAZNAS</div>
         </div>
 
         <div className="col-3 border-top m-auto"></div> {/*Kacao karna marginnya auto, ganti bikin css aja*/}

@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import footerStyles from "./footer.module.scss"
-import { AlertHeading } from "react-bootstrap/Alert"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -50,7 +49,7 @@ const Footer = () => {
 
 
       <div className='col-md-4 col-sm-12 '>
-        <h1 className={footerStyles.title}>Social Media</h1>
+        <h1 className={footerStyles.contentSocial}>Social Media</h1>
   
         <div className='d-flex ' href="#">
           <a href={data.contentfulFooter.linkWebsite}>

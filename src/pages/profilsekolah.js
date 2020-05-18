@@ -36,8 +36,6 @@ const ProfilSekolahPage = () => {
           image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
         />
 
-        {/* breadcrumb nya lom ada */}
-
         <div className="container text-center my-5 py-5">
           <div className="lead bold">
             <h1>PROFIL</h1>
@@ -56,11 +54,6 @@ const ProfilSekolahPage = () => {
           <span className="px-3">
             <Button href="#visimisi" className={halamanStyles.greenButton}>
               Visi - Misi
-            </Button>
-          </span>
-          <span className="px-3">
-            <Button href="#akreditas" className={halamanStyles.greenButton}>
-              Akreditasi
             </Button>
           </span>
         </div>
@@ -83,22 +76,22 @@ const ProfilSekolahPage = () => {
           </div>
           <div className="display-4">SEKOLAH CENDEKIA BAZNAS</div>
           <CardDeck className="m-5 m-2">
-            <Card>
-              <Card.Img variant="top" src="holder.js/100px160" />
+            <Card className="text-center" style={{borderRadius:'45px', boxShadow:'4px 4px 9px rgba(0, 0, 0, 0.15), -4px -4px 9px rgba(0, 0, 0, 0.15)'}}>
+              <Card.Img variant="top" src="https://svgshare.com/i/LEV.svg"  style={{paddingTop:'5rem' ,width:'116px' , display:'block', margin:'auto', }}/>
               <Card.Body>
                 <Card.Title>Visi</Card.Title>
-                <Card.Text className="m-3">
-                  Sekolah Cendekia BAZNAS (SCB) merupakan sekolah tingkat SMP
+                <Card.Text className="m-3 pb-5 text-left">
+                  <strong>Sekolah Cendekia BAZNAS (SCB)</strong> merupakan sekolah tingkat SMP
                   berkonsep asrama, bebas biaya untuk anak dhuafa berprestasi
                   yang lolos seleksi dari berbagai wilayah di Indonesia
                 </Card.Text>
               </Card.Body>
             </Card>
-            <Card>
-              <Card.Img variant="top" src="holder.js/100px160" />
+            <Card className="text-center" style={{borderRadius:'45px', boxShadow:'4px 4px 9px rgba(0, 0, 0, 0.15), -4px -4px 9px rgba(0, 0, 0, 0.15)'}}>
+              <Card.Img variant="top" src="https://svgshare.com/i/LCj.svg" style={{paddingTop:'5rem' ,width:'116px' , display:'block', margin:'auto', }}/>
               <Card.Body>
                 <Card.Title>Misi</Card.Title>
-                <Card.Text className="m-3 text-left">
+                <Card.Text className="m-3 pb-5 text-left">
                   <ol>
                     <li>Mengembangkan Sekolah Model</li>
                     <br />
@@ -121,13 +114,6 @@ const ProfilSekolahPage = () => {
           </CardDeck>
         </div>
 
-        <div id="akreditas" className="container text-center my-5 py-5">
-          <div className="lead bold">
-            <h1>AKREDITASI</h1>
-          </div>
-          <div className="display-4">SEKOLAH CENDEKIA BAZNAS</div>
-          <Image className="m-4" src="holder.js/100px250" thumbnail />
-        </div>
       </Layout>
     </div>
   )
