@@ -37,7 +37,6 @@ const Blog = ({ data, pageContext }) => {
             })}
           </ol>
           <Pager pageContext={pageContext} />
-          {/* <Kategori /> */}
         </div>
         <div className="col-md-3 col-lg-3">
           <Insta />
