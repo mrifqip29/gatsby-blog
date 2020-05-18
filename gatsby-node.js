@@ -1,7 +1,7 @@
-
-
+const _ = require('lodash')
 const path = require("path")
 const { paginate } = require('gatsby-awesome-pagination');
+
 
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -13,6 +13,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   // }
 
   const blogTemplate = path.resolve("./src/templates/kabarterkini.js")
+  const tagTemplate = path.resolve("./src/templates/tags-template.js")
   const MAX_POST = 2
 
   const result = await graphql(`
@@ -22,6 +23,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
           node {
             id
             slug
+            tags
           }
         }
       }
@@ -33,6 +35,8 @@ module.exports.createPages = async ({ graphql, actions }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
+
+  const posts = result.data.allContentfulBlogPost.edges;
 
 result.data.allContentfulBlogPost.edges.forEach(edge =>  {
   paginate({
@@ -53,4 +57,27 @@ result.data.allContentfulBlogPost.edges.forEach(edge =>  {
       },
     })
   })
+
+  let tags = [];    // Iterate through each post, putting all found tags into `tags` 
+
+
+
+  _.each(posts, edge => {      
+    if (_.get(edge, 'node.tags')) {        
+      tags = tags.concat(edge.node.tags);
+      }    
+    });    
+
+  tags = _.uniq(tags); // Eliminate duplicate tags 
+  // Make tag pages
+  tags.forEach(tag => {
+    createPage({
+      path: `kabarterkini/tag/${_.kebabCase(tag)}/`,
+      component: tagTemplate,
+      context: {
+        tag,
+      },
+    });
+  });
 }
+
