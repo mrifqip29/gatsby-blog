@@ -7,27 +7,42 @@ import Layout from "../components/layout"
 import blogStyles from "../pages/blog.module.scss"
 import Pager from "../components/paginator"
 import Kategori from "../components/kategori"
+import Insta from "../components/insta"
 
 const Blog = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Blog Posts" />
       <div className="h1 text-center"> Kabar Terkini</div>
-      <ol className={blogStyles.posts}>
-        {data.allContentfulBlogPost.edges.map(edge => {
-          return (
-            <li className={blogStyles.post}>
-              <Link to={`/kabarterkini/${edge.node.slug}`}>
-                <h2>{edge.node.title}</h2>
-                <p>{edge.node.publishedDate}</p>
-              </Link>
-            </li>
-          )
-        })}
-      </ol>
-      <Pager pageContext={pageContext} />
-
-      <Kategori />
+      <div className="row">
+        <div className="col-md-9 col-lg-9">
+          <ol className={blogStyles.posts}>
+            {data.allContentfulBlogPost.edges.map(edge => {
+              return (
+                // <div className="col-lg-3 col-md-6 col-sm-12 py-1">
+                <div
+                  className="card"
+                  style={{ minHeight: "100px", marginBottom: "30px" }}
+                >
+                  <div className="card-body text-center">
+                    <li className={blogStyles.post}>
+                      <Link to={`/kabarterkini/${edge.node.slug}`}>
+                        <h2>{edge.node.title}</h2>
+                        <p>{edge.node.publishedDate}</p>
+                      </Link>
+                    </li>
+                  </div>
+                </div>
+              )
+            })}
+          </ol>
+          <Pager pageContext={pageContext} />
+          {/* <Kategori /> */}
+        </div>
+        <div className="col-md-3 col-lg-3">
+          <Insta />
+        </div>
+      </div>
     </Layout>
   )
 }
