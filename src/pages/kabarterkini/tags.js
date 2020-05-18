@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 
 import { kebabCase } from 'lodash';
 
-import Layout from '../components/layout';
+import Layout from '../../components/layout';
 const TagsPage = ({ data }) => {
   const allTags = data.allContentfulBlogPost.group;
 
@@ -14,7 +14,7 @@ const TagsPage = ({ data }) => {
         <ul>
           {allTags.map(tag => (
             <li key={tag.fieldValue}>
-              <Link to={`/tag/${kebabCase(tag.fieldValue)}/`}>
+              <Link to={`kabarterkini/tag/${kebabCase(tag.fieldValue)}/`}>
                 {tag.fieldValue} ({tag.totalCount})
               </Link>
             </li>

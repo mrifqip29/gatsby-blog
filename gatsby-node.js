@@ -72,7 +72,7 @@ result.data.allContentfulBlogPost.edges.forEach(edge =>  {
   // Make tag pages
   tags.forEach(tag => {
     createPage({
-      path: `/tag/${_.kebabCase(tag)}/`,
+      path: `kabarterkini/tag/${_.kebabCase(tag)}/`,
       component: tagTemplate,
       context: {
         tag,
