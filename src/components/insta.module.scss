@@ -1,14 +1,15 @@
 .insta1 {
-  display: flex;
-  flex-wrap : wrap;
-  justify-content: right;
-  margin: auto;
+  display: block;
   padding: 0.5rem 0;
+}
+.photo a:hover {
+  transform: scale(1.2);
+  z-index: 10;
 }
 
 .insta2 {
   box-shadow: 0;
-  display: block;
+  display: flex;
   margin-top: 1rem;
   width: 120px;
   transition: 200ms box-shadow linear;
@@ -35,12 +36,13 @@
   font-size : 12px;
   font-weight : bold;
   margin-left : 20px;
+  text-align : left;
 }
 
 .bio {
   font-size : 12px;
-  margin-left : 20px;
   color: rgba(0, 0, 0, 0.5);
+  margin : 0 5px 0 5px;
 }
 
 .button {
@@ -54,4 +56,8 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  transform: none;
+}
+.button a{
+  transform: none;
 }
