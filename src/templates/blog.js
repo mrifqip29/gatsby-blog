@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import blogStyles from "../pages/blog.module.scss"
 import Pager from "../components/paginator"
 import Kategori from "../components/kategori"
+import Insta from "../components/insta"
 
 const Blog = ({ data, pageContext }) => {
   return (
@@ -28,6 +29,7 @@ const Blog = ({ data, pageContext }) => {
       <Pager pageContext={pageContext} />
 
       <Kategori />
+      <Insta />
     </Layout>
   )
 }

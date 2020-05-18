@@ -5,6 +5,8 @@ import { kebabCase } from 'lodash'
 
 import blogStyles from "../pages/blog.module.scss"
 import Pager from "../components/paginator"
+import Kategori from "../components/kategori"
+import Insta from "../components/insta"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -27,7 +29,10 @@ const Tags = ({ pageContext, data }) => {
           )     
         })}
         <Pager pageContext={pageContext} />
+        
       </ol>
+      <Kategori />
+      <Insta />
     </Layout>
   );
 };
