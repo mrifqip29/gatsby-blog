@@ -29,7 +29,8 @@ export default TagsPage;
 
 export const pageQuery = graphql`
   query {
-    allContentfulBlogPost(limit: 2000) {
+    allContentfulBlogPost(limit: 4
+    sort: {fields: tags, order: ASC}) {
       group(field: tags) {
         fieldValue
         totalCount
