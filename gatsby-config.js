@@ -15,7 +15,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Sekolah Cendekia Baznas",
-    author: "Tim Ilmu Komputer 54",
+    author: "Tim Ilmu Komputer IPB 54",
     description: "Website Resmi Sekolah Cendekia Baznas",
   },
   /* Your site config here */
