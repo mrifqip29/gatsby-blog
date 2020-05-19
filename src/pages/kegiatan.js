@@ -4,7 +4,7 @@ import { Button, Image, Card, CardDeck, Breadcrumb } from "react-bootstrap"
 import SEO from "../components/seo"
 
 import Layout from "../components/layout"
-import Jumbo from "../components/jumbo"
+import JumboKegiatan from "../components/jumbokegiatan"
 import kegiatanStyles from "./kegiatan.module.scss"
 
 import blogStyles from "./blog.module.scss"
@@ -26,7 +26,7 @@ const KegiatanPage = () => {
   return (
     <Layout>
       <SEO title="KEGIATAN" />
-      <Jumbo
+      <JumboKegiatan
         title="KEGIATAN"
         page="Kegiatan"
         image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}

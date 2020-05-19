@@ -15,12 +15,13 @@ const Blog = ({ data, pageContext }) => {
     <Layout>
       <Jumbo
         title="KABAR TERKINI"
+        nav="Informasi"
         page="Halaman Kabar Terkini"
         image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
       />
 
-      <div className="row">
-        <div className="col-md-9 col-lg-9" style={{ paddingLeft: "80px" }}>
+      <div className="row text-center px-5">
+        <div className=" col-md-8 col-lg-9 ">
           {data.allContentfulBlogPost.edges.map(edge => {
             return edge.node.gambarArtikel === null ? (
               <div
@@ -46,11 +47,13 @@ const Blog = ({ data, pageContext }) => {
                 <div className="card-body">
                   <div className="container">
                     <div className="row">
-                      <div className="col-md-9">
+                      <div className="col-sm-12 col-md-8 col-lg-10 text-left pl-0">
                         <p>{edge.node.title}</p>
                       </div>
 
-                      <div className="col">tanggal</div>
+                      <div className="col-sm-12 col-md-4 pl-0 col-lg-2 text-left mb-3">
+                        {edge.node.publishedDate}
+                      </div>
                     </div>
 
                     <div className="row">
@@ -83,11 +86,13 @@ const Blog = ({ data, pageContext }) => {
                 <div className="card-body">
                   <div className="container">
                     <div className="row">
-                      <div className="col-md-9">
+                      <div className="col-sm-12 col-md-8 col-lg-10 text-left pl-0">
                         <p>{edge.node.title}</p>
                       </div>
 
-                      <div className="col">tanggal</div>
+                      <div className="col-sm-12 col-md-4 col-lg-2 pl-0 text-left mb-3">
+                        {edge.node.publishedDate}
+                      </div>
                     </div>
 
                     <div className="row">
@@ -118,7 +123,7 @@ const Blog = ({ data, pageContext }) => {
 
           <Pager pageContext={pageContext} />
         </div>
-        <div className="col-md-3 col-lg-3" style={{ paddingRight: "50px" }}>
+        <div className="col-md-4 col-lg-3 text-left">
           <Kategori />
           <Insta />
         </div>
