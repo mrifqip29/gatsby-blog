@@ -4,7 +4,7 @@ import { Breadcrumb, Jumbotron, Container } from "react-bootstrap"
 
 import halamanStyles from "../pages/halaman.module.scss"
 
-const Jumbo = ({ title, nav, page, image }) => {
+const Jumbo = ({ title, nav,nav2, page, image }) => {
   return (
     <div>
       <Jumbotron
@@ -40,6 +40,7 @@ const Jumbo = ({ title, nav, page, image }) => {
               </Link>
             </li>
             <li className={halamanStyles.breadcrumbItem}>{nav}</li>
+            <li className={halamanStyles.breadcrumbItem}>{nav2}</li>
             <li
               className={halamanStyles.breadcrumbItem}
               style={{ color: "#005131" }}
