@@ -1,6 +1,5 @@
 .insta1 {
   display: block;
-  padding: 0.5rem 0;
 }
 .photo a:hover {
   transform: scale(1.2);
@@ -29,7 +28,8 @@
 
 .rounded {
     border-radius:25px;
-    border: 5px solid rgba(0, 0, 0, 0.25);;
+    border: 2px solid rgba(0, 0, 0, 0.10);
+    padding: 1rem 
 }
 
 .username {

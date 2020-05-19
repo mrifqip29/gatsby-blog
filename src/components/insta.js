@@ -16,12 +16,12 @@ const Insta = () => {
         <div className="col">
           <div className={instaStyles.rounded}>
             <div className="h3"  style={{marginLeft :"1%", marginTop:"1%"}}>Instagram Feeds</div>
-
+          
             <div className={instaStyles.username}>@{username}</div>
             <div className={instaStyles.bio}>{biography}</div>
               <div className={instaStyles.photo}>
               {instaPhotos.map(photo => (
-                <div className="col-lg-2 col-md-3 col-sm-6 col-6 d-inline-flex py-3">
+                <div className="col-lg-2 col-md-3 col-sm-6 col-6 d-inline-flex pb-3">
                   <a
                     href={`https://instagram.com/p/${photo.id}/`}
                     className={instaStyles.insta2}
