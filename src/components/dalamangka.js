@@ -33,7 +33,7 @@ const DalamAngka = () => {
       </div>
       <div className="row py-4">
         <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
-          <div className="card text-center" style={{ height: "180px" }}>
+          <div className="card text-center align-items-center" style={{ height: "180px" }}>
             <div
               className="profile-img"
               style={{
@@ -45,7 +45,6 @@ const DalamAngka = () => {
                 backgroundPosition: "center",
                 position: "absolute",
                 top: "-45px",
-                left: "82px",
                 borderRadius: "40%",
               }}
             ></div>
@@ -59,7 +58,7 @@ const DalamAngka = () => {
         </div>
 
         <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
-          <div className="card text-center">
+          <div className="card text-center align-items-center">
             <div
               className="profile-img"
               style={{
@@ -71,7 +70,6 @@ const DalamAngka = () => {
                 backgroundPosition: "center",
                 position: "absolute",
                 top: "-45px",
-                left: "82px",
                 borderRadius: "40%",
               }}
             ></div>
@@ -85,7 +83,7 @@ const DalamAngka = () => {
         </div>
 
         <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
-          <div className="card text-center">
+          <div className="card text-center align-items-center">
             <div
               className="profile-img"
               style={{
@@ -97,7 +95,6 @@ const DalamAngka = () => {
                 backgroundPosition: "center",
                 position: "absolute",
                 top: "-45px",
-                left: "82px",
                 borderRadius: "40%",
               }}
             ></div>
@@ -111,7 +108,7 @@ const DalamAngka = () => {
         </div>
 
         <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
-          <div className="card text-center">
+          <div className="card text-center align-items-center">
             <div
               className="profile-img"
               style={{
@@ -123,7 +120,6 @@ const DalamAngka = () => {
                 backgroundPosition: "center",
                 position: "absolute",
                 top: "-45px",
-                left: "82px",
                 borderRadius: "40%",
               }}
             ></div>
