@@ -2,40 +2,32 @@
   display: block;
   padding: 0.5rem 0;
 }
-.rounded {
-    border-radius:25px;
-    border: 1px solid rgba(0, 0, 0, 0.25);;
+.list-box {
+  display : inline-block;
+  margin-bottom : 10px;
+  text-align : center;
+  color: #ffffff;
+  background-color: #004547;
+  font-weight: 300;
+  border: 1px solid #004547;
+  border-radius: 25px;
+  border-width: medium;
+  padding: 0.5rem 0;
+  scroll-behavior: smooth !important;
 }
-.listChecker{
-  height:15px;
-  width:15px;
-  background : transparant;
-  margin-top : 10px;
-  margin-right : 10px;
-}
-.listName{
-  text-align :left;
-  font-size: 15px;
-  text-transform: capitalize;
-  text-align : left;
-  color: black;
-}
-.listName:hover{
-  text-decoration: none;
-  color : green;
-}
-.list {
-  border : 1px white;
-  width : 100px;
-  height: auto;
-  background: yellow;
-  background : none;
+.list-item {
+  border : 1px transparant;
+  border-radius: 25px;
+  padding : 2px 20px 2px 20px;
+  background : blue;
   color : white;
-  margin-left : 5px;
+  margin-bottom : 10px;
+  display :block;
 }
-.list:hover {
-  color: transparant;
-  text-decoration: none;
+.list-item:hover {
+  background : none;
+  text-decoration:none; 
+  transform : scale(1.5);
 }
 .button {
   margin : 20px 0px 10px 0;
@@ -53,8 +45,13 @@
 .button:hover {
   text-decoration: none;
   color : white;
+  transform : scale(1.2);
 }
 
+
+.listName{
+  color :white;
+}
 
 
 

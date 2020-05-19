@@ -7,7 +7,7 @@ import { kebabCase } from 'lodash'
 import blogStyles from "../pages/blog.module.scss"
 import Pager from "../components/paginator"
 import Kategori from "../components/kategori"
-import Insta from "../components/insta"
+import Insta from "../components/insta2"
 import Jumbo from "../components/jumbo"
 
 const Tags = ({ data,pageContext }) => {
