@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
+import moment from 'moment'
 
 import blogStyles from "../pages/blog.module.scss"
 import Pager from "../components/paginator"
@@ -24,7 +25,7 @@ const Blog = ({ data, pageContext }) => {
         <div className=" col-md-8 col-lg-9 ">
           {data.allContentfulBlogPost.edges.map(edge => {
             return edge.node.gambarArtikel === null ? (
-              <Link to={`/kabarterkini/${edge.node.slug}`}>
+              <Link to={`/kabarterkini/${edge.node.slug}`} style={{textDecoration:'none'}}>
               <div
                 className="card"
                 style={{
@@ -62,7 +63,7 @@ const Blog = ({ data, pageContext }) => {
               </div>
               </Link>
             ) : (
-              <Link to={`/kabarterkini/${edge.node.slug}`}>
+              <Link to={`/kabarterkini/${edge.node.slug}`} style={{textDecoration:'none'}}>
               <div
                 className="card"
                 style={{
@@ -89,7 +90,7 @@ const Blog = ({ data, pageContext }) => {
 
                       <div className="col-sm-12 col-md-4 col-lg-2 pl-0 text-left mb-3">
                         {edge.node.publishedDate}
-                      </div>
+                        </div>
                     </div>
                     </div>
                 </div>
@@ -141,7 +142,7 @@ export const query = graphql`
           id
           title
           slug
-          publishedDate(formatString: "MMMM Do, YYYY")
+          publishedDate(formatString: "D MMMM YYYY")
           gambarArtikel {
             file {
               url

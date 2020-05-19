@@ -42,19 +42,17 @@ const KabarTerkini = props => {
       "embedded-asset-block": node => {
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
-        return <img alt={alt} src={url} />
+        return <img alt={alt} src={url} style={{ maxWidth :'800px'}} />
       },
     },
   }
   return (
     <Layout>
-      <p>{JSON.stringify(props.data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp)}</p>
-      <p>{JSON.stringify(props.data.contentfulBlogPost.gambarArtikel)}</p>
       {props.data.contentfulBlogPost.gambarArtikel === null ? (
         
       <Jumbo
       title={props.data.contentfulBlogPost.title}
-      nav="Kabar Terkini ini ada yang kurang breadcrumbs nya"
+      nav="Kabar Terkini"
       page={props.data.contentfulBlogPost.title}
       image={props.data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
       />
@@ -63,7 +61,7 @@ const KabarTerkini = props => {
       :(
       <Jumbo
       title={props.data.contentfulBlogPost.title}
-      nav="Kabar Terkini ini ada yang kurang breadcrumbs nya"
+      nav="Kabar "
       page={props.data.contentfulBlogPost.title}
       image={props.data.contentfulBlogPost.gambarArtikel.file.url}
       />      
@@ -73,13 +71,16 @@ const KabarTerkini = props => {
 
 
       <Head title={props.data.contentfulBlogPost.title} />
-      <h1>{props.data.contentfulBlogPost.title}</h1>
-      <h1></h1>
-      <p>{props.data.contentfulBlogPost.publishedDate}</p>
-      {documentToReactComponents(
-        props.data.contentfulBlogPost.body.json,
-        options
+      <div className='container'>
+        <h1>{props.data.contentfulBlogPost.title}</h1>
+        <p>{props.data.contentfulBlogPost.publishedDate}</p>
+        {documentToReactComponents(
+          props.data.contentfulBlogPost.body.json,
+          options
       )}
+
+      </div>
+      
     </Layout>
   )
 }
