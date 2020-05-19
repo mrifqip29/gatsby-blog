@@ -50,7 +50,7 @@ const Kegiatan = props => {
       {props.data.contentfulAgenda.gambarKegiatan === null ? (
         <Jumbo
           title={props.data.contentfulAgenda.konten}
-          nav="Kegiatan"
+          nav="Halaman Kegiatan"
           page={props.data.contentfulAgenda.konten}
           image={
             props.data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp
@@ -59,20 +59,22 @@ const Kegiatan = props => {
       ) : (
         <Jumbo
           title={props.data.contentfulAgenda.konten}
-          nav="Kabar Terkini ini ada yang kurang breadcrumbs nya"
+          nav="Kegiatan"
           page={props.data.contentfulAgenda.konten}
           image={props.data.contentfulAgenda.gambarKegiatan.file.url}
         />
       )}
 
       <Head title={props.data.contentfulAgenda.konten} />
-      <h1>{props.data.contentfulAgenda.konten}</h1>
-      <h1></h1>
-      <p>{props.data.contentfulAgenda.tanggalm}</p>
-      {documentToReactComponents(
-        props.data.contentfulAgenda.body.json,
-        options
-      )}
+      <div className="container">
+        <h1>{props.data.contentfulAgenda.konten}</h1>
+        <h1></h1>
+        <p>{props.data.contentfulAgenda.tanggalm}</p>
+        {documentToReactComponents(
+          props.data.contentfulAgenda.body.json,
+          options
+        )}
+      </div>
     </Layout>
   )
 }
