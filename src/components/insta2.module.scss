@@ -29,7 +29,11 @@
 
 .rounded {
     border-radius:25px;
-    border: 1px solid rgba(0, 0, 0, 0.25);;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.rounded:hover, .bio:hover {
+  background-color: #004547;
+  color : white;
 }
 
 .username {
@@ -41,9 +45,9 @@
 
 .bio {
   font-size : 12px;
-  color: rgba(0, 0, 0, 0.5);
   margin-left : 20px;
   margin-right : 20px;
+  font-style : oblique;
 }
 
 .button {
