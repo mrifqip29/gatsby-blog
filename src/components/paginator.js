@@ -2,20 +2,18 @@ import React from "react"
 import { Link } from "gatsby";
 import PropTypes from "prop-types"
 
+import paginatorStyles from "./paginator.module.scss"
+
 const Pager = ({ pageContext }) => {
 	const {previousPagePath, nextPagePath } = pageContext;
 
 	return (
 		<div className="mx-5 my-5">
 			{previousPagePath && (
-				<span className="float-left h5">
-					<Link to={previousPagePath}> Previous </Link>
-				</span>
+				<Link to={previousPagePath} className={paginatorStyles.prev}>Previous </Link>
 			)}
 			{nextPagePath && (
-				<span className="float-right h5">
-					<Link to={nextPagePath}> Next </Link>
-				</span>
+				<Link to={nextPagePath} className={paginatorStyles.next}>Next </Link>
 			)}
 		</div>
 	)
