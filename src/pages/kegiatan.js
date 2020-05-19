@@ -84,7 +84,7 @@ const KegiatanPage = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-3 col-lg-3">
+        <div className="col-md-3 col-lg-3" style={{ paddingRight: "50px" }}>
           <div id="agenda" className="container my-5 py-5">
             <Insta />
           </div>
