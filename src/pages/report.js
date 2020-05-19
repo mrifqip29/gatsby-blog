@@ -15,7 +15,7 @@ const ReportPage = () => {
         nav="Informasi"
         page="Annual Report" />
         <div className="container text-center my-5 py-5">
-        <a href="/web/viewer.html?file=annual_report_maret.pdf">ANNUAL PDF</a>
+        <a href="https://pdfhost.io/v/mjPvq4e.0_ANNUAL_REPORT_REV_MARETpdf.pdf">ANNUAL PDF</a>
         </div>
       </Layout>
     </div>
