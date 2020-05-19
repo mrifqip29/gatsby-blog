@@ -20,11 +20,11 @@ const Banner = () => {
     }
   `)
   return (
-    <Carousel className="col-lg-12 col-md-12 col-sm-12">
+    <Carousel className="col-lg-12 col-md-12 col-sm-12 px-0">
       {data.allContentfulBannerBeranda.edges.map(edge => {
         return (
           <Carousel.Item
-            style={{ background: "#004547" }}
+            style={{ background: "#005131" }}
             className="pt-4 pb-5 text-center"
           >
             <div
@@ -44,7 +44,7 @@ const Banner = () => {
                     style={{
                       fontWeight: "bold",
                       color: "white",
-                      fontSize: "4vw"
+                      fontSize: "4vw",
                     }}
                   >
                     {edge.node.teks}
@@ -52,7 +52,7 @@ const Banner = () => {
                 </div>
 
                 <div className="col-lg-7 col-md-12 col-sm-12">
-                  <img src={edge.node.gambar.fixed.srcWebp} class="img-fluid"/>            
+                  <img src={edge.node.gambar.fixed.srcWebp} class="img-fluid" />
                 </div>
               </div>
             </div>
