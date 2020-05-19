@@ -24,6 +24,7 @@ const Blog = ({ data, pageContext }) => {
         <div className=" col-md-8 col-lg-9 ">
           {data.allContentfulBlogPost.edges.map(edge => {
             return edge.node.gambarArtikel === null ? (
+              <Link to={`/kabarterkini/${edge.node.slug}`}>
               <div
                 className="card"
                 style={{
@@ -47,8 +48,8 @@ const Blog = ({ data, pageContext }) => {
                 <div className="card-body">
                   <div className="container">
                     <div className="row">
-                      <div className="col-sm-12 col-md-8 col-lg-10 text-left pl-0">
-                        <p>{edge.node.title}</p>
+                      <div className="col-sm-12 col-md-8 col-lg-10 text-left pl-3 pb-3">
+                        <h4 style={ {color:'#005131'}}>{edge.node.title}</h4>
                       </div>
 
                       <div className="col-sm-12 col-md-4 pl-0 col-lg-2 text-left mb-3">
@@ -56,16 +57,12 @@ const Blog = ({ data, pageContext }) => {
                       </div>
                     </div>
 
-                    <div className="row">
-                      <p>deskripisi</p>
-                    </div>
-                    <div className="row">
-                      <p>button</p>
-                    </div>
                   </div>
                 </div>
               </div>
+              </Link>
             ) : (
+              <Link to={`/kabarterkini/${edge.node.slug}`}>
               <div
                 className="card"
                 style={{
@@ -86,24 +83,19 @@ const Blog = ({ data, pageContext }) => {
                 <div className="card-body">
                   <div className="container">
                     <div className="row">
-                      <div className="col-sm-12 col-md-8 col-lg-10 text-left pl-0">
-                        <p>{edge.node.title}</p>
+                      <div className="col-sm-12 col-md-8 col-lg-10 text-left pl-3 pb-3">
+                        <h4 style={ {color:'#005131'}}>{edge.node.title}</h4>
                       </div>
 
                       <div className="col-sm-12 col-md-4 col-lg-2 pl-0 text-left mb-3">
                         {edge.node.publishedDate}
                       </div>
                     </div>
-
-                    <div className="row">
-                      <p>deskripisi</p>
                     </div>
-                    <div className="row">
-                      <p>button</p>
-                    </div>
-                  </div>
                 </div>
-              </div>
+              </div>           
+              </Link>
+                  
             )
           })}
           {/*          

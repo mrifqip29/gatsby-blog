@@ -33,7 +33,7 @@ const DalamAngka = () => {
       </div>
       <div className="row py-4">
         <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
-          <div className="card text-center align-items-center" style={{ height: "180px" }}>
+          <div className="card text-center align-items-center bg-light" style={{ height: "180px" , borderRadius:'30px' }}>
             <div
               className="profile-img"
               style={{
@@ -49,8 +49,8 @@ const DalamAngka = () => {
               }}
             ></div>
             <div className="card-body">
-              <div className="display-4 py-3">
-                {data.contentfulScbDalamAngka.jumlahKelas}
+              <div className="display-4 pt-4">
+                <strong>{data.contentfulScbDalamAngka.jumlahKelas}</strong>
               </div>
               <p>Kelas tahun ini</p>
             </div>
@@ -58,7 +58,7 @@ const DalamAngka = () => {
         </div>
 
         <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
-          <div className="card text-center align-items-center">
+          <div className="card text-center align-items-center bg-light" style={{ height: "180px" , borderRadius:'30px' }}>
             <div
               className="profile-img"
               style={{
@@ -74,8 +74,8 @@ const DalamAngka = () => {
               }}
             ></div>
             <div className="card-body" style={{ height: "180px" }}>
-              <div className="display-4 py-3">
-                {data.contentfulScbDalamAngka.jumlahSiswa}
+              <div className="display-4 pt-4">
+                <strong>{data.contentfulScbDalamAngka.jumlahSiswa}</strong>
               </div>
               <p>Siswa tahun ini</p>
             </div>
@@ -83,7 +83,7 @@ const DalamAngka = () => {
         </div>
 
         <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
-          <div className="card text-center align-items-center">
+          <div className="card text-center align-items-center bg-light" style={{ height: "180px" , borderRadius:'30px' }}>
             <div
               className="profile-img"
               style={{
@@ -99,8 +99,8 @@ const DalamAngka = () => {
               }}
             ></div>
             <div className="card-body" style={{ height: "180px" }}>
-              <div className="display-4 py-3">
-                {data.contentfulScbDalamAngka.prestasi}
+              <div className="display-4 pt-4">
+                <strong>{data.contentfulScbDalamAngka.prestasi}</strong>
               </div>
               <p>Prestasi</p>
             </div>
@@ -108,7 +108,7 @@ const DalamAngka = () => {
         </div>
 
         <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
-          <div className="card text-center align-items-center">
+          <div className="card text-center align-items-center bg-light" style={{ height: "180px" , borderRadius:'30px' }}>
             <div
               className="profile-img"
               style={{
@@ -124,8 +124,8 @@ const DalamAngka = () => {
               }}
             ></div>
             <div className="card-body" style={{ height: "180px" }}>
-              <div className="display-4 py-3">
-                {data.contentfulScbDalamAngka.jumlahTendikDanStaf}
+              <div className="display-4 pt-4 ">
+              <strong>{data.contentfulScbDalamAngka.jumlahTendikDanStaf}</strong>
               </div>
               <p>Tenaga Pendidik dan Staf</p>
             </div>
