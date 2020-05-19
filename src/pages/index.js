@@ -159,8 +159,9 @@ const IndexPage = () => {
           {data.allContentfulAgenda.edges.map(edge => {
             return (
               <div className="col-lg-3 col-md-6 col-sm-12 py-1">
+                <Link to="/kegiatan" style={{textDecoration:'none'}}>
                 <div
-                  className="card"
+                  className="card "
                   style={{
                     overflow: "hidden",
                     minWidth: "260px",
@@ -170,26 +171,26 @@ const IndexPage = () => {
                     borderRadius:'30px',
                   }}
                 >
-                  <div className="card-body">
-                    <div className="row ">
-                      <div className="col-4">
-                        <Link to="/kegiatan">
+                  <div className="card-body " style={{background:'linear-gradient(90deg, rgba(0,69,71,1) 0%, rgba(0,69,71,1) 35%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 100%)'}}>
+                  
+                    <div className="row "> 
+                      <div className="col-4" >
                           <div
-                            className="h1 text-center"
-                            style={{ fontWeight: "bold", color: "#004547" }}
+                            className="h1 text-center text-decoration-none"
+                            style={{ fontWeight: "bold", color: "#FFFFFF" , textDecoration:'none'}}
                           >
                             {moment(edge.node.tanggalm).format("D")}
                           </div>
-                        </Link>
+                        
                           <div
                             className="h4 text-center"
-                            style={{ color: "#004547" }}
+                            style={{ color: "#ffffff" }}
                           >
                             {moment(edge.node.tanggalm).format("MMM")}
                           </div>
                       </div>
                       <div className="col-8 " >
-                        <div className="h5 text-left " style={{ color: "#004547" }}>
+                        <div className="h5 text-left " style={{ color: "#004547" , minHeight:"6rem" }}>
                           {edge.node.konten}
                         </div>
                         <div className="h6 text-left py-2" style={{ color: "#004547", margin: "auto",display:"block" }}>
@@ -202,6 +203,7 @@ const IndexPage = () => {
                     </div>
                   </div>
                 </div>
+                </Link>
               </div>
             )
           })}
