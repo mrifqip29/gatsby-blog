@@ -11,6 +11,8 @@ import Countdown from "../components/countdown"
 import DalamAngka from "../components/dalamangka"
 import CardKabar from "../components/cardkabar"
 import Insta from "../components/insta"
+import alamat from "../images/alamat.png"
+import jam from "../images/jam.png"
 
 //yuhu
 const currentDate = new Date()
@@ -161,40 +163,40 @@ const IndexPage = () => {
                   className="card"
                   style={{
                     overflow: "hidden",
-                    width: "260px",
-                    height: "260px",
+                    minWidth: "260px",
+                    minHeight: "200px",
                     borderColor: "#004547",
-                    borderWidth: "7px",
+                    borderWidth: "5px",
+                    borderRadius:'30px',
                   }}
                 >
                   <div className="card-body">
-                    <div className="row">
-                      <div className="col-5">
+                    <div className="row ">
+                      <div className="col-4">
                         <Link to="/kegiatan">
                           <div
-                            className="display-4 text-center"
+                            className="h1 text-center"
                             style={{ fontWeight: "bold", color: "#004547" }}
                           >
                             {moment(edge.node.tanggalm).format("D")}
                           </div>
                           <div
-                            className="h3 text-center"
+                            className="h4 text-center"
                             style={{ color: "#004547" }}
                           >
                             {moment(edge.node.tanggalm).format("MMM")}
                           </div>
                         </Link>
                       </div>
-                      <div className="col-7">
-                        <div className="h5" style={{ color: "#004547" }}>
+                      <div className="col-8 " >
+                        <div className="h5 text-left " style={{ color: "#004547" }}>
                           {edge.node.konten}
                         </div>
-                        <div className="h6" style={{ color: "#004547" }}>
-                          {moment(edge.node.tanggalm).format("H:MM")}-
-                          {moment(edge.node.tanggals).format("H:MM")}
+                        <div className="h6 text-left py-2" style={{ color: "#004547", margin: "auto",display:"block" }}>
+                        <img src={jam} class="img-fluid"/> {moment(edge.node.tanggalm).format("H:MM")}-{moment(edge.node.tanggals).format("H:MM")}
                         </div>
-                        <div className="h6" style={{ color: "#004547" }}>
-                          Di {edge.node.lokasi}
+                        <div className="h6 text-left" style={{ color: "#004547", margin: "auto",display:"block" }}>
+                        <img src={alamat} class="img-fluid"/> {edge.node.lokasi}
                         </div>
                       </div>
                     </div>
