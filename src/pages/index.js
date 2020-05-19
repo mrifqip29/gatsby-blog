@@ -175,8 +175,7 @@ const IndexPage = () => {
                       <div className="col-4">
                         <Link to="/kegiatan">
                           <div
-                            className="h1 text-center"
-                            style={{ fontWeight: "bold", color: "#004547" }}
+                            className={`h1 text-center ${halamanStyles.tanggal}`}
                           >
                             {moment(edge.node.tanggalm).format("D")}
                           </div>
