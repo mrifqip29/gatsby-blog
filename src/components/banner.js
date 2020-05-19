@@ -24,7 +24,7 @@ const Banner = () => {
       {data.allContentfulBannerBeranda.edges.map(edge => {
         return (
           <Carousel.Item
-            style={{ background: "#005131" }}
+            style={{ background: "#004547" }}
             className="pt-4 pb-5 text-center"
           >
             <div

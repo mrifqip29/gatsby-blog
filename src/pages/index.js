@@ -167,7 +167,7 @@ const IndexPage = () => {
                     minHeight: "200px",
                     borderColor: "#004547",
                     borderWidth: "5px",
-                    borderRadius:'30px',
+                    borderRadius: "30px",
                   }}
                 >
                   <div className="card-body">
@@ -181,22 +181,42 @@ const IndexPage = () => {
                             {moment(edge.node.tanggalm).format("D")}
                           </div>
                         </Link>
-                          <div
-                            className="h4 text-center"
-                            style={{ color: "#004547" }}
-                          >
-                            {moment(edge.node.tanggalm).format("MMM")}
-                          </div>
+                        <div
+                          className="h4 text-center"
+                          style={{ color: "#004547" }}
+                        >
+                          {moment(edge.node.tanggalm).format("MMM")}
+                        </div>
                       </div>
-                      <div className="col-8 " >
-                        <div className="h5 text-left " style={{ color: "#004547" }}>
+                      <div className="col-8 ">
+                        <div
+                          className="h5 text-left "
+                          style={{ color: "#004547" }}
+                        >
                           {edge.node.konten}
                         </div>
-                        <div className="h6 text-left py-2" style={{ color: "#004547", margin: "auto",display:"block" }}>
-                        <img src={jam} class="img-fluid"/> {moment(edge.node.tanggalm).format("H:MM")}-{moment(edge.node.tanggals).format("H:MM")}
+                        <div
+                          className="h6 text-left py-2"
+                          style={{
+                            color: "#004547",
+                            margin: "auto",
+                            display: "block",
+                          }}
+                        >
+                          <img src={jam} class="img-fluid" />{" "}
+                          {moment(edge.node.tanggalm).format("H:MM")}-
+                          {moment(edge.node.tanggals).format("H:MM")}
                         </div>
-                        <div className="h6 text-left" style={{ color: "#004547", margin: "auto",display:"block" }}>
-                        <img src={alamat} class="img-fluid"/> {edge.node.lokasi}
+                        <div
+                          className="h6 text-left"
+                          style={{
+                            color: "#004547",
+                            margin: "auto",
+                            display: "block",
+                          }}
+                        >
+                          <img src={alamat} class="img-fluid" />{" "}
+                          {edge.node.lokasi}
                         </div>
                       </div>
                     </div>
@@ -215,8 +235,7 @@ const IndexPage = () => {
       </div>
 
       <div id="kabarterkini">
-        {" "}
-        <CardKabar />{" "}
+        <CardKabar />
       </div>
       <Insta />
     </Layout>
