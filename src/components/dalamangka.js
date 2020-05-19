@@ -28,10 +28,27 @@ const DalamAngka = () => {
         </h1>
       </div>
 
-      <div className="display-4">SCB dalam Angka </div>
+      <div className="display-4" style={{ marginBottom: "40px" }}>
+        SCB dalam Angka{" "}
+      </div>
       <div className="row py-4">
         <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
           <div className="card text-center" style={{ height: "180px" }}>
+            <div
+              className="profile-img"
+              style={{
+                height: "90px",
+                width: "90px",
+                backgroundImage:
+                  "url(" + "https://svgshare.com/i/LEz.svg" + ")",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                position: "absolute",
+                top: "-45px",
+                left: "82px",
+                borderRadius: "40%",
+              }}
+            ></div>
             <div className="card-body">
               <div className="display-4 py-3">
                 {data.contentfulScbDalamAngka.jumlahKelas}
@@ -43,6 +60,21 @@ const DalamAngka = () => {
 
         <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
           <div className="card text-center">
+            <div
+              className="profile-img"
+              style={{
+                height: "90px",
+                width: "90px",
+                backgroundImage:
+                  "url(" + "https://svgshare.com/i/LEA.svg" + ")",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                position: "absolute",
+                top: "-45px",
+                left: "82px",
+                borderRadius: "40%",
+              }}
+            ></div>
             <div className="card-body" style={{ height: "180px" }}>
               <div className="display-4 py-3">
                 {data.contentfulScbDalamAngka.jumlahSiswa}
@@ -54,6 +86,21 @@ const DalamAngka = () => {
 
         <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
           <div className="card text-center">
+            <div
+              className="profile-img"
+              style={{
+                height: "90px",
+                width: "90px",
+                backgroundImage:
+                  "url(" + "https://svgshare.com/i/LEi.svg" + ")",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                position: "absolute",
+                top: "-45px",
+                left: "82px",
+                borderRadius: "40%",
+              }}
+            ></div>
             <div className="card-body" style={{ height: "180px" }}>
               <div className="display-4 py-3">
                 {data.contentfulScbDalamAngka.prestasi}
@@ -65,6 +112,21 @@ const DalamAngka = () => {
 
         <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
           <div className="card text-center">
+            <div
+              className="profile-img"
+              style={{
+                height: "90px",
+                width: "90px",
+                backgroundImage:
+                  "url(" + "https://svgshare.com/i/LFj.svg" + ")",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                position: "absolute",
+                top: "-45px",
+                left: "82px",
+                borderRadius: "40%",
+              }}
+            ></div>
             <div className="card-body" style={{ height: "180px" }}>
               <div className="display-4 py-3">
                 {data.contentfulScbDalamAngka.jumlahTendikDanStaf}
