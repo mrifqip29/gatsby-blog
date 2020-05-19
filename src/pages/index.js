@@ -180,13 +180,13 @@ const IndexPage = () => {
                           >
                             {moment(edge.node.tanggalm).format("D")}
                           </div>
+                        </Link>
                           <div
                             className="h4 text-center"
                             style={{ color: "#004547" }}
                           >
                             {moment(edge.node.tanggalm).format("MMM")}
                           </div>
-                        </Link>
                       </div>
                       <div className="col-8 " >
                         <div className="h5 text-left " style={{ color: "#004547" }}>
