@@ -78,7 +78,7 @@ const IndexPage = () => {
               </Button>
             </span>
           </div>
-          
+
           <div className="col-lg-3 col-md-6 col-sm-12 py-2">
             <span className="px-3">
               <Button
@@ -93,7 +93,7 @@ const IndexPage = () => {
               </Button>
             </span>
           </div>
-          
+
           <div className="col-lg-3 col-md-6 col-sm-12 py-2">
             <span className=" px-3">
               <Button
@@ -160,7 +160,9 @@ const IndexPage = () => {
                 <div
                   className="card"
                   style={{
-                    minHeight: "200px",
+                    overflow: "hidden",
+                    width: "260px",
+                    height: "260px",
                     borderColor: "#004547",
                     borderWidth: "7px",
                   }}
@@ -210,7 +212,10 @@ const IndexPage = () => {
         </div>
       </div>
 
-      <div id="kabarterkini"> <CardKabar/> </div>
+      <div id="kabarterkini">
+        {" "}
+        <CardKabar />{" "}
+      </div>
       <Insta />
     </Layout>
   )
