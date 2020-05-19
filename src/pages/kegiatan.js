@@ -8,7 +8,7 @@ import JumboKegiatan from "../components/jumbokegiatan"
 import kegiatanStyles from "./kegiatan.module.scss"
 
 import blogStyles from "./blog.module.scss"
-import Insta from "../components/insta"
+import Insta2 from "../components/insta2"
 
 const KegiatanPage = () => {
   const data = useStaticQuery(graphql`
@@ -86,7 +86,7 @@ const KegiatanPage = () => {
         </div>
         <div className="col-md-3 col-lg-3" style={{ paddingRight: "50px" }}>
           <div id="agenda" className="container my-5 py-5">
-            <Insta />
+            <Insta2 />
           </div>
         </div>
       </div>
