@@ -2,7 +2,7 @@ import React from "react"
 import Image from "gatsby-image"
 import useInstagram from "../hooks/use-instagram"
 import InstagramUser from "../hooks/instagram-user"
-import instaStyles from "./insta.module.scss"
+import instaStyles from "./insta2.module.scss"
 
 const Insta = () => {
   const instaPhotos = useInstagram()

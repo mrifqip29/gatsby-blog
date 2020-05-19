@@ -28,12 +28,12 @@ const Kategori = () => {
   return (
     <div className="container">
       <div className={catStyles.box}>
-        <div className="col-lg-20">
-          <div className={catStyles.rounded}>
+        <div className="col-20">
+          <div className={catStyles.listBox}>
             <div className="h3 m-3">Kategori</div>
                 {allTags.map(tag => (
-                <div className=" col-6 d-inline-flex">
-                  <Link to={`kabarterkini/tag/${kebabCase(tag.fieldValue)}/`} className={catStyles.list}> 
+                <div className=" col-lg-6  d-inline-flex text-center">
+                  <Link to={`kabarterkini/tag/${kebabCase(tag.fieldValue)}/`} className={catStyles.listItem}> 
                     <div className={catStyles.listName}>
                       {tag.fieldValue}
                     </div>
@@ -42,7 +42,7 @@ const Kategori = () => {
                 ))}
                 <div className="container text-center">
                 <Link to="/kabarterkini/tags" className={catStyles.button}>
-                 More Category
+                 Lebih banyak
                 </Link>
               
             </div>
