@@ -7,7 +7,7 @@ const CardKabar = () => {
     query {
       allContentfulBlogPost(
         sort: { fields: publishedDate, order: ASC }
-        limit: 4
+        limit: 3
       ) {
         edges {
           node {
@@ -47,10 +47,10 @@ const CardKabar = () => {
         </p>
         {data.allContentfulBlogPost.edges.map(edge => {
           return (
-            <div className="col-lg-3 col-md-6 col-sm-12 py-1 pl-0">
+            <div className="col-lg-4 col-md-4 col-sm-12 py-1 pl-0">
               <div className="card" style={{ minHeight: "200px" }}>
                 {edge.node.gambarArtikel === null ? (
-                  <div className="card-body text-center">
+                  <div className="card-body text-left">
                     <img
                       className="card-img-top"
                       src={
@@ -63,12 +63,12 @@ const CardKabar = () => {
                       to={`/kabarterkini/${edge.node.slug}`}
                       className={layoutStyles.selengkapnya}
                     >
-                      <h2
+                      <h3
                         className="card-title font-weight-bold"
                         className={layoutStyles.selengkapnya}
                       >
                         {edge.node.title}
-                      </h2>
+                      </h3>
                     </Link>
                     <p className="card-title">{edge.node.publishedDate}</p>
                   </div>
@@ -81,17 +81,17 @@ const CardKabar = () => {
                       object-fit="contain"
                     ></img>
 
-                    <div className="card-body text-center">
+                    <div className="card-body text-left">
                       <Link
                         to={`/kabarterkini/${edge.node.slug}`}
                         className={layoutStyles.selengkapnya}
                       >
-                        <h2
+                        <h3
                           className="card-title font-weight-bold"
                           className={layoutStyles.selengkapnya}
                         >
                           {edge.node.title}
-                        </h2>
+                        </h3>
                       </Link>
                       <p className="card-title">{edge.node.publishedDate}</p>
                     </div>
