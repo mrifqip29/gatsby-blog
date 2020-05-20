@@ -1,0 +1,40 @@
+.box {
+	width: 300px;
+	display : inline-block;
+	margin-bottom : 20px;
+	text-align : center;
+	margin-right : 20px;
+	color: #004547;
+	background-color: #ffffff;
+	font-weight: 300;
+	border: 1px solid #004547;
+	border-radius: 25px;
+	border-width: medium;
+	padding: 1rem (1rem * 1.5);
+	scroll-behavior: smooth !important;
+}
+.box:hover,
+.box:active,
+.box:focus{
+color: #ffffff !important;
+  background-color: #004547 !important;
+  border-color: #004547 !important;
+  scroll-behavior: smooth !important;
+}
+.title {
+	font-size : 40px;
+	margin-bottom : 50px;
+	text-decoration : underline;
+	
+}
+.box-title {
+	font-size : 30px;
+	display : inline-block;
+	margin-right : 10px;
+
+}
+.box-number {
+	font-size : 30px;
+	display : inline-block;
+	
+}

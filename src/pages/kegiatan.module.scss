@@ -1,0 +1,136 @@
+.kegiatan-button{
+    top : 1000px;
+    color: #707070;
+    background-color: #ffffff;
+    font-weight: 300;
+    border-color: #ffffff;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 1.4rem (1rem * 1.5);
+    scroll-behavior: smooth !important;
+    width: 219px;
+    height: 80px;
+    // left: 41px;
+    // top: 691px;
+    // box-shadow: 4.16667px 4.16667px 9.375px rgba(0, 0, 0, 0.25);
+    border-radius: 20.8333px;
+
+}
+
+.kegiatan-button:hover,
+.kegiatan-button:active,
+.kegiatan-button:focus {
+   
+  color: #ffffff !important;
+  background-color: #005131 !important;
+  border-color: #005131 !important;
+  scroll-behavior: smooth !important;
+}
+
+.selengkapnya {
+    color: #005131;
+    text-decoration: none;
+    background-color: #ffffff;
+    // font-weight: 300;
+    border-color: #005131;
+  }
+  .selengkapnya:hover,
+  .selengkapnya:active,
+  .selengkapnya:focus {
+    color: #ffffff !important;
+    background-color: #005131 !important;
+    border-color: #005131 !important;
+    scroll-behavior: smooth !important;
+
+    // color: #005131;
+    font-weight: bold !important;
+    text-decoration: none;
+  }
+
+/* Container: Kabar terkini */
+
+.kabar-terkini{
+position: relative;
+width: 755px;
+height: 541px;
+left: 25px;
+top: 150px;
+}
+.container-kabar-terkini{
+    /* Container: Profil */
+
+
+position: relative;
+width: 1000px;
+height: 1000px;
+left: 0px;
+top: 20px;
+
+background: #FFFFFF;
+}
+.card-kabar-terkini {
+    /* Card: Kabar Terkini */
+
+
+position: relative;
+width: 755px;
+height: 541px;
+left: 25px;
+top: 20px;
+
+background: #FFFFFF;
+box-shadow: 2.19418px 2.19418px 4.93692px rgba(0, 0, 0, 0.25), -2.19418px -2.19418px 4.93692px rgba(0, 0, 0, 0.25);
+border-radius: 26.3302px;
+}
+
+.title{
+    /* Title */
+
+
+position: relative;
+width: 693px;
+height: 54px;
+left: 30px;
+top: 300px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+
+color: #000000;
+}
+
+.konten{
+position: relative;
+width: 714px;
+height: 45px;
+left: 30px;
+top: 350px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 19px;
+
+color: rgba(0, 0, 0, 0.4);
+}
+
+.slide-kategori{
+    /* Rectangle 10 */
+
+
+position: absolute;
+width: 755px;
+height: 80px;
+left: 41px;
+top: 400px;
+
+background: #FFFFFF;
+box-shadow: 4.16667px 4.16667px 9.375px rgba(0, 0, 0, 0.25);
+border-radius: 20.8333px;
+}

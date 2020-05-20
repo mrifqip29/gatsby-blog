@@ -1,67 +1,135 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 
 import headerStyles from "./header.module.scss"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      site {
-        siteMetadata {
-          title
+      allContentfulAsset(
+        filter: { id: { eq: "d90e6e31-c573-51a5-8cde-b6d9fca79a66" } }
+      ) {
+        edges {
+          node {
+            id
+            title
+            fixed {
+              srcWebp
+            }
+          }
         }
       }
     }
   `)
-
   return (
-    <header className={headerStyles.header}>
-      <h1>
-        <Link className={headerStyles.title} to="/">
-          {data.site.siteMetadata.title}
+    <Navbar bg="white" expand="lg" className="col-12">
+      <Navbar.Brand className="col-md-12 col-sm-12 col-lg-6">
+        <Link to="/">
+          <img
+            src={data.allContentfulAsset.edges[0].node.fixed.srcWebp}
+            alt=""
+            height="70px"
+          />
         </Link>
-      </h1>
-      <nav>
-        <ul className={headerStyles.navList}>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/"
+      </Navbar.Brand>
+
+      <Nav
+        className="mx-auto justify-content-end"
+        style={{
+          color: "33775a",
+        }}
+      >
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link>
+              <Link to="/" className={headerStyles.navItem}>
+                Beranda
+              </Link>
+            </Nav.Link>
+
+            <NavDropdown
+              //warna nya gatau gmn
+              title={
+                <span className={headerStyles.navDropdownItem}>
+                  Tentang Kami
+                </span>
+              }
+              id="collasible-nav-dropdown"
             >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/blog"
+              <NavDropdown.Item>
+                <Link
+                  to="/profilsekolah"
+                  className={headerStyles.dropdownContent}
+                >
+                  Profil Sekolah
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item>
+                <Link to="/profilstaf" className={headerStyles.dropdownContent}>
+                  Profil Pendidik & Staf
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item>
+                <Link to="/fasilitas" className={headerStyles.dropdownContent}>
+                  Fasilitas
+                </Link>
+              </NavDropdown.Item>
+            </NavDropdown>
+
+            <NavDropdown
+              //warna nya gatau gmn
+              title={
+                <span className={headerStyles.navDropdownItem}>Informasi</span>
+              }
+              id="collasible-nav-dropdown"
             >
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/about"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/contact"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+              <NavDropdown.Item>
+                <Link
+                  to="/kabarterkini"
+                  className={headerStyles.dropdownContent}
+                >
+                  Kabar Terkini
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item>
+                <Link to="/silabus" className={headerStyles.dropdownContent}>
+                  Silabus
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item>
+                <Link to="/report" className={headerStyles.dropdownContent}>
+                  Annual Report
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item>
+                <Link to="/buletin" className={headerStyles.dropdownContent}>
+                  Buletin
+                </Link>
+              </NavDropdown.Item>
+            </NavDropdown>
+
+            <Nav.Link>
+              <Link to="/kegiatan" className={headerStyles.navItem}>
+                Kegiatan
+              </Link>
+            </Nav.Link>
+
+            <Nav.Link>
+              <Link to="/ppdb" className={headerStyles.navItem}>
+                PPDB
+              </Link>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Nav>
+    </Navbar>
   )
 }
 

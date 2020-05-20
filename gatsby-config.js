@@ -15,7 +15,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Sekolah Cendekia Baznas",
-    author: "Tim Ilmu Komputer 54",
+    author: "Tim Ilmu Komputer IPB 54",
+    description: "Website Resmi Sekolah Cendekia Baznas",
   },
   /* Your site config here */
   plugins: [
@@ -23,8 +24,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: "n2o2oyh78lcv",
+        accessToken: "yNw9k6la9B3Q06h04menoajN6zNllx-ifEK1E8Ia5GU",
       },
     },
     "gatsby-plugin-sass",
@@ -35,6 +36,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     {
       resolve: "gatsby-transformer-remark",
@@ -51,5 +53,41 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "gatsby-starter-default",
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/logo-scb.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-source-instagram",
+      options: {
+        username: "avrientanep",
+      },
+    },
+    {
+      resolve: "gatsby-source-instagram",
+      options: {
+        type: `user-profile`,
+        username: "avrientanep",
+      },
+    },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }

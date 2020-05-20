@@ -1,0 +1,66 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@import "../../node_modules/bootstrap/scss/breadcrumb";
+
+.green-button {
+  color: #004547;
+  background-color: #ffffff;
+  font-weight: 300;
+  border-color: #004547;
+  border-radius: 25px;
+  border-width: medium;
+  padding: 1rem (1rem * 1.5);
+  scroll-behavior: smooth !important;
+}
+
+.green-button:hover,
+.green-button:active,
+.green-button:focus {
+  color: #ffffff !important;
+  background-color: #004547 !important;
+  border-color: #004547 !important;
+  scroll-behavior: smooth !important;
+}
+
+.selengkapnya {
+  color: #005131;
+  text-decoration: none;
+}
+.selengkapnya:hover,
+.selengkapnya:active,
+.selengkapnya:focus {
+  color: #004547;
+  text-decoration: none;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 0.25rem;
+}
+
+.breadcrumb-item {
+  text-decoration: none !important;
+  color: #ffffff;
+  list-style: none;
+}
+
+.tanggal {
+  font-weight: bold;
+  color: #004547;
+  text-decoration: none;
+}
+
+.tanggal:hover,
+.tanggal:active,
+.tanggal:focus {
+  font-weight: bold;
+  color: #004547;
+  text-decoration: none;
+}
