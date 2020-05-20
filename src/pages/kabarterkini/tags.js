@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import { kebabCase } from 'lodash';
-
+import Head from "../../components/head"
 import Layout from '../../components/layout';
 import Jumbo from "../../components/jumbo";
 import tagsStyle from "./tags.module.scss"
@@ -18,7 +18,7 @@ const TagsPage = ({ data }) => {
           page="Kategori"
           image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
         />
-
+        <Head title="Semua Kategori" />
         <div className="container text-center">
           <div className={tagsStyle.title}> Semua Kategori </div>
           <div className=" col-12 ">

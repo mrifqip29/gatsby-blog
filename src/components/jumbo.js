@@ -4,7 +4,7 @@ import { Breadcrumb, Jumbotron, Container } from "react-bootstrap"
 
 import halamanStyles from "../pages/halaman.module.scss"
 
-const Jumbo = ({ title, nav, nav2, page, image }) => {
+const Jumbo = ({ title, nav, page, image }) => {
   return (
     <div>
       <Jumbotron

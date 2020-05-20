@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery } from "gatsby"
 
-import dalamAngkaStyles from "./dalamangka.module.scss"
 
 const DalamAngka = () => {
   const data = useStaticQuery(graphql`

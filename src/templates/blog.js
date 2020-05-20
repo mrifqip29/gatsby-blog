@@ -1,11 +1,9 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import SEO from "../components/seo"
+import { Link, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
-import moment from 'moment'
 
-import blogStyles from "../pages/blog.module.scss"
+import Head from "../components/head"
 import Pager from "../components/paginator"
 import Kategori from "../components/kategori"
 import Insta from "../components/insta2"
@@ -20,7 +18,7 @@ const Blog = ({ data, pageContext }) => {
         page="Halaman Kabar Terkini"
         image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
       />
-
+    <Head title="Halaman Kabar Terkini" />
       <div className="row text-center px-5">
         <div className=" col-md-8 col-lg-9 ">
           {data.allContentfulBlogPost.edges.map(edge => {

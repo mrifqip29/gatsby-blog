@@ -1,6 +1,6 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import { Button, Image, Card, CardDeck, Breadcrumb } from "react-bootstrap"
+import { graphql, useStaticQuery } from "gatsby"
+import { Button, Image, Card, CardDeck} from "react-bootstrap"
 import SEO from "../components/seo"
 
 import Layout from "../components/layout"

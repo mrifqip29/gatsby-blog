@@ -2,9 +2,8 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PropTypes from "prop-types"
-import { kebabCase } from 'lodash'
 
-import blogStyles from "../pages/blog.module.scss"
+import Head from "../components/head"
 import Pager from "../components/paginator"
 import Kategori from "../components/kategori"
 import Insta from "../components/insta2"
@@ -24,6 +23,7 @@ const Tags = ({ data,pageContext }) => {
             page="Halaman Kabar Terkini"
             image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
           />
+          <Head title="Halaman Kabar Terkini" />
           <div className=" col-md-8 col-lg-9 text-center">
             <h1 className=" px-5"> {tagHeader} </h1>
           </div>

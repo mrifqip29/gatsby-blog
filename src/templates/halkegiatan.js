@@ -1,11 +1,10 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import SEO from "../components/seo"
+import { Link, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
 
-import blogStyles from "../pages/blog.module.scss"
 import Pager from "../components/paginator"
+import Head from "../components/head"
 import Kategori from "../components/kategori"
 import Insta from "../components/insta2"
 import Jumbo from "../components/jumbokegiatan"
@@ -19,6 +18,7 @@ const Halkegiatan = ({ data, pageContext }) => {
         image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
       />
 
+    <Head title="Halaman Kabar Terkini" />
       <div className="row text-center px-5">
         <div className=" col-md-8 col-lg-9 ">
           {data.allContentfulAgenda.edges.map(edge => {
