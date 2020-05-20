@@ -7,7 +7,6 @@ import Jumbo from "../components/jumbo"
 
 const ReportPage = () => {
   const data = useStaticQuery(graphql`
-<<<<<<< HEAD
     query {
       allContentfulAnnualReport( sort: { fields: createdAt, order: DESC } ) {
         edges {
@@ -35,29 +34,10 @@ const ReportPage = () => {
       }
     }
   `)
-
-=======
-  query {
-    contentfulJumbotronHalaman(
-      jumbotronHalaman: { eq: "Halaman Annual Report" }
-    ) {
-      jumbotronHalaman
-      jumbotronGambar {
-        fixed {
-          srcWebp
-        }
-      }
-    }
-  }
-  
-
-`)
->>>>>>> 3484462a9f74578e4d0ab698231eb24397aae55b
   return (
     <div>
       <Layout>
         <Jumbo
-<<<<<<< HEAD
           title="Annual Report"
           nav="Informasi"
           page="Annual Report"
@@ -91,16 +71,6 @@ const ReportPage = () => {
               )
             })
           }
-=======
-        title="Annual Report"
-        nav="Informasi"
-        page="Annual Report"
-        image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
-        />
-
-        <div className="container text-center my-5 py-5">
-        <a href="/web/viewer.html?file=annual_report_maret.pdf">ANNUAL PDF</a>
->>>>>>> 3484462a9f74578e4d0ab698231eb24397aae55b
         </div>
       </Layout>
     </div>

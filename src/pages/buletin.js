@@ -8,7 +8,7 @@ import Jumbo from "../components/jumbo"
 const BuletinPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulbuletin( sort: { fields: createdAt, order: DESC } ) {
+      allContentfulBuletin( sort: { fields: createdAt, order: DESC } ) {
         edges {
           node {
             title
@@ -47,7 +47,7 @@ const BuletinPage = () => {
 
         <div className="container my-5 py-5">
           {
-            data.allContentfulbuletin.edges.map(edge => {
+            data.allContentfulBuletin.edges.map(edge => {
               return (
                 <div className="row my-5">
                   <div className="col-12">

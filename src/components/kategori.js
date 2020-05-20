@@ -11,7 +11,7 @@ const Kategori = () => {
   const data = useStaticQuery(graphql`
     query{
       allContentfulBlogPost(
-      limit: 10
+      limit: 4
       sort: {fields: tags, order: ASC} )
       {
         group(field: tags) {
