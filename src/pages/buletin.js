@@ -5,10 +5,10 @@ import {Button, Image, Card, CardDeck, Breadcrumb} from "react-bootstrap"
 import Layout from "../components/layout"
 import Jumbo from "../components/jumbo"
 
-const ReportPage = () => {
+const BuletinPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulAnnualReport( sort: { fields: createdAt, order: DESC } ) {
+      allContentfulbuletin( sort: { fields: createdAt, order: DESC } ) {
         edges {
           node {
             title
@@ -23,7 +23,7 @@ const ReportPage = () => {
         }
       }
       contentfulJumbotronHalaman(
-        jumbotronHalaman: { eq: "Halaman Annual Report" }
+        jumbotronHalaman: { eq: "Halaman buletin" }
       ) {
         jumbotronHalaman
         jumbotronGambar {
@@ -39,15 +39,15 @@ const ReportPage = () => {
     <div>
       <Layout>
         <Jumbo
-          title="Annual Report"
+          title="Buletin Pena"
           nav="Informasi"
-          page="Annual Report"
+          page="Buletin Pena"
           image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
         />
 
         <div className="container my-5 py-5">
           {
-            data.allContentfulAnnualReport.edges.map(edge => {
+            data.allContentfulbuletin.edges.map(edge => {
               return (
                 <div className="row my-5">
                   <div className="col-12">
@@ -78,4 +78,4 @@ const ReportPage = () => {
   )
 }
 
-export default ReportPage
+export default BuletinPage
