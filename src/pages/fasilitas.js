@@ -1,9 +1,7 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import {  graphql, useStaticQuery } from "gatsby"
 
-import { Button, Image, Card, CardDeck, Breadcrumb } from "react-bootstrap"
 import Layout from "../components/layout"
-import blogStyles from "./blog.module.scss"
 import Head from "../components/head"
 import Jumbo from "../components/jumbo"
 
@@ -11,7 +9,7 @@ import Jumbo from "../components/jumbo"
 const PageFasilitas = () => {
   const data = useStaticQuery(graphql`
     query{
-      allContentfulFasilitasScb{
+      allContentfulFasilitasScb(sort: { fields: createdAt, order: ASC }){
         edges{
           node{
             namaFasilitas
@@ -23,6 +21,18 @@ const PageFasilitas = () => {
         }
       }
     }
+
+    contentfulJumbotronHalaman(
+      jumbotronHalaman: { eq: "Halaman Fasilitas" }
+    ) {
+      jumbotronHalaman
+      jumbotronGambar {
+        fixed {
+          srcWebp
+        }
+      }
+    }
+    
   }
   `)
 
@@ -30,36 +40,39 @@ const PageFasilitas = () => {
     <Layout>
       <Jumbo title="Fasilitas SCB"
           nav="Tentang Kami"
-          page="Fasilitas SCB"/>
+          page="Fasilitas SCB"
+          image={data.contentfulJumbotronHalaman.jumbotronGambar.fixed.srcWebp}
+          />
+
+
       <Head title="Fasilitas Kami" />
-        
+      <div className="col-xs-12 col-sm-12">
         <div className="container text-center my-5 py-5">
           <div className="lead bold">
             <h1>Fasilitas</h1>
           </div>
           <div className="display-4">SMP CENDEKIA BAZNAS</div>
         </div>
-
-      <ol className={blogStyles.posts}>
+      </div>    
+        <div className="container">
+        <div className="row">
         {data.allContentfulFasilitasScb.edges.map(edge => {
           return (
-            <Card style={{ width: '25rem', }}>
-              <Card.Img variant="top" src={edge.node.gambarFasilitas.file.url} alt={edge.node.namaFasilitas} />
-              <Card.Body>
-                <Card.Title>{edge.node.namaFasilitas}</Card.Title>
-              </Card.Body>
-            </Card>
-            
-            
-            // <li className={blogStyles.post}>
-            //   <img src={edge.node.gambarFasilitas.file.url} alt={edge.node.namaFasilitas}/>
-                
-            // </li>
+              <div className="col-md-6 col-sm-12 col-xs-12 py-3" >
+                <div className="card" >
+                  <img className="card-img-top" src={edge.node.gambarFasilitas.file.url} object-fit="scale-down" height="350vh"></img>
+                    <div className="card-body">
+                       <h5 className="card-title-center text-center">{edge.node.namaFasilitas}</h5>
+
+                    </div>
+                </div>
+              </div>
                   )
                 }
               )
             }
-      </ol>
+        </div>
+        </div>
     </Layout>
   )
 }

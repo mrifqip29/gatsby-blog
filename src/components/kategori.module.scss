@@ -1,0 +1,145 @@
+.box {
+  display: block;
+  padding: 0.5rem 0;
+}
+.list-box {
+  display : inline-block;
+  margin-bottom : 10px;
+  text-align : center;
+  color: #004547;
+  background-color: #ffffff;
+  font-weight: 300;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  border-width: medium;
+  padding: 0.5rem 0;
+  scroll-behavior: smooth !important;
+}
+.list-box:hover{
+  background-color: #004547;
+  color : #ffffff
+}
+.list-item {
+  border : 1px transparant;
+  border-radius: 25px;
+  padding : 2px 20px 2px 20px;
+  background : rgba(0, 0, 0, 0.25);
+  color : white;
+  margin-bottom : 10px;
+  display :block;
+  text-transform: capitalize;
+}
+.list-item:hover {
+  background : none;
+  text-decoration:none; 
+  transform : scale(1.5);
+}
+.button {
+  margin : 20px 0px 10px 0;
+  background-color: #007446;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transform: none;
+}
+.button:hover {
+  text-decoration: none;
+  color : white;
+  transform : scale(1.2);
+}
+
+
+.listName{
+  color :white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: green;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+
+  .container .checkmark:after {
+       top: 6px;
+      left: 6px;
+      width: 9px;
+      height: 9px;
+      border-radius: 25%;
+      background: white;
+  }
+  .he li {
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: normal;
+  }
+  .checkmark {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 25%;
+  }
+ .halo {
+  position: absolute;
+width: 519px;
+height: 689px;
+left: 871px;
+top: 784px;
+
+background: #FFFFFF;
+box-shadow: 2.19418px 2.19418px 4.93692px rgba(0, 0, 0, 0.25), -2.19418px -2.19418px 4.93692px rgba(0, 0, 0, 0.25);
+border-radius: 26.3302px;
+ }
+

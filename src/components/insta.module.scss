@@ -1,0 +1,65 @@
+.insta1 {
+  display: block;
+}
+.photo a:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+.insta2 {
+  box-shadow: 0;
+  display: flex;
+  margin-top: 1rem;
+  width: 120px;
+  transition: 200ms box-shadow linear;
+  :focus,
+  :hover {
+    box-shadow: 0 2px 14px #22222244;
+    z-index: 10;
+  }
+}
+
+.insta3 {
+  width: 100%;
+  * {
+    margin-top: 0;
+  }
+}
+
+.rounded {
+    border-radius:25px;
+    border: 2px solid rgba(0, 0, 0, 0.10);
+    padding: 1rem 
+}
+
+.username {
+  font-size : 1rem;
+  font-weight : bold;
+  margin-left : 12px;
+  text-align : left;
+}
+
+.bio {
+  font-size : 1rem;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left : 12px;
+
+}
+
+.button {
+  margin : 20px 0px 20px 0;
+  background-color: #007446;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transform: none;
+}
+.button:hover{
+  color : white;
+  text-decoration : none;
+}

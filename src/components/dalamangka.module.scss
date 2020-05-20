@@ -1,0 +1,16 @@
+.single-counter-box i::before {
+  background: #0861b5;
+  font-family: Segoe UI;
+  text-align: center;
+  width: 120px;
+  display: block;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 100%;
+  font-size: 50px;
+  margin: auto;
+  box-shadow: 0 8px 8px #020202;
+  border: 2px solid white;
+  transition: all 0.4s;
+  padding: 1rem 0;
+}
