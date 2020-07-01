@@ -74,18 +74,20 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-instagram",
+      resolve: `gatsby-source-instagram`,
       options: {
-        username: "avrientanep",
+        username: `4157226947`,
       },
     },
     {
-      resolve: "gatsby-source-instagram",
+      resolve: `gatsby-source-instagram`,
       options: {
         type: `user-profile`,
-        username: "avrientanep",
+        username: `pendidikanbaznas`,
       },
     },
+
+    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

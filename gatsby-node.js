@@ -72,7 +72,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   // Make tag pages
   tags.forEach(tag => {
     createPage({
-      path: `kabarterkini/tag/${_.kebabCase(tag)}/`,
+      path: `/kabarterkini/tag/${_.kebabCase(tag)}`,
       component: tagTemplate,
       context: {
         tag,

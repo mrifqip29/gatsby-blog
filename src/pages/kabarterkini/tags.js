@@ -24,7 +24,7 @@ const TagsPage = ({ data }) => {
           <div className=" col-12 ">
             {allTags.map(tag => {
               return (
-                <Link to={`kabarterkini/tag/${kebabCase(tag.fieldValue)}/`}>
+                <Link to={`/kabarterkini/tag/${kebabCase(tag.fieldValue)}/`}>
                   <div key={tag.fieldValue} className={tagsStyle.box}>                
                     <div className={tagsStyle.boxTitle}>
                       {tag.fieldValue}

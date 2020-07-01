@@ -33,7 +33,7 @@ const Kategori = () => {
             <div className="h3 m-3">Kategori</div>
                 {allTags.map(tag => (
                 <div className=" col-lg-6  d-inline-flex text-center">
-                  <Link to={`kabarterkini/tag/${kebabCase(tag.fieldValue)}/`} className={catStyles.listItem}> 
+                  <Link to={`/kabarterkini/tag/${kebabCase(tag.fieldValue)}`} className={catStyles.listItem}> 
                     <div className={catStyles.listName}>
                       {tag.fieldValue}
                     </div>

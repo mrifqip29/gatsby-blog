@@ -6,9 +6,9 @@ import instaStyles from "./insta2.module.scss"
 
 const Insta = () => {
   const instaPhotos = useInstagram()
-  const { username } = instaPhotos[0]
   const instaUser = InstagramUser()
   const { biography } = instaUser[0]
+  const { username } = instaUser[0]
 
   return (
     <div className="container">

@@ -7,7 +7,6 @@ const useInstagram = () => {
         nodes {
           id
           caption
-          username
           localFile {
             childImageSharp {
               fluid(maxWidth: 150, maxHeight: 150) {
