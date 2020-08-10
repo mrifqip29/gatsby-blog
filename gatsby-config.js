@@ -73,19 +73,6 @@ module.exports = {
         icon: `src/images/logo-scb.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `4157226947`,
-      },
-    },
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        type: `user-profile`,
-        username: `pendidikanbaznas`,
-      },
-    },
 
     
     // this (optional) plugin enables Progressive Web App + Offline functionality
