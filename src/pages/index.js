@@ -10,7 +10,6 @@ import halamanStyles from "./halaman.module.scss"
 import Countdown from "../components/countdown"
 import DalamAngka from "../components/dalamangka"
 import CardKabar from "../components/cardkabar"
-import Insta from "../components/insta"
 import alamat from "../images/alamat.png"
 import jam from "../images/jam.png"
 
@@ -220,7 +219,6 @@ const IndexPage = () => {
         {" "}
         <CardKabar />{" "}
       </div>
-      <Insta />
     </Layout>
   )
 }

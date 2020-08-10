@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 import Pager from "../components/paginator"
 import Head from "../components/head"
 import Kategori from "../components/kategori"
-import Insta from "../components/insta2"
 import Jumbo from "../components/jumbokegiatan"
 
 const Halkegiatan = ({ data, pageContext }) => {
@@ -117,7 +116,7 @@ const Halkegiatan = ({ data, pageContext }) => {
           <Pager pageContext={pageContext} />
         </div>
         <div className="col-md-4 col-lg-3 text-left">
-          <Insta />
+          
         </div>
       </div>
     </Layout>

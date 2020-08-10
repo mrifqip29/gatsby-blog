@@ -6,7 +6,6 @@ import PropTypes from "prop-types"
 import Head from "../components/head"
 import Pager from "../components/paginator"
 import Kategori from "../components/kategori"
-import Insta from "../components/insta2"
 import Jumbo from "../components/jumbo"
 
 const Tags = ({ data,pageContext }) => {
@@ -125,7 +124,6 @@ const Tags = ({ data,pageContext }) => {
             </div>
             <div className="col-md-4 col-lg-3 text-left">
               <Kategori />
-              <Insta />
             </div>
           </div>
         </Layout>

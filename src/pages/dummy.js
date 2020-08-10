@@ -11,7 +11,6 @@ import {
 } from "react-bootstrap"
 import Layout from "../components/layout"
 import Jumbo from "../components/jumbo"
-import Insta from "../components/insta"
 import Kategori from "../components/kategori"
 
 const Dummy = () => {
@@ -48,15 +47,6 @@ const Dummy = () => {
             >
               {/* instagramnya belom bener */}
               <Kategori />
-            </div>
-
-              <div
-              className=""
-              style={{
-                background: "yellow",
-              }}
-            >
-              <Insta />
             </div>
 
             <div>

@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import Pager from "../components/paginator"
 import Kategori from "../components/kategori"
-import Insta from "../components/insta2"
 import Jumbo from "../components/jumbo"
 
 const Blog = ({ data, pageContext }) => {
@@ -116,7 +115,6 @@ const Blog = ({ data, pageContext }) => {
         </div>
         <div className="col-md-4 col-lg-3 text-left">
           <Kategori />
-          <Insta />
         </div>
       </div>
     </Layout>
