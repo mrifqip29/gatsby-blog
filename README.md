@@ -9,11 +9,7 @@ git clone https://github.com/mrifqip29/gatsby-blog.git
 git checkout scb-web
 ```
 
-3. Buat file ".env.development" di dalem folder gatsby.
-
-hubungkan spaceid dan accessToken di gatsby-config.js -> plugins-> gatsby-source-contentful
-
-isi spaceId dan accessToken seperti ini
+3. Buat file ".env.development" di dalem folder gatsby. Kemudian hubungkan spaceid dan accessToken di gatsby-config.js -> plugins-> gatsby-source-contentful seperti ini:
 ```shell
  resolve: `gatsby-source-contentful`,
       options: {
