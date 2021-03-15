@@ -26,7 +26,7 @@ npm install
 ```
 
 
-5. jalankan
+5. Jalankan
 ```shell
 npm run develop
 ```
